@@ -3,6 +3,11 @@ export type Medium = 'hardcover' | 'paperback' | 'audiobook' | 'ebook';
 export type Category =
   | 'Biography'
   | 'Business'
+  | 'Cybersecurity'
+  | 'Fiction'
+  | 'Finance'
+  | 'Leadership'
+  | 'Management'
   | 'Productivity'
   | 'Science'
   | 'Self-Help'
