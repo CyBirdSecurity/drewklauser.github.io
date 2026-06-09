@@ -1128,6 +1128,59 @@ strong { font-weight: 600; color: var(--c-text); }
   .contact-links { grid-template-columns: 1fr; }
 }
 
+/* ── Dark mode ────────────────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-bg:          #07080f;
+    --c-bg-elevated: #0d1017;
+    --c-bg-card:     rgba(255, 255, 255, 0.04);
+    --c-bg-card-hov: rgba(5, 150, 105, 0.08);
+    --c-border:      rgba(255, 255, 255, 0.08);
+    --c-border-hov:  rgba(52, 211, 153, 0.4);
+    --c-purple:      #10b981;
+    --c-purple-lt:   #34d399;
+    --c-blue:        #3b82f6;
+    --c-blue-lt:     #60a5fa;
+    --c-cyan:        #22d3ee;
+    --c-cyan-lt:     #67e8f9;
+    --c-green:       #34d399;
+    --c-text:        #f8fafc;
+    --c-text-2:      #94a3b8;
+    --c-text-3:      #64748b;
+    --grad-primary:  linear-gradient(135deg, #34d399 0%, #60a5fa 50%, #67e8f9 100%);
+    --grad-button:   linear-gradient(135deg, #059669 0%, #047857 100%);
+  }
+
+  .navbar.scrolled {
+    background: rgba(7, 8, 15, 0.88);
+  }
+
+  .nav-links.open {
+    background: rgba(7, 8, 15, 0.98);
+  }
+
+  .btn-ghost {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .shield-badge {
+    background: rgba(13, 16, 23, 0.95);
+  }
+
+  .project-skeleton {
+    background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.04) 100%
+    );
+    background-size: 200% 100%;
+  }
+}
+
 /* ── Reduced motion ───────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

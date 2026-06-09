@@ -7,7 +7,7 @@
   <meta property="og:title" content="Drew Klauser | Links" />
   <meta property="og:description" content="Engineering Manager, Security Engineering & Compliance at ezCater." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://cybirdsecurity.com/drew" />
+  <meta property="og:url" content="https://drewklauser.com/me" />
   <title>Drew Klauser | Links</title>
 
   <!-- Favicon -->
@@ -324,6 +324,44 @@
     .links .link-card:nth-child(5) { animation-delay: 420ms; }
     .links .link-card:nth-child(6) { animation-delay: 480ms; }
     .links .link-card:nth-child(7) { animation-delay: 540ms; }
+    .links .link-card:nth-child(8) { animation-delay: 600ms; }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --c-bg:          #fafbff;
+        --c-bg-elevated: #ffffff;
+        --c-bg-card:     rgba(0, 0, 0, 0.025);
+        --c-bg-card-hov: rgba(124, 58, 237, 0.04);
+        --c-border:      rgba(0, 0, 0, 0.09);
+        --c-border-hov:  rgba(124, 58, 237, 0.4);
+        --c-purple-lt:   #7c3aed;
+        --c-blue-lt:     #2563eb;
+        --c-cyan-lt:     #0891b2;
+        --c-green:       #059669;
+        --c-text:        #0f172a;
+        --c-text-2:      #475569;
+        --grad-primary:  linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #0891b2 100%);
+        --grad-button:   linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+      }
+
+      .mesh-orb { opacity: 0.07; }
+
+      .link-icon { background: rgba(0, 0, 0, 0.04); }
+
+      .link-card--primary .link-icon { background: rgba(124, 58, 237, 0.1); }
+
+      .profile-badge {
+        background: rgba(5, 150, 105, 0.08);
+        border-color: rgba(5, 150, 105, 0.2);
+        color: #059669;
+      }
+
+      .link-icon svg[fill="#60a5fa"]  { fill: #1d4ed8; }
+      .link-icon svg[fill="#94a3b8"]  { fill: #475569; }
+      .link-icon svg[stroke="#a78bfa"] { stroke: #6d28d9; }
+      .link-icon svg[stroke="#34d399"] { stroke: #059669; }
+      .link-icon svg[stroke="#67e8f9"] { stroke: #0891b2; }
+    }
   </style>
 </head>
 <body>
@@ -382,6 +420,18 @@
           <span class="link-label">Study Tool</span>
           <span class="link-value">CISSP Exam Prep</span>
           <span class="link-desc">Practice Questions &amp; Flashcards across all 8 domains</span>
+        </div>
+        <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="https://securityplus.cybirdsecurity.com" target="_blank" rel="noopener noreferrer" class="link-card" aria-label="Security+ Study Tool">
+        <div class="link-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div class="link-content">
+          <span class="link-label">Study Tool</span>
+          <span class="link-value">Security+ Exam Prep</span>
+          <span class="link-desc">Practice Questions &amp; Flashcards for CompTIA Security+</span>
         </div>
         <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>

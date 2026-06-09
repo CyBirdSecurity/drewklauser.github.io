@@ -52,6 +52,7 @@ const PERSONAL_REPOS = [
     owner:   'CyBirdSecurity',
     repo:    'CISSP',
     badge:   'Study Tool',
+    liveUrl: 'https://cissp.cybirdsecurity.com',
     fallback: {
       name:        'CISSP Study Tool',
       description: 'Interactive CISSP exam prep with 96 practice questions and 120 flashcards across all 8 exam domains. Built with React/Next.js, featuring real-time feedback, progress tracking, and a distraction-free interface.',
@@ -65,6 +66,7 @@ const PERSONAL_REPOS = [
     owner:   'CyBirdSecurity',
     repo:    'SecurityPlus',
     badge:   'Study Tool',
+    liveUrl: 'https://securityplus.cybirdsecurity.com',
     fallback: {
       name:        'SecurityPlus Study Tool',
       description: 'Interactive CompTIA Security+ exam prep and study guide. Covers all exam domains with practice questions and study materials to help security professionals earn their certification.',
