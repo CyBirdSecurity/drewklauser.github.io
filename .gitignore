@@ -1,0 +1,3 @@
+library-src/node_modules/
+library-src/.astro/
+.DS_Store

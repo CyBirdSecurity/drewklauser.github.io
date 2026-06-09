@@ -1,0 +1,70 @@
+---
+import type { Book } from '../utils/books';
+import { categoryColor, CATEGORY_COLORS, MEDIUM_ICONS } from '../utils/books';
+
+export interface Props {
+  books: Book[];
+}
+
+const { books } = Astro.props;
+---
+
+<section id="reading" style="position:relative;z-index:1;">
+  <div class="section-container">
+    <p class="section-eyebrow">Currently Reading</p>
+    <h2 class="section-heading">On the desk right now</h2>
+    <div class="section-divider"></div>
+
+    {books.length === 0 ? (
+      <div style="padding:3rem 0;color:var(--c-text-2);">
+        <p style="font-size:1.1rem;font-weight:500;color:var(--c-text);margin-bottom:0.5rem;">Between books at the moment</p>
+        <p style="font-size:0.875rem;">Set <code style="background:var(--c-bg-card);border:1px solid var(--c-border);padding:1px 8px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;">in_progress: true</code> in books.yaml to show a book here.</p>
+      </div>
+    ) : (
+      <div style="display:flex;flex-wrap:wrap;gap:2.5rem;align-items:flex-end;">
+        {books.map(book => {
+          const bg = categoryColor(book.categories);
+          const bookData = JSON.stringify({
+            title: book.title, author: book.author, year_read: book.year_read,
+            categories: book.categories, medium: book.medium,
+            hasCover: book.hasCover, coverUrl: book.coverUrl, notes: book.notes,
+          });
+          return (
+            <div class="reading-card" role="button" tabindex="0"
+              aria-label={`${book.title} by ${book.author}`}
+              data-book={bookData} style="cursor:pointer;">
+              <div class="reading-cover">
+                <div class="reading-spine-edge" style={`background:linear-gradient(180deg,${bg}dd 0%,${bg} 100%);`}></div>
+                {book.hasCover ? (
+                  <img src={book.coverUrl!} alt={`Cover of ${book.title}`} width="120" height="180" />
+                ) : (
+                  <div class="reading-cover-placeholder" style={`background-color:${bg};`}>
+                    <span style="font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;line-height:1.3;color:rgba(248,250,252,0.85);text-align:center;">{book.title}</span>
+                    <span style="font-size:0.65rem;color:rgba(248,250,252,0.45);margin-top:4px;">{book.author.split(',')[0]}</span>
+                  </div>
+                )}
+              </div>
+              <div style="text-align:center;max-width:130px;">
+                <p style="font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:600;color:var(--c-text);line-height:1.3;margin-bottom:3px;">{book.title}</p>
+                <p style="font-size:0.75rem;color:var(--c-text-2);">{book.author.split(',')[0]}</p>
+                <div style="display:flex;flex-wrap:wrap;gap:4px;justify-content:center;margin-top:6px;">
+                  {book.categories.map(cat => (
+                    <span class="category-badge" style={`background-color:${CATEGORY_COLORS[cat] ?? '#1e2433'};`}>{cat}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    )}
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('#reading [data-book]').forEach(el => {
+    const open = () => (window as any).openBookModal?.(JSON.parse(el.dataset.book ?? '{}'));
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  });
+</script>

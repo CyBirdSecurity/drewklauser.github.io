@@ -1,0 +1,216 @@
+---
+import { readFileSync, readdirSync, existsSync } from 'fs';
+import { join } from 'path';
+import yaml from 'js-yaml';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import type { Book, Medium, Category } from '../utils/books';
+import { slugify, categoryColor, CATEGORY_COLORS } from '../utils/books';
+import '../styles/global.css';
+
+// ── Load data ─────────────────────────────────────────────
+const raw = yaml.load(
+  readFileSync(join(process.cwd(), 'src/data/books.yaml'), 'utf8')
+) as { books: Omit<Book, 'slug' | 'hasCover' | 'coverUrl'>[] };
+
+const coversDir = join(process.cwd(), 'public/covers');
+const coverSet = existsSync(coversDir)
+  ? new Set(readdirSync(coversDir).map(f => f.replace(/\.jpg$/, '')))
+  : new Set<string>();
+
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const books: Book[] = raw.books.map(b => {
+  const slug = slugify(b.title);
+  const hasCover = coverSet.has(slug);
+  return {
+    ...b,
+    medium: b.medium as Medium,
+    categories: b.categories as Category[],
+    slug,
+    hasCover,
+    coverUrl: hasCover ? `${BASE}/covers/${slug}.jpg` : null,
+  };
+});
+
+// Sort A–Z by author
+const sortedBooks = [...books].sort((a, b) =>
+  a.author.localeCompare(b.author, undefined, { sensitivity: 'base' })
+);
+
+// Unique categories and years for filters
+const allCategories = [...new Set(books.flatMap(b => b.categories))].sort() as string[];
+const allYears = [...new Set(books.map(b => b.year_read))].sort((a, b) => b - a);
+---
+
+<Layout
+  title="All Books — Drew's Library"
+  description="Every book Drew has read — searchable and filterable by category and year."
+>
+  <!-- Compact hero -->
+  <header style="position:relative;z-index:1;padding:5rem 2rem 2rem;text-align:center;">
+    <h1 style="font-family:'Inter',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-0.035em;color:var(--c-text);">All Books</h1>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:0.875rem;color:var(--c-purple);margin-top:0.5rem;letter-spacing:0.08em;" id="books-count">{sortedBooks.length} books · A–Z by author</p>
+  </header>
+
+  <!-- Nav (back to Library + no section anchors) -->
+  <Nav links={[{ href: `${BASE}/`, label: '← Library' }]} />
+
+  <!-- Controls: search + filters -->
+  <div style="position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:2rem 2rem 1rem;">
+
+    <!-- Search -->
+    <div class="books-search-wrap">
+      <svg class="books-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input
+        id="books-search"
+        type="search"
+        class="books-search"
+        placeholder="Search title or author…"
+        aria-label="Search books by title or author"
+        autocomplete="off"
+      />
+    </div>
+
+    <!-- Category filter -->
+    <div class="filter-row">
+      <span class="filter-label">Category</span>
+      <div class="filter-pills">
+        <button class="filter-pill filter-pill--active" data-filter-type="cat" data-filter-val="">All</button>
+        {allCategories.map(cat => (
+          <button
+            class="filter-pill"
+            data-filter-type="cat"
+            data-filter-val={cat}
+            style={`--pill-color:${CATEGORY_COLORS[cat] ?? '#334155'};`}
+          >{cat}</button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Year filter -->
+    <div class="filter-row" style="margin-top:0.75rem;">
+      <span class="filter-label">Year</span>
+      <div class="filter-pills">
+        <button class="filter-pill filter-pill--active" data-filter-type="year" data-filter-val="">All Years</button>
+        {allYears.map(year => (
+          <button class="filter-pill" data-filter-type="year" data-filter-val={String(year)}>{year}</button>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Books grid -->
+  <div id="books-grid" class="all-books-grid" style="position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:0 2rem 5rem;">
+    {sortedBooks.map(book => {
+      const bg = categoryColor(book.categories);
+      const bookData = JSON.stringify({
+        title: book.title, author: book.author, year_read: book.year_read,
+        categories: book.categories, medium: book.medium,
+        hasCover: book.hasCover, coverUrl: book.coverUrl, notes: book.notes,
+      });
+      return (
+        <div
+          class="all-book-card"
+          role="button"
+          tabindex="0"
+          aria-label={`${book.title} by ${book.author}`}
+          data-book={bookData}
+          data-title={book.title.toLowerCase()}
+          data-author={book.author.toLowerCase()}
+          data-cats={book.categories.join(',')}
+          data-year={String(book.year_read)}
+        >
+          <div class="all-book-cover-wrap">
+            {book.hasCover ? (
+              <img
+                src={book.coverUrl!}
+                alt={`Cover of ${book.title}`}
+                class="all-book-img"
+                loading="lazy"
+              />
+            ) : (
+              <div class="all-book-placeholder" style={`background-color:${bg};`}>
+                <span>{book.title}</span>
+              </div>
+            )}
+          </div>
+          <div class="all-book-info">
+            <p class="all-book-title">{book.title}</p>
+            <p class="all-book-author">{book.author.split(',')[0]}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:5px;">
+              {book.categories.map(cat => (
+                <span class="category-badge" style={`background-color:${CATEGORY_COLORS[cat] ?? '#334155'};font-size:0.55rem;`}>{cat}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  <!-- Empty state -->
+  <div id="books-empty" style="display:none;position:relative;z-index:1;text-align:center;padding:4rem 2rem;">
+    <p style="font-size:1.1rem;font-weight:500;color:var(--c-text);margin-bottom:0.5rem;">No books found</p>
+    <p style="font-size:0.875rem;color:var(--c-text-2);">Try a different search or filter.</p>
+  </div>
+</Layout>
+
+<script>
+  const searchEl  = document.getElementById('books-search') as HTMLInputElement;
+  const grid      = document.getElementById('books-grid')!;
+  const emptyEl   = document.getElementById('books-empty')!;
+  const countEl   = document.getElementById('books-count')!;
+  const cards     = Array.from(grid.querySelectorAll<HTMLElement>('.all-book-card'));
+
+  let query   = '';
+  let cat     = '';
+  let year    = '';
+
+  // Open modal on card click / keypress
+  cards.forEach(card => {
+    const open = () => (window as any).openBookModal?.(JSON.parse(card.dataset.book ?? '{}'));
+    card.addEventListener('click', open);
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+
+  // Search
+  searchEl.addEventListener('input', () => {
+    query = searchEl.value.toLowerCase().trim();
+    applyFilters();
+  });
+
+  // Category + year filter pills
+  document.querySelectorAll<HTMLElement>('.filter-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type = btn.dataset.filterType!;
+      const val  = btn.dataset.filterVal!;
+
+      // Toggle active within the same group
+      document.querySelectorAll<HTMLElement>(`.filter-pill[data-filter-type="${type}"]`)
+        .forEach(b => b.classList.remove('filter-pill--active'));
+      btn.classList.add('filter-pill--active');
+
+      if (type === 'cat')  cat  = val;
+      if (type === 'year') year = val;
+      applyFilters();
+    });
+  });
+
+  function applyFilters() {
+    let visible = 0;
+    cards.forEach(card => {
+      const matchQ    = !query || card.dataset.title!.includes(query) || card.dataset.author!.includes(query);
+      const matchCat  = !cat  || card.dataset.cats!.split(',').includes(cat);
+      const matchYear = !year || card.dataset.year === year;
+      const show = matchQ && matchCat && matchYear;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    emptyEl.style.display   = visible === 0 ? '' : 'none';
+    grid.style.display      = visible === 0 ? 'none' : '';
+    countEl.textContent     = `${visible} book${visible !== 1 ? 's' : ''} · A–Z by author`;
+  }
+</script>

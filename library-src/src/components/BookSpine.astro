@@ -1,0 +1,60 @@
+---
+import type { Book } from '../utils/books';
+import { categoryColor, spineHeight, MEDIUM_ICONS } from '../utils/books';
+
+export interface Props {
+  book: Book;
+}
+
+const { book } = Astro.props;
+
+const bg = categoryColor(book.categories);
+const height = spineHeight(book.medium);
+const isAudio = book.medium === 'audiobook';
+const isEbook = book.medium === 'ebook';
+const showAuthor = height >= 30;
+const titleSize = height >= 30 ? '11px' : height >= 24 ? '10px' : '9px';
+const authorSize = '9px';
+
+// Serialise only what the modal needs
+const bookData = JSON.stringify({
+  title: book.title,
+  author: book.author,
+  year_read: book.year_read,
+  categories: book.categories,
+  medium: book.medium,
+  hasCover: book.hasCover,
+  coverUrl: book.coverUrl,
+  notes: book.notes,
+});
+---
+
+<div
+  class="book-spine"
+  role="button"
+  tabindex="0"
+  aria-label={`${book.title} by ${book.author}`}
+  data-book={bookData}
+  data-spine-cats={book.categories.join(',')}
+  style={`background-color:${bg};height:${height}px;`}
+>
+  <span class="spine-title" style={`font-size:${titleSize};`}>{book.title}</span>
+  {showAuthor && (
+    <span class="spine-author" style={`font-size:${authorSize};`}>{book.author.split(',')[0]}</span>
+  )}
+  {(isAudio || isEbook) && (
+    <span class="spine-medium-dot" style="background:rgba(255,255,255,0.5);" title={book.medium}></span>
+  )}
+</div>
+
+<script>
+  // Delegate spine click/keypress up to the modal handler defined in index.astro
+  document.querySelectorAll<HTMLElement>('.book-spine').forEach(el => {
+    const open = () => {
+      const data = JSON.parse(el.dataset.book ?? '{}');
+      (window as any).openBookModal?.(data);
+    };
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  });
+</script>

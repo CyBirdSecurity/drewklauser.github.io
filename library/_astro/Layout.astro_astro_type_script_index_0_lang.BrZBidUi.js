@@ -1,0 +1,1 @@
+document.getElementById("book-modal")?.addEventListener("click",function(e){e.target===this&&this.close()});document.addEventListener("keydown",e=>{e.key==="Escape"&&document.getElementById("book-modal")?.close()});

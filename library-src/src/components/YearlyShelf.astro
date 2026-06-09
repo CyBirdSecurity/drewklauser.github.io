@@ -1,0 +1,132 @@
+---
+import type { Book } from '../utils/books';
+import { categoryColor } from '../utils/books';
+
+export interface Props {
+  booksByYear: Record<number, Book[]>;
+  years: number[];
+}
+
+const { booksByYear, years } = Astro.props;
+
+// Descending year order (most recent first)
+const sortedYears = [...years].sort((a, b) => b - a);
+
+const categoryLegend = [
+  ['Biography',    '#8B4513'],
+  ['Business',     '#1e3f8c'],
+  ['Cybersecurity','#065f46'],
+  ['Fiction',      '#4c1d95'],
+  ['Finance',      '#92400e'],
+  ['Leadership',   '#991b1b'],
+  ['Management',   '#1e3a8a'],
+  ['Productivity', '#9a3412'],
+  ['Science',      '#075985'],
+  ['Self-Help',    '#14532d'],
+  ['Sports',       '#15803d'],
+  ['Technology',   '#334155'],
+] as const;
+---
+
+<section id="years" class="section-alt" style="position:relative;z-index:1;">
+  <div class="section-container" style="padding-bottom:5rem;">
+    <p class="section-eyebrow">Year by Year</p>
+    <h2 class="section-heading">A shelf for every year</h2>
+    <div class="section-divider"></div>
+
+    <div class="yearly-shelves">
+      {sortedYears.map(year => {
+        const books = booksByYear[year];
+        return (
+          <div class="shelf-row" data-year={year}>
+            <div class="shelf-header">
+              <span class="shelf-year">{year}</span>
+              <span class="shelf-count">{books.length} {books.length === 1 ? 'book' : 'books'}</span>
+            </div>
+            <div class="shelf-books">
+              {books.map(book => {
+                const bg = categoryColor(book.categories);
+                const bookData = JSON.stringify({
+                  title: book.title, author: book.author, year_read: book.year_read,
+                  categories: book.categories, medium: book.medium,
+                  hasCover: book.hasCover, coverUrl: book.coverUrl, notes: book.notes,
+                });
+                return (
+                  <div class="shelf-book" role="button" tabindex="0"
+                    aria-label={`${book.title} by ${book.author}`}
+                    data-book={bookData}
+                    data-shelf-cats={book.categories.join(',')}>
+                    {book.hasCover ? (
+                      <img src={book.coverUrl!} alt={`Cover of ${book.title}`}
+                        style="display:block;width:72px;height:108px;object-fit:cover;border-radius:1px 4px 4px 1px;" />
+                    ) : (
+                      <div class="shelf-book-placeholder" style={`background-color:${bg};`}>
+                        <span>{book.title}</span>
+                      </div>
+                    )}
+                    <div class="shelf-book-spine-edge" style={`background:linear-gradient(180deg,${bg}cc 0%,${bg} 100%);`}></div>
+                  </div>
+                );
+              })}
+            </div>
+            <div class="wood-shelf"></div>
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- Category filter -->
+    <div style="margin-top:3rem;display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-text-2);margin-right:0.5rem;">Filter</span>
+      {categoryLegend.map(([name, color]) => (
+        <button
+          class="category-badge category-filter-btn"
+          data-filter-cat={name}
+          style={`background-color:${color};cursor:pointer;border:none;`}
+        >{name}</button>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  let activeCategory: string | null = null;
+
+  const filterBtns = document.querySelectorAll<HTMLElement>('.category-filter-btn');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.filterCat ?? null;
+      activeCategory = activeCategory === cat ? null : cat;
+      applyFilter();
+    });
+  });
+
+  function applyFilter() {
+    filterBtns.forEach(btn => {
+      const isActive = btn.dataset.filterCat === activeCategory;
+      btn.style.opacity = activeCategory === null || isActive ? '1' : '0.3';
+      btn.style.outline = isActive ? '2px solid rgba(255,255,255,0.7)' : 'none';
+      btn.style.outlineOffset = '2px';
+    });
+
+    const shelfRows = document.querySelectorAll<HTMLElement>('#years .shelf-row');
+    shelfRows.forEach(row => {
+      const books = row.querySelectorAll<HTMLElement>('.shelf-book');
+      let visible = 0;
+      books.forEach(book => {
+        const cats = (book.dataset.shelfCats ?? '').split(',');
+        const show = activeCategory === null || cats.includes(activeCategory);
+        book.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      row.style.display = visible === 0 ? 'none' : '';
+    });
+  }
+
+  document.querySelectorAll<HTMLElement>('#years .shelf-book').forEach(el => {
+    const open = () => (window as any).openBookModal?.(JSON.parse(el.dataset.book ?? '{}'));
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  });
+</script>

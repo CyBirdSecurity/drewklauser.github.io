@@ -1,0 +1,74 @@
+---
+import type { Book } from '../utils/books';
+import { categoryColor, CATEGORY_COLORS } from '../utils/books';
+
+export interface Props {
+  books: Book[];
+}
+
+const { books } = Astro.props;
+---
+
+<section id="top10" style="position:relative;z-index:1;">
+  <div class="section-container">
+    <p class="section-eyebrow">Top 5</p>
+    <h2 class="section-heading">Most Influential Books</h2>
+    <div class="section-divider"></div>
+    <p class="section-subheading">Books that changed how I think</p>
+
+    {books.length === 0 ? (
+      <div style="padding:3rem 0;color:var(--c-text-2);">
+        <p style="font-size:1.1rem;font-weight:500;color:var(--c-text);margin-bottom:0.5rem;">Rankings coming soon</p>
+        <p style="font-size:0.875rem;">Set <code style="background:var(--c-bg-card);border:1px solid var(--c-border);padding:1px 8px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;">ranking: 1</code> through <code style="background:var(--c-bg-card);border:1px solid var(--c-border);padding:1px 8px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;">5</code> in books.yaml.</p>
+      </div>
+    ) : (
+      <div style="display:flex;flex-wrap:wrap;gap:2.5rem;align-items:flex-end;">
+        {books.map(book => {
+          const bg = categoryColor(book.categories);
+          const bookData = JSON.stringify({
+            title: book.title, author: book.author, year_read: book.year_read,
+            categories: book.categories, medium: book.medium,
+            hasCover: book.hasCover, coverUrl: book.coverUrl, notes: book.notes,
+          });
+          return (
+            <div class="top5-item" role="button" tabindex="0"
+              aria-label={`#${book.ranking} — ${book.title} by ${book.author}`}
+              data-book={bookData}>
+              <div style="position:relative;">
+                <!-- Rank badge -->
+                <div class="top5-rank-badge">#{book.ranking}</div>
+
+                <!-- Cover with 3D tilt -->
+                <div class="reading-cover">
+                  <div class="reading-spine-edge" style={`background:linear-gradient(180deg,${bg}dd 0%,${bg} 100%);`}></div>
+                  {book.hasCover ? (
+                    <img src={book.coverUrl!} alt={`Cover of ${book.title}`}
+                      style="display:block;width:140px;height:210px;object-fit:cover;border-radius:2px 6px 6px 2px;" />
+                  ) : (
+                    <div class="reading-cover-placeholder"
+                      style={`background-color:${bg};width:140px;height:210px;`}>
+                      <span style="font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:600;line-height:1.3;color:rgba(248,250,252,0.85);text-align:center;">{book.title}</span>
+                      <span style="font-size:0.65rem;color:rgba(248,250,252,0.45);margin-top:4px;">{book.author.split(',')[0]}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div style="text-align:center;max-width:150px;margin-top:0.75rem;">
+                <p style="font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:600;color:var(--c-text);line-height:1.3;margin-bottom:3px;">{book.title}</p>
+                <p style="font-size:0.75rem;color:var(--c-text-2);">{book.author.split(',')[0]}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    )}
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('#top10 [data-book]').forEach(el => {
+    const open = () => (window as any).openBookModal?.(JSON.parse(el.dataset.book ?? '{}'));
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  });
+</script>

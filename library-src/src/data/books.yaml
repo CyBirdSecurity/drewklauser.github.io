@@ -1,0 +1,1196 @@
+books:
+  # ── 2018 ──────────────────────────────────────────────
+  - title: "How to Win Friends and Influence People"
+    author: "Dale Carnegie"
+    year_read: 2018
+    categories: [Self-Help]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  # ── 2020 ──────────────────────────────────────────────
+  - title: "The New One Minute Manager"
+    author: "Ken Blanchard, Spencer Johnson"
+    year_read: 2020
+    categories: [Management]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Sandworm"
+    author: "Andy Greenberg"
+    year_read: 2020
+    categories: [Cybersecurity]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Permanent Record"
+    author: "Edward Snowden"
+    year_read: 2020
+    categories: [Biography]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  # ── 2021 ──────────────────────────────────────────────
+  - title: "Work Optional"
+    author: "Tanja Hester"
+    year_read: 2021
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Secrets of Closing the Sale"
+    author: "Zig Ziglar"
+    year_read: 2021
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Simple Path to Wealth"
+    author: "JL Collins"
+    year_read: 2021
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Quit Like a Millionaire"
+    author: "Kristy Shen, Bryce Leung"
+    year_read: 2021
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "CISA Review Manual"
+    author: "ISACA"
+    year_read: 2021
+    categories: [Technology]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Obstacle Is the Way"
+    author: "Ryan Holiday"
+    year_read: 2021
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Leadership Vertigo"
+    author: "Max Brown"
+    year_read: 2021
+    categories: [Management]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Cybercrime and the Darknet"
+    author: "Cath Senker"
+    year_read: 2021
+    categories: [Cybersecurity]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Third Wave"
+    author: "Steve Case"
+    year_read: 2021
+    categories: [Technology]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "How to Be F*cking Awesome"
+    author: "Dan Meredith"
+    year_read: 2021
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Secret to Cybersecurity"
+    author: "Scott Augenbaum"
+    year_read: 2021
+    categories: [Cybersecurity]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Money Code"
+    author: "Joe Duran"
+    year_read: 2021
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Quantum Theory"
+    author: "Brian Clegg"
+    year_read: 2021
+    categories: [Science]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "60 Ways to Keep Your Brain Sharp"
+    author: "Bonnie Sparrman"
+    year_read: 2021
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Metasploit for Beginners"
+    author: "Sagar Rahalkar"
+    year_read: 2021
+    categories: [Cybersecurity]
+    medium: ebook
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Little Book of Common Sense Investing"
+    author: "John C. Bogle"
+    year_read: 2021
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Phoenix Project"
+    author: "Gene Kim, Kevin Behr, George Spafford"
+    year_read: 2021
+    categories: [Technology]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Scorecasters"
+    author: "Tobias Moskowitz, L. Jon Wertheim"
+    year_read: 2021
+    categories: [Sports]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Outliers"
+    author: "Malcolm Gladwell"
+    year_read: 2021
+    categories: [Business]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Memory Mastery"
+    author: "Harry Lorayne"
+    year_read: 2021
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Social Engineering: The Art of Human Hacking"
+    author: "Christopher Hadnagy"
+    year_read: 2021
+    categories: [Cybersecurity]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Science of Getting Rich"
+    author: "Wallace D. Wattles"
+    year_read: 2021
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Resilience Factor"
+    author: "Karen Reivich, Andrew Shatte"
+    year_read: 2021
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  # ── 2022 ──────────────────────────────────────────────
+  - title: "The CISO Evolution"
+    author: "Matthew K. Sharp, Kyriakos Kokkinos"
+    year_read: 2022
+    categories: [Cybersecurity]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Team Topologies"
+    author: "Matthew Skelton, Manuel Pais"
+    year_read: 2022
+    categories: [Technology, Leadership]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Radical Candor"
+    author: "Kim Scott"
+    year_read: 2022
+    categories: [Leadership]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Infinite Game"
+    author: "Simon Sinek"
+    year_read: 2022
+    categories: [Leadership]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Breaking and Entering"
+    author: "Jeremy N. Smith"
+    year_read: 2022
+    categories: [Cybersecurity]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Psychology of Money"
+    author: "Morgan Housel"
+    year_read: 2022
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Accelerate"
+    author: "Nicole Forsgren, Jez Humble, Gene Kim"
+    year_read: 2022
+    categories: [Technology]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Die with Zero"
+    author: "Bill Perkins"
+    year_read: 2022
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Turn the Ship Around!"
+    author: "L. David Marquet"
+    year_read: 2022
+    categories: [Leadership]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Almanack of Naval Ravikant"
+    author: "Eric Jorgenson"
+    year_read: 2022
+    categories: [Self-Help]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Rework"
+    author: "Jason Fried, David Heinemeier Hansson"
+    year_read: 2022
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Broke Millennial Talks Money"
+    author: "Erin Lowry"
+    year_read: 2022
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Business @ the Speed of Thought"
+    author: "Bill Gates"
+    year_read: 2022
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Never Split the Difference"
+    author: "Chris Voss"
+    year_read: 2022
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Think and Grow Rich"
+    author: "Napoleon Hill"
+    year_read: 2022
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Manager's Path"
+    author: "Camille Fournier"
+    year_read: 2022
+    categories: [Management]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Millionaire Next Door"
+    author: "Thomas J. Stanley, William D. Danko"
+    year_read: 2022
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Tax-Free Retirement"
+    author: "Patrick Kelly"
+    year_read: 2022
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The 4-Hour Body"
+    author: "Tim Ferriss"
+    year_read: 2022
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Option B"
+    author: "Sheryl Sandberg, Adam Grant"
+    year_read: 2022
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Good to Great"
+    author: "Jim Collins"
+    year_read: 2022
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Leadership Strategy and Tactics"
+    author: "Jocko Willink"
+    year_read: 2022
+    categories: [Leadership]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "A Random Walk Down Wall Street"
+    author: "Burton G. Malkiel"
+    year_read: 2022
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Art of Invisibility"
+    author: "Kevin Mitnick"
+    year_read: 2022
+    categories: [Cybersecurity]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "More Than a Hobby"
+    author: "David Green"
+    year_read: 2022
+    categories: [Biography]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The 5AM Club"
+    author: "Robin Sharma"
+    year_read: 2022
+    categories: [Productivity]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The 4-Hour Workweek"
+    author: "Tim Ferriss"
+    year_read: 2022
+    categories: [Productivity]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Monk Who Sold His Ferrari"
+    author: "Robin Sharma"
+    year_read: 2022
+    categories: [Self-Help]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Subtle Art of Not Giving a F*ck"
+    author: "Mark Manson"
+    year_read: 2022
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Mass Killers: Inside the Minds of Men Who Murder"
+    author: "David Krajicek"
+    year_read: 2022
+    categories: [Biography]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Atomic Habits"
+    author: "James Clear"
+    year_read: 2022
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: 1
+    notes: ""
+
+  - title: "The Unicorn Project"
+    author: "Gene Kim"
+    year_read: 2022
+    categories: [Technology]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Elon Musk"
+    author: "Ashlee Vance"
+    year_read: 2022
+    categories: [Biography]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "I Will Teach You to Be Rich"
+    author: "Ramit Sethi"
+    year_read: 2022
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: 2
+    notes: ""
+
+  - title: "The Pentester Blueprint"
+    author: "Phillip Wylie, Kim Crawley"
+    year_read: 2022
+    categories: [Cybersecurity]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Can't Hurt Me"
+    author: "David Goggins"
+    year_read: 2022
+    categories: [Self-Help]
+    medium: audiobook
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  # ── 2023 ──────────────────────────────────────────────
+  - title: "The First 90 Days"
+    author: "Michael Watkins"
+    year_read: 2023
+    categories: [Management]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Tipping Point"
+    author: "Malcolm Gladwell"
+    year_read: 2023
+    categories: [Business]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Extreme Ownership"
+    author: "Jocko Willink, Leif Babin"
+    year_read: 2023
+    categories: [Leadership]
+    medium: hardcover
+    in_progress: false
+    ranking: 5
+    notes: ""
+
+  - title: "Pitch Perfect"
+    author: "Bill McGowan"
+    year_read: 2023
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Money Magic"
+    author: "Laurence J. Kotlikoff"
+    year_read: 2023
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Get Good with Money"
+    author: "Tiffany Aliche"
+    year_read: 2023
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Dumb Things Smart People Do with Their Money"
+    author: "Jill Schlesinger"
+    year_read: 2023
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Zero to One"
+    author: "Peter Thiel, Blake Masters"
+    year_read: 2023
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Business Made Simple"
+    author: "Donald Miller"
+    year_read: 2023
+    categories: [Business]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Lean Startup"
+    author: "Eric Ries"
+    year_read: 2023
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Power of Full Engagement"
+    author: "Jim Loehr, Tony Schwartz"
+    year_read: 2023
+    categories: [Productivity]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Cyber Defense Matrix"
+    author: "Sounil Yu"
+    year_read: 2023
+    categories: [Cybersecurity]
+    medium: ebook
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Super Founders"
+    author: "Ali Tamaseb"
+    year_read: 2023
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Upstarts"
+    author: "Brad Stone"
+    year_read: 2023
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Proximity Principle"
+    author: "Ken Coleman"
+    year_read: 2023
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Dichotomy of Leadership"
+    author: "Jocko Willink, Leif Babin"
+    year_read: 2023
+    categories: [Leadership]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Agile Retrospectives"
+    author: "Esther Derby, Diana Larsen"
+    year_read: 2023
+    categories: [Management]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Home Buying 101"
+    author: "Jon Gorey"
+    year_read: 2023
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Power of Zero"
+    author: "David McKnight"
+    year_read: 2023
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Switch"
+    author: "Chip Heath, Dan Heath"
+    year_read: 2023
+    categories: [Self-Help]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Silo Effect"
+    author: "Gillian Tett"
+    year_read: 2023
+    categories: [Business]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Your Money, Your Marriage"
+    author: "Cherie Lowe, Brian Lowe"
+    year_read: 2023
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "No-Drama Leadership"
+    author: "Marlene Chism"
+    year_read: 2023
+    categories: [Management]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Million Dollar Maverick"
+    author: "Alan Weiss"
+    year_read: 2023
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  # ── 2024 ──────────────────────────────────────────────
+  - title: "Chaos Monkeys"
+    author: "Antonio García Martínez"
+    year_read: 2024
+    categories: [Technology]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Playing with FIRE"
+    author: "Scott Rieckens"
+    year_read: 2024
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "More Wealth, Less Taxes"
+    author: "Lance Belline"
+    year_read: 2024
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "What to Do with Everything You Own to Leave the Legacy You Want"
+    author: "Marni Jameson"
+    year_read: 2024
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Age of A.I."
+    author: "Henry Kissinger, Eric Schmidt, Daniel Huttenlocher"
+    year_read: 2024
+    categories: [Technology]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Rich AF"
+    author: "Vivian Tu"
+    year_read: 2024
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Pathfinders"
+    author: "J.L. Collins"
+    year_read: 2024
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Building a Second Brain"
+    author: "Tiago Forte"
+    year_read: 2024
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  # ── 2025 ──────────────────────────────────────────────
+  - title: "Tax Planning To and Through Early Retirement"
+    author: "Cody Garrett"
+    year_read: 2025
+    categories: [Finance]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Thinking in Bets"
+    author: "Annie Duke"
+    year_read: 2025
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Options Trading 101"
+    author: "James Royal"
+    year_read: 2025
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "A Hacker's Mind"
+    author: "Bruce Schneier"
+    year_read: 2025
+    categories: [Cybersecurity]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Principles of Building AI Agents"
+    author: "Sam Bhagwat"
+    year_read: 2025
+    categories: [Technology]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Steal the Show"
+    author: "Michael Port"
+    year_read: 2025
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Team Genius"
+    author: "Rich Karlgaard, Michael Malone"
+    year_read: 2025
+    categories: [Leadership]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Hacking Executive Leadership"
+    author: "Emily Sander"
+    year_read: 2025
+    categories: [Leadership]
+    medium: audiobook
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Hidden Potential"
+    author: "Adam Grant"
+    year_read: 2025
+    categories: [Leadership]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Wealth Ladder"
+    author: "Nick Maggiulli"
+    year_read: 2025
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Blitzscaling"
+    author: "Reid Hoffman, Chris Yeh"
+    year_read: 2025
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Millionaire Mission"
+    author: "Brian Preston"
+    year_read: 2025
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The 5 Types of Wealth"
+    author: "Sahil Bloom"
+    year_read: 2025
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: 4
+    notes: ""
+
+  - title: "Smart, Not Loud"
+    author: "Jessica Chen"
+    year_read: 2025
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Warren and Bill"
+    author: "Anthony McCarten"
+    year_read: 2025
+    categories: [Biography]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Rich Girl Nation"
+    author: "Katie Gatti Tassin"
+    year_read: 2025
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Principles"
+    author: "Ray Dalio"
+    year_read: 2025
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "When They Win, You Win"
+    author: "Russ Laraway"
+    year_read: 2025
+    categories: [Leadership]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Multipliers"
+    author: "Liz Wiseman"
+    year_read: 2025
+    categories: [Leadership]
+    medium: hardcover
+    in_progress: false
+    ranking: 3
+    notes: ""
+
+  - title: "Sunrise on the Reaping"
+    author: "Suzanne Collins"
+    year_read: 2025
+    categories: [Fiction]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Just the Good Stuff"
+    author: "Jim VandeHei"
+    year_read: 2025
+    categories: [Self-Help]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Working Backwards"
+    author: "Colin Bryar, Bill Carr"
+    year_read: 2025
+    categories: [Business]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Stacked"
+    author: "Joe Saul-Sehy, Emily Guy Birken"
+    year_read: 2025
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Launching Financial Grownups"
+    author: "Bobbi Rebell"
+    year_read: 2025
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Simple Road to Financial Freedom"
+    author: "Mark Schlipman, Steve Short"
+    year_read: 2025
+    categories: [Finance]
+    medium: ebook
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  # ── 2026 ──────────────────────────────────────────────
+  - title: "The Minimum Method"
+    author: "Joey Thurman"
+    year_read: 2026
+    categories: [Self-Help]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+    
+  - title: "Pappyland"
+    author: "Wright Thompson"
+    year_read: 2026
+    categories: [Biography]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Cybersecurity Playbook"
+    author: "Allison Cerra"
+    year_read: 2026
+    categories: [Cybersecurity]
+    medium: audiobook
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "GRC Engineering"
+    author: "AJ Yawn"
+    year_read: 2026
+    categories: [Cybersecurity]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "A Richer Retirement"
+    author: "William Bengen"
+    year_read: 2026
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The Latte Factor"
+    author: "David Bach"
+    year_read: 2026
+    categories: [Finance]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Stop Letting Everything Affect You"
+    author: "Daniel Chidiac"
+    year_read: 2026
+    categories: [Self-Help]
+    medium: audiobook
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Start with Why"
+    author: "Simon Sinek"
+    year_read: 2026
+    categories: [Leadership]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "The First Two Hours"
+    author: "Donna McGeorge"
+    year_read: 2026
+    categories: [Productivity]
+    medium: audiobook
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Job Moves"
+    author: "Ethan Bernstein"
+    year_read: 2026
+    categories: [Management]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Mastery"
+    author: "Tony Wagner, Urlik Juul Christiansen"
+    year_read: 2026
+    categories: [Management]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Screw Business as Usual"
+    author: "Richard Branson"
+    year_read: 2026
+    categories: [Management]
+    medium: paperback
+    in_progress: true
+    ranking: null
+    notes: ""

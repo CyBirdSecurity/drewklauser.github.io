@@ -1,0 +1,71 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Drew's Library",
+  description = "A personal reading log — books that shaped my thinking across cybersecurity, finance, leadership, and beyond.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23059669'/><text y='22' x='4' font-size='16' font-family='monospace' fill='white'>DK</text></svg>" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://drewklauser.com/library" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Background mesh orbs -->
+    <div class="bg-mesh" aria-hidden="true">
+      <div class="mesh-orb mesh-orb--purple"></div>
+      <div class="mesh-orb mesh-orb--blue"></div>
+      <div class="mesh-orb mesh-orb--cyan"></div>
+    </div>
+
+    <slot />
+
+    <!-- Book detail modal (single instance, populated by JS) -->
+    <dialog id="book-modal" class="book-modal" aria-label="Book details">
+      <div class="modal-inner">
+        <button class="modal-close" aria-label="Close" onclick="document.getElementById('book-modal').close()">×</button>
+        <div class="modal-cover" id="modal-cover-wrap"></div>
+        <div style="flex:1;min-width:0;">
+          <div id="modal-categories" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0.75rem;"></div>
+          <h2 class="modal-title">
+            <a id="modal-title" target="_blank" rel="noopener noreferrer"
+               style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(5,150,105,0.25);transition:border-color 0.15s;"
+               onmouseover="this.style.borderColor='rgba(5,150,105,0.7)'"
+               onmouseout="this.style.borderColor='rgba(5,150,105,0.25)'"></a>
+          </h2>
+          <p class="modal-author" id="modal-author"></p>
+          <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:0.5rem;">
+            <span class="medium-badge" id="modal-medium"></span>
+            <span style="font-size:0.8rem;color:var(--c-text-2);" id="modal-year"></span>
+          </div>
+          <p id="modal-notes" style="margin-top:1rem;font-size:0.875rem;color:var(--c-text-2);line-height:1.6;display:none;"></p>
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      document.getElementById('book-modal')?.addEventListener('click', function(e) {
+        if (e.target === this) this.close();
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') (document.getElementById('book-modal') as HTMLDialogElement)?.close();
+      });
+    </script>
+  </body>
+</html>

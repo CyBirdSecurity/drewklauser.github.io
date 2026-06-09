@@ -1,0 +1,160 @@
+---
+import { readFileSync, readdirSync, existsSync } from 'fs';
+import { join } from 'path';
+import yaml from 'js-yaml';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import CurrentlyReading from '../components/CurrentlyReading.astro';
+import TopTen from '../components/TopTen.astro';
+import YearlyShelf from '../components/YearlyShelf.astro';
+import type { Book, Medium, Category } from '../utils/books';
+import { slugify } from '../utils/books';
+import '../styles/global.css';
+
+// ── Load data ────────────────────────────────────────────
+const raw = yaml.load(
+  readFileSync(join(process.cwd(), 'src/data/books.yaml'), 'utf8')
+) as { books: Omit<Book, 'slug' | 'hasCover' | 'coverUrl'>[] };
+
+const coversDir = join(process.cwd(), 'public/covers');
+const coverSet = existsSync(coversDir)
+  ? new Set(readdirSync(coversDir).map(f => f.replace(/\.jpg$/, '')))
+  : new Set<string>();
+
+// BASE_URL is '/library/' when base is set to '/library'
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const books: Book[] = raw.books.map(b => {
+  const slug = slugify(b.title);
+  const hasCover = coverSet.has(slug);
+  return {
+    ...b,
+    medium: b.medium as Medium,
+    categories: b.categories as Category[],
+    slug,
+    hasCover,
+    coverUrl: hasCover ? `${BASE}/covers/${slug}.jpg` : null,
+  };
+});
+
+// ── Derived views ─────────────────────────────────────────
+const currentlyReading = books.filter(b => b.in_progress);
+
+const topTen = books
+  .filter(b => b.ranking !== null && b.ranking >= 1 && b.ranking <= 10)
+  .sort((a, b) => (a.ranking ?? 99) - (b.ranking ?? 99));
+
+const booksByYear = books.reduce<Record<number, Book[]>>((acc, book) => {
+  (acc[book.year_read] ??= []).push(book);
+  return acc;
+}, {});
+
+const years = Object.keys(booksByYear).map(Number).sort((a, b) => a - b);
+
+const totalBooks = books.length;
+const totalYears = years.length;
+---
+
+<Layout>
+  <!-- Hero -->
+  <header class="hero">
+    <h1 class="hero-title">Drew's Library</h1>
+    <p class="hero-subtitle">{totalBooks} books across {totalYears} years</p>
+    <a href={`${BASE}/all`} style="display:inline-flex;align-items:center;gap:6px;margin-top:1.25rem;font-family:'JetBrains Mono',monospace;font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--c-purple);text-decoration:none;border:1px solid rgba(5,150,105,0.3);background:rgba(5,150,105,0.06);padding:6px 14px;border-radius:999px;transition:background 0.15s,border-color 0.15s;"
+      onmouseover="this.style.background='rgba(5,150,105,0.12)';this.style.borderColor='rgba(5,150,105,0.5)'"
+      onmouseout="this.style.background='rgba(5,150,105,0.06)';this.style.borderColor='rgba(5,150,105,0.3)'">
+      Browse all books
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </header>
+
+  <!-- Sticky nav -->
+  <Nav />
+
+  <!-- Currently Reading -->
+  <CurrentlyReading books={currentlyReading} />
+
+  <!-- Thin separator -->
+  <div style="height:1px;background:var(--c-border);margin:0 2rem;position:relative;z-index:1;"></div>
+
+  <!-- Top 10 -->
+  <TopTen books={topTen} />
+
+  <!-- Thin separator -->
+  <div style="height:1px;background:var(--c-border);margin:0 2rem;position:relative;z-index:1;"></div>
+
+  <!-- Year by Year -->
+  <YearlyShelf booksByYear={booksByYear} years={years} />
+
+  <!-- Footer -->
+  <footer style="position:relative;z-index:1;text-align:center;padding:2rem;border-top:1px solid var(--c-border);">
+    <p style="font-size:0.75rem;font-family:'JetBrains Mono',monospace;color:var(--c-text-2);letter-spacing:0.06em;">
+      Updated whenever a new book is finished · <a href="/" style="color:var(--c-purple);text-decoration:none;">drewklauser.com</a>
+    </p>
+  </footer>
+</Layout>
+
+<script define:vars={{ books }}>
+  // ── Global modal handler ─────────────────────────────────
+  const CATEGORY_COLORS = {
+    Biography:    '#8B4513',
+    Business:     '#1e3f8c',
+    Cybersecurity:'#065f46',
+    Fiction:      '#4c1d95',
+    Finance:      '#92400e',
+    Leadership:   '#991b1b',
+    Management:   '#1e3a8a',
+    Productivity: '#9a3412',
+    Science:      '#075985',
+    'Self-Help':  '#14532d',
+    Sports:       '#15803d',
+    Technology:   '#334155',
+  };
+
+  const MEDIUM_ICONS = {
+    hardcover: '📖', paperback: '📄', audiobook: '🎧', ebook: '📱',
+  };
+
+  window.openBookModal = function(book) {
+    const modal = document.getElementById('book-modal');
+    if (!modal) return;
+
+    // Cover
+    const coverWrap = document.getElementById('modal-cover-wrap');
+    if (coverWrap) {
+      if (book.hasCover && book.coverUrl) {
+        coverWrap.innerHTML = `<img src="${book.coverUrl}" alt="Cover of ${book.title}" style="width:100%;display:block;border-radius:2px 4px 4px 2px;box-shadow:4px 4px 20px rgba(0,0,0,0.4);" />`;
+      } else {
+        const bg = CATEGORY_COLORS[book.categories?.[0]] ?? '#5C4033';
+        coverWrap.innerHTML = `
+          <div class="modal-cover-placeholder" style="background-color:${bg};">
+            ${book.title}
+          </div>`;
+      }
+    }
+
+    // Categories
+    const catsEl = document.getElementById('modal-categories');
+    if (catsEl) {
+      catsEl.innerHTML = (book.categories ?? []).map(cat => {
+        const color = CATEGORY_COLORS[cat] ?? '#5C4033';
+        return `<span class="category-badge" style="background-color:${color};">${cat}</span>`;
+      }).join('');
+    }
+
+    const titleEl = document.getElementById('modal-title');
+    titleEl.textContent = book.title;
+    titleEl.href = `https://www.amazon.com/s?k=${encodeURIComponent(book.title + ' ' + book.author)}`;
+    document.getElementById('modal-author').textContent = book.author;
+    document.getElementById('modal-medium').textContent = `${MEDIUM_ICONS[book.medium] ?? ''} ${book.medium}`;
+    document.getElementById('modal-year').textContent = `Read in ${book.year_read}`;
+
+    const notesEl = document.getElementById('modal-notes');
+    if (notesEl) {
+      notesEl.textContent = book.notes ?? '';
+      notesEl.style.display = book.notes ? 'block' : 'none';
+    }
+
+    modal.showModal();
+  };
+</script>
