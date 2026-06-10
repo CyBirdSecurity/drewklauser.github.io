@@ -58,7 +58,12 @@ function normalizeIsbns(isbns) {
 async function isbnsFromGoogleBooks(title, author) {
   const q = encodeURIComponent(`intitle:${title} inauthor:${firstAuthor(author)}`);
   const url = `https://www.googleapis.com/books/v1/volumes?q=${q}&maxResults=5&fields=items(volumeInfo(title,industryIdentifiers))`;
-  const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+  let res;
+  for (let attempt = 0; ; attempt++) {
+    res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+    if (res.status !== 429 || attempt >= 4) break;
+    await sleep(2000 * 2 ** attempt);
+  }
   if (!res.ok) throw new Error(`gbooks ${res.status}`);
   const data = await res.json();
   const isbns = [];
