@@ -20,7 +20,7 @@ jobs:
           node-version: 22
       - run: npm ci
         working-directory: library-src
-      - run: node scripts/fetch-covers.mjs
+      - run: node scripts/fetch-covers-amazon.mjs
         working-directory: library-src
       - name: Commit new covers
         run: |
