@@ -18,6 +18,29 @@ const BOOKS_FILE = join(ROOT, 'src', 'data', 'books.yaml');
 const DELAY_MS = 600;
 const MIN_BYTES = 5000; // Amazon returns a tiny GIF/JPG for missing covers
 
+// Known ISBN-10s/ASINs (from each book's Amazon listing), keyed by slug.
+// Used when the metadata APIs are unavailable or rate-limited.
+const ISBN_OVERRIDES = {
+  'the-secret-to-cybersecurity': ['1948677083'],
+  'the-ciso-evolution': ['1119782481'],
+  'the-5am-club': ['1443456624'],
+  'mass-killers-inside-the-minds-of-men-who-murder': ['1788883446'],
+  'cant-hurt-me': ['1544512287'],
+  'cyber-defense-matrix': ['B09QP2GSGZ'],
+  'nodrama-leadership': ['1629560618'],
+  'principles-of-building-ai-agents': ['B0DYH5GHDD'],
+  'hacking-executive-leadership': ['1954024142'],
+  'the-wealth-ladder': ['0593854039'],
+  'smart-not-loud': ['0593717686'],
+  'the-simple-road-to-financial-freedom': ['1962656446'],
+  'the-cybersecurity-playbook': ['1119442192'],
+  'grc-engineering': ['B0FDLZX4BP'],
+  'a-richer-retirement': ['1394343175'],
+  'stop-letting-everything-affect-you': ['1764110803'],
+  'the-first-two-hours': ['073035959X'],
+  'mastery': ['1541601920'],
+};
+
 function slugify(title) {
   return title
     .toLowerCase()
@@ -133,20 +156,22 @@ async function main() {
     process.stdout.write(`Fetching: ${book.title} … `);
 
     try {
-      let isbns = [];
+      let isbns = ISBN_OVERRIDES[slug] ?? [];
       let olCoverId = null;
       const diag = [];
 
-      try {
-        isbns = await isbnsFromGoogleBooks(book.title, book.author);
-      } catch (e) { diag.push(e.message); }
+      if (isbns.length === 0) {
+        try {
+          isbns = await isbnsFromGoogleBooks(book.title, book.author);
+        } catch (e) { diag.push(e.message); }
 
-      const ol = await openLibrarySearch(book.title, book.author).catch(e => {
-        diag.push(e.message);
-        return { isbns: [], coverId: null };
-      });
-      isbns = [...new Set([...isbns, ...ol.isbns])];
-      olCoverId = ol.coverId;
+        const ol = await openLibrarySearch(book.title, book.author).catch(e => {
+          diag.push(e.message);
+          return { isbns: [], coverId: null };
+        });
+        isbns = [...new Set([...isbns, ...ol.isbns])];
+        olCoverId = ol.coverId;
+      }
 
       let img = null;
       let source = null;
