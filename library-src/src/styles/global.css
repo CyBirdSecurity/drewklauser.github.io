@@ -731,6 +731,26 @@ dialog.book-modal::backdrop {
 }
 
 /* ── Top 5 cover-art layout ──────────────────────────────── */
+.top5-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .top5-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+  }
+  .top5-grid .top5-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
 .top5-item {
   display: flex;
   flex-direction: column;

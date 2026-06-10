@@ -22,7 +22,7 @@ const { books } = Astro.props;
         <p style="font-size:0.875rem;">Set <code style="background:var(--c-bg-card);border:1px solid var(--c-border);padding:1px 8px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;">ranking: 1</code> through <code style="background:var(--c-bg-card);border:1px solid var(--c-border);padding:1px 8px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;">5</code> in books.yaml.</p>
       </div>
     ) : (
-      <div style="display:flex;flex-wrap:wrap;gap:2.5rem;align-items:flex-end;">
+      <div class="top5-grid">
         {books.map(book => {
           const bg = categoryColor(book.categories);
           const bookData = JSON.stringify({
