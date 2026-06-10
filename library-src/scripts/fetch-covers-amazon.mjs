@@ -21,6 +21,7 @@ const MIN_BYTES = 5000; // Amazon returns a tiny GIF/JPG for missing covers
 // Known ISBN-10s/ASINs (from each book's Amazon listing), keyed by slug.
 // Used when the metadata APIs are unavailable or rate-limited.
 const ISBN_OVERRIDES = {
+  'the-4hour-body': ['030746363X'],
   'the-secret-to-cybersecurity': ['1948677083'],
   'the-ciso-evolution': ['1119782481'],
   'the-5am-club': ['1443456624'],
