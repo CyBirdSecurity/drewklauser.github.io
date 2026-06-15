@@ -40,18 +40,23 @@ const books: Book[] = raw.books.map(b => {
 // ── Derived views ─────────────────────────────────────────
 const currentlyReading = books.filter(b => b.in_progress);
 
-const topTen = books
+// A book that's still in progress lives only in "Currently Reading" — it
+// doesn't count toward a year's shelf (or the totals) until it's finished
+// and `in_progress` is flipped back to false.
+const finishedBooks = books.filter(b => !b.in_progress);
+
+const topTen = finishedBooks
   .filter(b => b.ranking !== null && b.ranking >= 1 && b.ranking <= 10)
   .sort((a, b) => (a.ranking ?? 99) - (b.ranking ?? 99));
 
-const booksByYear = books.reduce<Record<number, Book[]>>((acc, book) => {
+const booksByYear = finishedBooks.reduce<Record<number, Book[]>>((acc, book) => {
   (acc[book.year_read] ??= []).push(book);
   return acc;
 }, {});
 
 const years = Object.keys(booksByYear).map(Number).sort((a, b) => a - b);
 
-const totalBooks = books.length;
+const totalBooks = finishedBooks.length;
 const totalYears = years.length;
 ---
 
