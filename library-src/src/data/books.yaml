@@ -1186,6 +1186,15 @@ books:
     ranking: null
     notes: ""
 
+  - title: "Ikigai"
+    author: "Héctor García, Francesc Miralles"
+    year_read: 2026
+    categories: [Self-Help]
+    medium: audiobook
+    in_progress: false
+    ranking: null
+    notes: ""
+
   - title: "Screw Business as Usual"
     author: "Richard Branson"
     year_read: 2026
