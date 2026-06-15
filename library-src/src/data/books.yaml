@@ -324,7 +324,7 @@ books:
     categories: [Leadership]
     medium: hardcover
     in_progress: false
-    ranking: null
+    ranking: 2
     notes: ""
 
   - title: "The Almanack of Naval Ravikant"
@@ -477,7 +477,7 @@ books:
     categories: [Productivity]
     medium: paperback
     in_progress: false
-    ranking: null
+    ranking: 10
     notes: ""
 
   - title: "The 4-Hour Workweek"
@@ -549,7 +549,7 @@ books:
     categories: [Finance]
     medium: paperback
     in_progress: false
-    ranking: 2
+    ranking: 6
     notes: ""
 
   - title: "The Pentester Blueprint"
@@ -595,7 +595,7 @@ books:
     categories: [Leadership]
     medium: hardcover
     in_progress: false
-    ranking: 5
+    ranking: 4
     notes: ""
 
   - title: "Pitch Perfect"
@@ -703,7 +703,7 @@ books:
     categories: [Self-Help]
     medium: hardcover
     in_progress: false
-    ranking: null
+    ranking: 8
     notes: ""
 
   - title: "The Dichotomy of Leadership"
@@ -867,7 +867,7 @@ books:
     categories: [Finance]
     medium: paperback
     in_progress: false
-    ranking: null
+    ranking: 9
     notes: ""
 
   - title: "Thinking in Bets"
@@ -975,7 +975,7 @@ books:
     categories: [Self-Help]
     medium: hardcover
     in_progress: false
-    ranking: 4
+    ranking: 5
     notes: ""
 
   - title: "Smart, Not Loud"
@@ -1029,7 +1029,7 @@ books:
     categories: [Leadership]
     medium: hardcover
     in_progress: false
-    ranking: 3
+    ranking: 7
     notes: ""
 
   - title: "Sunrise on the Reaping"
@@ -1056,7 +1056,7 @@ books:
     categories: [Business]
     medium: hardcover
     in_progress: false
-    ranking: null
+    ranking: 3
     notes: ""
 
   - title: "Stacked"
