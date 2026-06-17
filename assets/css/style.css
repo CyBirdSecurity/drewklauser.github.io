@@ -730,7 +730,7 @@ strong { font-weight: 600; color: var(--c-text); }
 }
 
 /* ── Projects ─────────────────────────────────────────────────────────── */
-.projects { background: var(--c-bg); padding-top: 56px; }
+.projects { background: var(--c-bg); padding-top: 56px; padding-bottom: 56px; }
 .about { padding-bottom: 56px; }
 
 .projects-header {
@@ -909,6 +909,69 @@ strong { font-weight: 600; color: var(--c-text); }
   background: rgba(5, 150, 105, 0.14);
   border-color: rgba(5, 150, 105, 0.35);
   color: #047857;
+}
+
+/* ── Library Feature ─────────────────────────────────────────── */
+.library-card {
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.06) 0%, rgba(37, 99, 235, 0.06) 100%);
+  border: 1px solid rgba(5, 150, 105, 0.18);
+  border-radius: var(--radius);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+}
+
+.library-card-title {
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+  margin-top: 12px;
+}
+
+.library-card-desc {
+  font-size: 16px;
+  color: var(--c-text-2);
+  max-width: 460px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.library-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  min-width: 240px;
+}
+
+.library-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+}
+
+.library-stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.library-stat-label {
+  font-size: 12px;
+  color: var(--c-text-3);
+  font-weight: 500;
 }
 
 /* ── Contact ────────────────────────────────────────────────────────── */
@@ -1118,6 +1181,11 @@ strong { font-weight: 600; color: var(--c-text); }
 
   .current-role { flex-direction: column; align-items: flex-start; gap: 10px; }
   .role-content { flex-direction: column; align-items: flex-start; }
+
+  .library-card { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
+  .library-stats { min-width: unset; }
+
+  .projects { padding-bottom: 56px; }
 
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-links { justify-content: center; }
