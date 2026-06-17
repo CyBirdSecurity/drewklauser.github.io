@@ -1195,6 +1195,15 @@ books:
     ranking: null
     notes: ""
 
+  - title: "CISSP Exam Prep 2025-2026"
+    author: "Leander Ashbourne"
+    year_read: 2026
+    categories: [Cybersecurity]
+    medium: audiobook
+    in_progress: false
+    ranking: null
+    notes: ""
+
   - title: "Screw Business as Usual"
     author: "Richard Branson"
     year_read: 2026
