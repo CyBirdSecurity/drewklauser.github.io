@@ -1,0 +1,370 @@
+/* ─────────────────────────────────────────────────────────────
+   Drew Klauser — myfi.css
+   Page-specific styles for the MyFi showcase (/myfi)
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Invite banner ────────────────────────────────────────────── */
+.invite-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.08) 0%, rgba(37, 99, 235, 0.08) 100%);
+  border: 1px solid rgba(5, 150, 105, 0.20);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  max-width: 640px;
+}
+.invite-banner-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(5, 150, 105, 0.10);
+  border: 1px solid rgba(5, 150, 105, 0.20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-purple);
+}
+.invite-banner-text {
+  font-size: 14px;
+  color: var(--c-text-2);
+  line-height: 1.6;
+}
+.invite-banner-text strong { color: var(--c-text); }
+
+/* ── Mini hero widget (replaces the shield card on this page) ──── */
+.myfi-hero-card {
+  position: relative;
+  width: 340px;
+  border-radius: var(--radius);
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  box-shadow: 0 30px 60px -20px rgba(15, 23, 42, 0.15);
+  padding: 24px;
+}
+.myfi-hero-glow {
+  position: absolute;
+  inset: -20%;
+  background: var(--grad-primary);
+  opacity: 0.12;
+  filter: blur(40px);
+  z-index: -1;
+  border-radius: inherit;
+}
+.myfi-hero-networth-label {
+  font-size: 12px;
+  color: var(--c-text-3);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.myfi-hero-networth-value {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+.myfi-hero-networth-value .delta {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-green);
+  vertical-align: middle;
+}
+
+/* ── MyFi app demo (ported from MyFi's own LandingMockup) ────────
+   MyFi ships both a light and a dark theme (emerald accent in light,
+   indigo accent in dark) and this block mirrors both palettes 1:1
+   from MyFi's own index.css, switching automatically with the
+   visitor's OS/browser color-scheme preference — same as the real
+   app's --bg-*/--text-*/--accent-* design tokens. ── */
+.myfi-app-demo {
+  /* Light (default) — mirrors MyFi's :root */
+  --mfd-canvas:              #F8FAFC;
+  --mfd-surface:             #FFFFFF;
+  --mfd-subtle:              #F1F5F9;
+  --mfd-border:              #E2E8F0;
+  --mfd-text-primary:        #0F172A;
+  --mfd-text-secondary:      #475569;
+  --mfd-text-tertiary:       #64748B;
+  --mfd-text-muted:          #94A3B8;
+  --mfd-accent-text:         #047857;
+  --mfd-accent-tint-bg:      #ECFDF5;
+  --mfd-accent-tint-border:  #A7F3D0;
+  --mfd-positive:            #15803D;
+  --mfd-positive-tint-bg:    #F0FDF4;
+  --mfd-negative:            #B91C1C;
+  --mfd-warning:             #B45309;
+  --mfd-warning-tint-bg:     #FFFBEB;
+  /* Outer frame border — distinct from --mfd-border (used for internal
+     dividers) since MyFi's light canvas (#F8FAFC) matches this site's
+     own page background almost exactly and would otherwise disappear. */
+  --mfd-outer-border:        #CBD5E1;
+
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--mfd-canvas);
+  border: 1px solid var(--mfd-outer-border);
+  box-shadow:
+    0 2px 6px rgba(15, 23, 42, 0.10),
+    0 12px 24px -8px rgba(15, 23, 42, 0.20),
+    0 40px 80px -20px rgba(15, 23, 42, 0.35);
+  color-scheme: light;
+  font-family: var(--font);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Dark — mirrors MyFi's .dark class */
+  .myfi-app-demo {
+    --mfd-canvas:              #09090b;
+    --mfd-surface:             #18181b;
+    --mfd-subtle:              #27272a;
+    --mfd-border:              #27272a;
+    --mfd-text-primary:        #f4f4f5;
+    --mfd-text-secondary:      #a1a1aa;
+    --mfd-text-tertiary:       #71717a;
+    --mfd-text-muted:          #52525b;
+    --mfd-accent-text:         #818cf8;
+    --mfd-accent-tint-bg:      rgba(99, 102, 241, 0.10);
+    --mfd-accent-tint-border:  rgba(99, 102, 241, 0.20);
+    --mfd-positive:            #10b981;
+    --mfd-positive-tint-bg:    rgba(16, 185, 129, 0.10);
+    --mfd-negative:            #f43f5e;
+    --mfd-warning:             #f59e0b;
+    --mfd-warning-tint-bg:     rgba(245, 158, 11, 0.10);
+    color-scheme: dark;
+  }
+}
+
+.mfd-chrome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--mfd-surface);
+  border-bottom: 1px solid var(--mfd-border);
+}
+.mfd-dot { width: 10px; height: 10px; border-radius: 50%; }
+.mfd-dot--red   { background: rgba(244, 63, 94, 0.6); }
+.mfd-dot--amber { background: rgba(245, 158, 11, 0.6); }
+.mfd-dot--green { background: rgba(16, 185, 129, 0.6); }
+.mfd-url {
+  margin: 0 auto;
+  background: var(--mfd-subtle);
+  color: var(--mfd-text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 3px 64px;
+  border-radius: 6px;
+}
+
+.mfd-body { display: flex; min-height: 540px; }
+
+.mfd-sidebar {
+  width: 176px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-right: 1px solid var(--mfd-border);
+  background: var(--mfd-surface);
+  padding: 12px 8px;
+}
+.mfd-logo {
+  padding: 0 8px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: var(--mfd-accent-text);
+}
+.mfd-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--mfd-text-tertiary);
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--t-base), color var(--t-base);
+}
+.mfd-nav-btn:hover { background: var(--mfd-subtle); color: var(--mfd-text-primary); }
+.mfd-nav-btn.active { background: var(--mfd-accent-tint-bg); color: var(--mfd-accent-text); }
+.mfd-nav-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+
+.mfd-main { flex: 1; padding: 16px; overflow-y: auto; }
+.mfd-main-head { margin-bottom: 12px; }
+.mfd-main-title { font-size: 16px; font-weight: 700; color: var(--mfd-text-primary); }
+.mfd-main-sub { font-size: 12px; color: var(--mfd-text-tertiary); }
+
+.mfd-panel { display: none; }
+.mfd-panel.active { display: block; }
+
+.mfd-disclaimer {
+  font-size: 12px;
+  color: var(--mfd-text-muted);
+  text-align: center;
+  padding: 12px 16px;
+  border-top: 1px solid var(--mfd-border);
+}
+
+.mfd-stat-grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; }
+.mfd-card { border: 1px solid var(--mfd-border); background: var(--mfd-surface); border-radius: 8px; padding: 12px; }
+.mfd-card-label { font-size: 11px; color: var(--mfd-text-tertiary); }
+.mfd-card-value { font-size: 18px; font-weight: 700; color: var(--mfd-text-primary); margin-top: 2px; }
+.mfd-card-sub { font-size: 11px; margin-top: 2px; }
+.mfd-text-positive  { color: var(--mfd-positive); }
+.mfd-text-negative  { color: var(--mfd-negative); }
+.mfd-text-warning   { color: var(--mfd-warning); }
+.mfd-text-secondary { color: var(--mfd-text-secondary); }
+.mfd-text-tertiary  { color: var(--mfd-text-tertiary); }
+.mfd-text-accent    { color: var(--mfd-accent-text); }
+
+.mfd-pill--accent   { background: var(--mfd-accent-tint-bg);   color: var(--mfd-accent-text); }
+.mfd-pill--positive { background: var(--mfd-positive-tint-bg); color: var(--mfd-positive); }
+.mfd-pill--warning  { background: var(--mfd-warning-tint-bg);  color: var(--mfd-warning); }
+
+.mfd-grid-3-2 { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; margin-bottom: 12px; }
+.mfd-panel-label { font-size: 11px; font-weight: 500; color: var(--mfd-text-secondary); margin-bottom: 8px; }
+
+.mfd-allocation-row { margin-bottom: 6px; }
+.mfd-allocation-head { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 2px; color: var(--mfd-text-primary); }
+.mfd-bar-track { height: 4px; border-radius: 999px; background: var(--mfd-subtle); overflow: hidden; }
+.mfd-bar-fill { height: 100%; border-radius: 999px; }
+
+.mfd-list { border: 1px solid var(--mfd-border); background: var(--mfd-surface); border-radius: 8px; overflow: hidden; }
+.mfd-list-head {
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--mfd-text-tertiary);
+  border-bottom: 1px solid var(--mfd-border);
+}
+.mfd-list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--mfd-border);
+}
+.mfd-list-row:last-child { border-bottom: none; }
+.mfd-row-name { font-size: 11px; font-weight: 500; color: var(--mfd-text-primary); }
+.mfd-row-sub { font-size: 11px; color: var(--mfd-text-tertiary); }
+.mfd-row-value { font-size: 11px; font-weight: 500; color: var(--mfd-text-primary); }
+
+/* Holdings table */
+.mfd-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.mfd-table th {
+  text-align: right;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--mfd-text-tertiary);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--mfd-border);
+}
+.mfd-table th:first-child, .mfd-table td:first-child,
+.mfd-table th:nth-child(2), .mfd-table td:nth-child(2) { text-align: left; }
+.mfd-table td { padding: 8px 12px; border-bottom: 1px solid var(--mfd-border); text-align: right; color: var(--mfd-text-primary); }
+.mfd-table tr:last-child td { border-bottom: none; }
+.mfd-ticker { font-weight: 700; color: var(--mfd-accent-text); }
+.mfd-table-total { display: flex; justify-content: space-between; padding: 10px 12px; }
+
+/* Forecast */
+.mfd-scenario-row { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.mfd-scenario-btn {
+  border: 1px solid var(--mfd-border);
+  background: var(--mfd-subtle);
+  color: var(--mfd-text-tertiary);
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color var(--t-base), background var(--t-base), border-color var(--t-base);
+}
+.mfd-scenario-btn:hover { color: var(--mfd-text-primary); }
+.mfd-scenario-btn.active { border-color: var(--mfd-accent-tint-border); background: var(--mfd-accent-tint-bg); color: var(--mfd-accent-text); }
+.mfd-forecast-chart { border: 1px solid var(--mfd-border); background: var(--mfd-surface); border-radius: 8px; padding: 12px; }
+.mfd-forecast-axis { display: flex; justify-content: space-between; font-size: 11px; color: var(--mfd-text-muted); margin-top: 4px; }
+
+/* Goals */
+.mfd-goal-card { border: 1px solid var(--mfd-border); background: var(--mfd-surface); border-radius: 8px; padding: 16px; margin-bottom: 12px; }
+.mfd-goal-card:last-child { margin-bottom: 0; }
+.mfd-goal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.mfd-goal-name { font-size: 13px; font-weight: 500; color: var(--mfd-text-primary); }
+.mfd-goal-pct { font-size: 11px; font-weight: 500; color: var(--mfd-text-secondary); }
+.mfd-goal-track { height: 8px; border-radius: 999px; background: var(--mfd-subtle); overflow: hidden; margin-bottom: 8px; }
+.mfd-goal-fill { height: 100%; border-radius: 999px; }
+.mfd-goal-foot { display: flex; justify-content: space-between; font-size: 11px; color: var(--mfd-text-tertiary); }
+.mfd-pill { display: inline-block; border-radius: 4px; padding: 2px 8px; font-size: 10px; font-weight: 500; }
+
+/* Taxes stacked bar */
+.mfd-stack-bar { display: flex; height: 20px; width: 100%; overflow: hidden; border-radius: 999px; gap: 2px; margin: 10px 0 8px; }
+.mfd-stack-legend { display: flex; justify-content: space-between; }
+.mfd-legend-chip { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--mfd-text-tertiary); }
+.mfd-legend-swatch { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+.mfd-swatch-indigo  { background: #6366f1; }
+.mfd-swatch-violet  { background: #8b5cf6; }
+.mfd-swatch-slate   { background: #94a3b8; }
+.mfd-swatch-amber   { background: #f59e0b; }
+.mfd-swatch-emerald { background: #10b981; }
+.mfd-swatch-cyan    { background: #06b6d4; }
+.mfd-swatch-rose    { background: #f43f5e; }
+
+.donut-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.donut {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--c-text-2);
+}
+.legend-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.legend-item strong { color: var(--c-text); margin-left: auto; padding-left: 12px; }
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .mfd-grid-3-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .myfi-hero-card { width: 100%; }
+  .mfd-body { flex-direction: column; }
+  .mfd-sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; border-right: none; border-bottom: 1px solid var(--mfd-border); }
+  .mfd-logo { display: none; }
+  .mfd-nav-btn { width: auto; }
+  .mfd-stat-grid3 { grid-template-columns: 1fr; }
+  .mfd-table { display: block; overflow-x: auto; }
+}
