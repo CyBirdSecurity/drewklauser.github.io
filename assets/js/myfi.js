@@ -49,9 +49,9 @@
   if (!scenarioBtns.length) return;
 
   const SUMMARY = {
-    base:        { retire: '$1.16M', at80: '$1.62M', at100: '$2.05M', color: '#818cf8' },
-    optimistic:  { retire: '$1.45M', at80: '$2.14M', at100: '$2.85M', color: '#10b981' },
-    pessimistic: { retire: '$935,000', at80: '$1.22M', at100: '$1.48M', color: '#f43f5e' },
+    base:        { retire: '$1.16M', at80: '$1.62M', at100: '$2.05M', color: 'var(--mfd-accent-text)' },
+    optimistic:  { retire: '$1.45M', at80: '$2.14M', at100: '$2.85M', color: 'var(--mfd-positive)' },
+    pessimistic: { retire: '$935,000', at80: '$1.22M', at100: '$1.48M', color: 'var(--mfd-negative)' },
   };
 
   const retireEl = document.getElementById('mfd-forecast-retire');

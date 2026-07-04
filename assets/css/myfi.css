@@ -74,30 +74,64 @@
 }
 
 /* ── MyFi app demo (ported from MyFi's own LandingMockup) ────────
-   MyFi is dark-mode only (zinc surfaces + indigo accent); this block
-   is intentionally scoped to its own dark palette via --mfd-* vars
-   so it renders true-to-product inside the light showcase page. ── */
+   MyFi ships both a light and a dark theme (emerald accent in light,
+   indigo accent in dark) and this block mirrors both palettes 1:1
+   from MyFi's own index.css, switching automatically with the
+   visitor's OS/browser color-scheme preference — same as the real
+   app's --bg-*/--text-*/--accent-* design tokens. ── */
 .myfi-app-demo {
-  --mfd-canvas:            #09090b;
-  --mfd-surface:           #18181b;
-  --mfd-subtle:            #27272a;
-  --mfd-border:            #27272a;
-  --mfd-text-primary:      #f4f4f5;
-  --mfd-text-secondary:    #a1a1aa;
-  --mfd-text-tertiary:     #71717a;
-  --mfd-text-muted:        #52525b;
-  --mfd-accent-text:       #818cf8;
-  --mfd-accent-tint-bg:    rgba(99, 102, 241, 0.10);
-  --mfd-accent-tint-border:rgba(99, 102, 241, 0.20);
-  --mfd-positive:          #10b981;
-  --mfd-negative:          #f43f5e;
+  /* Light (default) — mirrors MyFi's :root */
+  --mfd-canvas:              #F8FAFC;
+  --mfd-surface:             #FFFFFF;
+  --mfd-subtle:              #F1F5F9;
+  --mfd-border:              #E2E8F0;
+  --mfd-text-primary:        #0F172A;
+  --mfd-text-secondary:      #475569;
+  --mfd-text-tertiary:       #64748B;
+  --mfd-text-muted:          #94A3B8;
+  --mfd-accent-text:         #047857;
+  --mfd-accent-tint-bg:      #ECFDF5;
+  --mfd-accent-tint-border:  #A7F3D0;
+  --mfd-positive:            #15803D;
+  --mfd-positive-tint-bg:    #F0FDF4;
+  --mfd-negative:            #B91C1C;
+  --mfd-warning:             #B45309;
+  --mfd-warning-tint-bg:     #FFFBEB;
+  /* Outer frame border — distinct from --mfd-border (used for internal
+     dividers) since MyFi's light canvas (#F8FAFC) matches this site's
+     own page background almost exactly and would otherwise disappear. */
+  --mfd-outer-border:        #CBD5E1;
+
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--mfd-canvas);
-  border: 1px solid var(--mfd-border);
+  border: 1px solid var(--mfd-outer-border);
   box-shadow: 0 30px 70px -30px rgba(15, 23, 42, 0.35);
-  color-scheme: dark;
+  color-scheme: light;
   font-family: var(--font);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Dark — mirrors MyFi's .dark class */
+  .myfi-app-demo {
+    --mfd-canvas:              #09090b;
+    --mfd-surface:             #18181b;
+    --mfd-subtle:              #27272a;
+    --mfd-border:              #27272a;
+    --mfd-text-primary:        #f4f4f5;
+    --mfd-text-secondary:      #a1a1aa;
+    --mfd-text-tertiary:       #71717a;
+    --mfd-text-muted:          #52525b;
+    --mfd-accent-text:         #818cf8;
+    --mfd-accent-tint-bg:      rgba(99, 102, 241, 0.10);
+    --mfd-accent-tint-border:  rgba(99, 102, 241, 0.20);
+    --mfd-positive:            #10b981;
+    --mfd-positive-tint-bg:    rgba(16, 185, 129, 0.10);
+    --mfd-negative:            #f43f5e;
+    --mfd-warning:             #f59e0b;
+    --mfd-warning-tint-bg:     rgba(245, 158, 11, 0.10);
+    color-scheme: dark;
+  }
 }
 
 .mfd-chrome {
@@ -184,10 +218,16 @@
 .mfd-card-label { font-size: 11px; color: var(--mfd-text-tertiary); }
 .mfd-card-value { font-size: 18px; font-weight: 700; color: var(--mfd-text-primary); margin-top: 2px; }
 .mfd-card-sub { font-size: 11px; margin-top: 2px; }
-.mfd-text-positive { color: var(--mfd-positive); }
-.mfd-text-negative { color: var(--mfd-negative); }
-.mfd-text-tertiary { color: var(--mfd-text-tertiary); }
-.mfd-text-accent   { color: var(--mfd-accent-text); }
+.mfd-text-positive  { color: var(--mfd-positive); }
+.mfd-text-negative  { color: var(--mfd-negative); }
+.mfd-text-warning   { color: var(--mfd-warning); }
+.mfd-text-secondary { color: var(--mfd-text-secondary); }
+.mfd-text-tertiary  { color: var(--mfd-text-tertiary); }
+.mfd-text-accent    { color: var(--mfd-accent-text); }
+
+.mfd-pill--accent   { background: var(--mfd-accent-tint-bg);   color: var(--mfd-accent-text); }
+.mfd-pill--positive { background: var(--mfd-positive-tint-bg); color: var(--mfd-positive); }
+.mfd-pill--warning  { background: var(--mfd-warning-tint-bg);  color: var(--mfd-warning); }
 
 .mfd-grid-3-2 { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; margin-bottom: 12px; }
 .mfd-panel-label { font-size: 11px; font-weight: 500; color: var(--mfd-text-secondary); margin-bottom: 8px; }
