@@ -132,145 +132,286 @@
       <div class="section-header reveal">
         <p class="section-eyebrow">Simulated Demo</p>
         <h2 class="section-title">See it in action,<br/><span class="gradient-text">with sample data.</span></h2>
-        <p class="section-sub">Click through the tabs below &mdash; this is the actual MyFi interface, populated with a fictional demo account.</p>
+        <p class="section-sub">The exact interactive walkthrough shown on MyFi's own logged-out home page &mdash; click through the sidebar to explore each section.</p>
       </div>
 
-      <div class="demo-window reveal">
-        <div class="demo-window-chrome" aria-hidden="true">
-          <span class="demo-dot demo-dot--red"></span>
-          <span class="demo-dot demo-dot--yellow"></span>
-          <span class="demo-dot demo-dot--green"></span>
-          <span class="demo-window-url">myfi.app/dashboard</span>
+      <div class="myfi-app-demo reveal">
+        <div class="mfd-chrome" aria-hidden="true">
+          <span class="mfd-dot mfd-dot--red"></span>
+          <span class="mfd-dot mfd-dot--amber"></span>
+          <span class="mfd-dot mfd-dot--green"></span>
+          <span class="mfd-url">app.myfi.io</span>
         </div>
 
-        <div class="demo-tabs" role="tablist" aria-label="Demo sections">
-          <button class="demo-tab active" data-tab="panel-dashboard" role="tab" aria-selected="true">Dashboard</button>
-          <button class="demo-tab" data-tab="panel-holdings" role="tab" aria-selected="false">Holdings</button>
-          <button class="demo-tab" data-tab="panel-forecast" role="tab" aria-selected="false">Forecast</button>
-          <button class="demo-tab" data-tab="panel-goals" role="tab" aria-selected="false">Goals</button>
-        </div>
+        <div class="mfd-body">
+          <nav class="mfd-sidebar" aria-label="Demo sections">
+            <div class="mfd-logo">MyFi</div>
+            <button class="mfd-nav-btn active" data-tab="mfd-dashboard"><span class="mfd-nav-dot"></span>Dashboard</button>
+            <button class="mfd-nav-btn" data-tab="mfd-holdings"><span class="mfd-nav-dot"></span>Holdings</button>
+            <button class="mfd-nav-btn" data-tab="mfd-forecast"><span class="mfd-nav-dot"></span>Forecast</button>
+            <button class="mfd-nav-btn" data-tab="mfd-goals"><span class="mfd-nav-dot"></span>Goals</button>
+            <button class="mfd-nav-btn" data-tab="mfd-budget"><span class="mfd-nav-dot"></span>Budget</button>
+            <button class="mfd-nav-btn" data-tab="mfd-taxes"><span class="mfd-nav-dot"></span>Taxes</button>
+          </nav>
 
-        <!-- Dashboard panel -->
-        <div class="demo-panel active" id="panel-dashboard" role="tabpanel">
-          <div class="demo-stat-row">
-            <div class="demo-stat">
-              <div class="demo-stat-label">Net Worth</div>
-              <div class="demo-stat-value">$344,818</div>
+          <div class="mfd-main">
+            <div class="mfd-main-head">
+              <h3 class="mfd-main-title" id="mfd-title">Dashboard</h3>
+              <p class="mfd-main-sub" id="mfd-subtitle">Your financial snapshot</p>
             </div>
-            <div class="demo-stat">
-              <div class="demo-stat-label">30-Day Change</div>
-              <div class="demo-stat-value positive">+$8,204 (2.4%)</div>
-            </div>
-            <div class="demo-stat">
-              <div class="demo-stat-label">Accounts Linked</div>
-              <div class="demo-stat-value">7</div>
-            </div>
-          </div>
 
-          <div class="demo-grid-2">
-            <div>
-              <div class="about-card-title" style="margin-bottom:14px;">Allocation by Tax Treatment</div>
-              <div class="donut-row">
-                <div class="donut" style="background: conic-gradient(var(--c-purple) 0% 44%, var(--c-blue) 44% 80%, var(--c-cyan) 80% 100%);"></div>
-                <div class="donut-legend">
-                  <span class="legend-item"><span class="legend-dot" style="background:var(--c-purple)"></span>Tax-Deferred <strong>$151,800</strong></span>
-                  <span class="legend-item"><span class="legend-dot" style="background:var(--c-blue)"></span>Taxable <strong>$124,850</strong></span>
-                  <span class="legend-item"><span class="legend-dot" style="background:var(--c-cyan)"></span>Tax-Free <strong>$69,408</strong></span>
+            <!-- Dashboard panel -->
+            <div class="mfd-panel active" id="mfd-dashboard">
+              <div class="mfd-stat-grid3">
+                <div class="mfd-card">
+                  <p class="mfd-card-label">Net Worth</p>
+                  <p class="mfd-card-value">$284,510</p>
+                  <p class="mfd-card-sub mfd-text-positive">+$6,842 this month</p>
+                </div>
+                <div class="mfd-card">
+                  <p class="mfd-card-label">Total Assets</p>
+                  <p class="mfd-card-value">$312,200</p>
+                  <p class="mfd-card-sub mfd-text-tertiary">12 accounts</p>
+                </div>
+                <div class="mfd-card">
+                  <p class="mfd-card-label">Liabilities</p>
+                  <p class="mfd-card-value">$27,690</p>
+                  <p class="mfd-card-sub mfd-text-tertiary">2 accounts</p>
                 </div>
               </div>
-              <svg viewBox="0 0 240 60" width="100%" height="60" style="margin-top:20px;" aria-label="Net worth trend over the last 15 months">
-                <polyline points="0,49 34,45 69,39 103,43 137,33 171,25 206,18 240,9" fill="none" stroke="var(--c-purple)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+
+              <div class="mfd-grid-3-2">
+                <div class="mfd-card">
+                  <p class="mfd-panel-label">Net Worth — 12 months</p>
+                  <svg viewBox="0 0 100 100" width="100%" height="96" preserveAspectRatio="none" aria-label="Net worth over the last 12 months">
+                    <defs>
+                      <linearGradient id="mfdAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+                        <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <polygon points="0.00,90.00 9.09,81.35 18.18,74.86 27.27,78.11 36.36,68.38 45.45,59.73 54.55,52.16 63.64,44.59 72.73,35.95 81.82,27.30 90.91,17.57 100.00,10.00 100.00,100 0,100" fill="url(#mfdAreaGrad)"/>
+                    <polyline points="0.00,90.00 9.09,81.35 18.18,74.86 27.27,78.11 36.36,68.38 45.45,59.73 54.55,52.16 63.64,44.59 72.73,35.95 81.82,27.30 90.91,17.57 100.00,10.00" fill="none" stroke="#6366f1" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="mfd-card">
+                  <p class="mfd-panel-label">Allocation</p>
+                  <div class="mfd-allocation-row">
+                    <div class="mfd-allocation-head"><span class="mfd-text-tertiary">Equities</span><span>62%</span></div>
+                    <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-indigo" style="width:62%"></div></div>
+                  </div>
+                  <div class="mfd-allocation-row">
+                    <div class="mfd-allocation-head"><span class="mfd-text-tertiary">Bonds</span><span>14%</span></div>
+                    <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-violet" style="width:14%"></div></div>
+                  </div>
+                  <div class="mfd-allocation-row">
+                    <div class="mfd-allocation-head"><span class="mfd-text-tertiary">Cash</span><span>9%</span></div>
+                    <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-slate" style="width:9%"></div></div>
+                  </div>
+                  <div class="mfd-allocation-row">
+                    <div class="mfd-allocation-head"><span class="mfd-text-tertiary">Crypto</span><span>8%</span></div>
+                    <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-amber" style="width:8%"></div></div>
+                  </div>
+                  <div class="mfd-allocation-row">
+                    <div class="mfd-allocation-head"><span class="mfd-text-tertiary">Real Estate</span><span>7%</span></div>
+                    <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-emerald" style="width:7%"></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mfd-list">
+                <p class="mfd-list-head">Accounts</p>
+                <div class="mfd-list-row"><div><p class="mfd-row-name">Fidelity 401(k)</p><p class="mfd-row-sub">Tax-Deferred</p></div><p class="mfd-row-value">$142,800</p></div>
+                <div class="mfd-list-row"><div><p class="mfd-row-name">Roth IRA</p><p class="mfd-row-sub">Tax-Free</p></div><p class="mfd-row-value">$58,400</p></div>
+                <div class="mfd-list-row"><div><p class="mfd-row-name">Brokerage</p><p class="mfd-row-sub">Taxable</p></div><p class="mfd-row-value">$47,200</p></div>
+                <div class="mfd-list-row"><div><p class="mfd-row-name">Home</p><p class="mfd-row-sub">Taxable</p></div><p class="mfd-row-value">$63,600</p></div>
+              </div>
             </div>
 
-            <div>
-              <div class="about-card-title" style="margin-bottom:14px;">Accounts</div>
-              <div class="demo-accounts-list">
-                <div class="demo-account-row"><span class="demo-account-name">Chase Checking</span><span class="demo-account-value">$8,450</span></div>
-                <div class="demo-account-row"><span class="demo-account-name">Marcus High-Yield Savings</span><span class="demo-account-value">$22,100</span></div>
-                <div class="demo-account-row"><span class="demo-account-name">Fidelity 401(k)</span><span class="demo-account-value">$151,800</span></div>
-                <div class="demo-account-row"><span class="demo-account-name">Fidelity Roth IRA</span><span class="demo-account-value">$58,900</span></div>
-                <div class="demo-account-row"><span class="demo-account-name">Vanguard Brokerage</span><span class="demo-account-value">$94,300</span></div>
-                <div class="demo-account-row"><span class="demo-account-name">Fidelity HSA</span><span class="demo-account-value">$10,508</span></div>
-                <div class="demo-account-row"><span class="demo-account-name">Chase Visa</span><span class="demo-account-value negative">&minus;$1,240</span></div>
+            <!-- Holdings panel -->
+            <div class="mfd-panel" id="mfd-holdings">
+              <div class="mfd-list">
+                <table class="mfd-table">
+                  <thead>
+                    <tr><th>Ticker</th><th>Name</th><th>Shares</th><th>Price</th><th>Value</th><th>G/L</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td class="mfd-ticker">VTI</td><td>Vanguard Total Market ETF</td><td>142</td><td>$248.30</td><td>$35,255</td><td class="mfd-text-positive">+18.2%</td></tr>
+                    <tr><td class="mfd-ticker">AAPL</td><td>Apple Inc.</td><td>85</td><td>$189.40</td><td>$16,099</td><td class="mfd-text-positive">+30.4%</td></tr>
+                    <tr><td class="mfd-ticker">MSFT</td><td>Microsoft Corp.</td><td>40</td><td>$412.70</td><td>$16,508</td><td class="mfd-text-positive">+32.9%</td></tr>
+                    <tr><td class="mfd-ticker">BND</td><td>Vanguard Total Bond ETF</td><td>220</td><td>$73.10</td><td>$16,082</td><td class="mfd-text-negative">&minus;5.6%</td></tr>
+                    <tr><td class="mfd-ticker">BTC</td><td>Bitcoin</td><td>0.42</td><td>$64,200</td><td>$26,964</td><td class="mfd-text-positive">+68.9%</td></tr>
+                    <tr><td class="mfd-ticker">VXUS</td><td>Vanguard Total Intl ETF</td><td>180</td><td>$61.80</td><td>$11,124</td><td class="mfd-text-positive">+10.6%</td></tr>
+                  </tbody>
+                </table>
+                <div class="mfd-table-total"><span class="mfd-text-tertiary">Total Portfolio Value</span><span class="mfd-row-value">$122,032</span></div>
+              </div>
+            </div>
+
+            <!-- Forecast panel -->
+            <div class="mfd-panel" id="mfd-forecast">
+              <div class="mfd-scenario-row">
+                <button class="mfd-scenario-btn active" data-scenario="base">Base</button>
+                <button class="mfd-scenario-btn" data-scenario="optimistic">Optimistic (+2%)</button>
+                <button class="mfd-scenario-btn" data-scenario="pessimistic">Pessimistic (&minus;2%)</button>
+              </div>
+              <div class="mfd-forecast-chart">
+                <svg viewBox="0 0 100 95" width="100%" height="176" preserveAspectRatio="none" aria-label="Projected net worth to age 100 under base, optimistic, and pessimistic scenarios">
+                  <line x1="0" y1="88" x2="100" y2="88" stroke="#27272a" stroke-width="0.5"/>
+                  <line x1="0" y1="62" x2="100" y2="62" stroke="#27272a" stroke-width="0.5"/>
+                  <line x1="0" y1="36" x2="100" y2="36" stroke="#27272a" stroke-width="0.5"/>
+                  <line x1="0" y1="10" x2="100" y2="10" stroke="#27272a" stroke-width="0.5"/>
+                  <line x1="66.67" y1="10" x2="66.67" y2="90" stroke="#6366f1" stroke-width="0.5" stroke-dasharray="2,2"/>
+                  <path id="mfd-path-pessimistic" d="M 0.00 80.23 L 4.76 79.33 L 9.52 78.39 L 14.29 77.39 L 19.05 76.35 L 23.81 75.25 L 28.57 74.09 L 33.33 72.88 L 38.10 71.60 L 42.86 70.25 L 47.62 68.84 L 52.38 67.35 L 57.14 65.78 L 61.90 64.13 L 66.67 62.40 L 71.43 60.58 L 76.19 58.66 L 80.95 56.64 L 85.71 54.52 L 90.48 52.28 L 95.24 49.93 L 100.00 47.46" fill="none" stroke="#f43f5e" stroke-width="1.2" opacity="0.3"/>
+                  <path id="mfd-path-base" d="M 0.00 80.23 L 4.76 79.17 L 9.52 78.05 L 14.29 76.84 L 19.05 75.54 L 23.81 74.15 L 28.57 72.66 L 33.33 71.06 L 38.10 69.35 L 42.86 67.51 L 47.62 65.55 L 52.38 63.44 L 57.14 61.18 L 61.90 58.75 L 66.67 56.15 L 71.43 53.37 L 76.19 50.38 L 80.95 47.18 L 85.71 43.75 L 90.48 40.07 L 95.24 36.13 L 100.00 31.90" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="1"/>
+                  <path id="mfd-path-optimistic" d="M 0.00 80.23 L 4.76 79.02 L 9.52 77.70 L 14.29 76.26 L 19.05 74.69 L 23.81 72.97 L 28.57 71.09 L 33.33 69.04 L 38.10 66.81 L 42.86 64.36 L 47.62 61.70 L 52.38 58.78 L 57.14 55.60 L 61.90 52.13 L 66.67 48.34 L 71.43 44.20 L 76.19 39.67 L 80.95 34.74 L 85.71 29.34 L 90.48 23.45 L 95.24 17.02 L 100.00 10.00" fill="none" stroke="#10b981" stroke-width="1.2" opacity="0.3"/>
+                </svg>
+                <div class="mfd-forecast-axis">
+                  <span>2026</span>
+                  <span class="mfd-text-accent">&uarr; Retire 2040</span>
+                  <span>2048</span>
+                </div>
+              </div>
+              <div class="mfd-stat-grid3" style="margin-top:12px; margin-bottom:0;">
+                <div class="mfd-card" style="text-align:center;">
+                  <p class="mfd-card-label">At Retirement</p>
+                  <p class="mfd-card-value mfd-text-accent" id="mfd-forecast-retire">$1.16M</p>
+                </div>
+                <div class="mfd-card" style="text-align:center;">
+                  <p class="mfd-card-label">At Age 80</p>
+                  <p class="mfd-card-value mfd-text-accent" id="mfd-forecast-80">$1.62M</p>
+                </div>
+                <div class="mfd-card" style="text-align:center;">
+                  <p class="mfd-card-label">At Age 100</p>
+                  <p class="mfd-card-value mfd-text-accent" id="mfd-forecast-100">$2.05M</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Goals panel -->
+            <div class="mfd-panel" id="mfd-goals">
+              <div class="mfd-goal-card">
+                <div class="mfd-goal-head"><span class="mfd-goal-name">Emergency Fund</span><span class="mfd-goal-pct">75%</span></div>
+                <div class="mfd-goal-track"><div class="mfd-goal-fill mfd-swatch-indigo" style="width:75%"></div></div>
+                <div class="mfd-goal-foot"><span>$22,400</span><span>of $30,000</span></div>
+              </div>
+              <div class="mfd-goal-card">
+                <div class="mfd-goal-head"><span class="mfd-goal-name">Home Down Payment</span><span class="mfd-goal-pct">59%</span></div>
+                <div class="mfd-goal-track"><div class="mfd-goal-fill mfd-swatch-violet" style="width:59%"></div></div>
+                <div class="mfd-goal-foot"><span>$47,200</span><span>of $80,000</span></div>
+              </div>
+              <div class="mfd-goal-card">
+                <div class="mfd-goal-head">
+                  <span class="mfd-goal-name" style="display:inline-flex; align-items:center; gap:8px;">Max Roth IRA 2026 <span class="mfd-pill" style="background:rgba(16,185,129,0.10); color:#10b981;">Achieved</span></span>
+                  <span class="mfd-goal-pct">100%</span>
+                </div>
+                <div class="mfd-goal-track"><div class="mfd-goal-fill mfd-swatch-emerald" style="width:100%"></div></div>
+                <div class="mfd-goal-foot"><span>$7,000</span><span>of $7,000</span></div>
+              </div>
+              <div class="mfd-goal-card">
+                <div class="mfd-goal-head"><span class="mfd-goal-name">Early Retirement</span><span class="mfd-goal-pct">19%</span></div>
+                <div class="mfd-goal-track"><div class="mfd-goal-fill mfd-swatch-amber" style="width:19%"></div></div>
+                <div class="mfd-goal-foot"><span>$284,510</span><span>of $1.5M</span></div>
+              </div>
+            </div>
+
+            <!-- Budget panel -->
+            <div class="mfd-panel" id="mfd-budget">
+              <div class="mfd-stat-grid3">
+                <div class="mfd-card">
+                  <p class="mfd-card-label">Spent</p>
+                  <p class="mfd-card-value mfd-text-negative">$3,842</p>
+                  <p class="mfd-card-sub mfd-text-tertiary">this month</p>
+                </div>
+                <div class="mfd-card">
+                  <p class="mfd-card-label">Income</p>
+                  <p class="mfd-card-value">$5,000</p>
+                  <p class="mfd-card-sub mfd-text-tertiary">this month</p>
+                </div>
+                <div class="mfd-card">
+                  <p class="mfd-card-label">Saved</p>
+                  <p class="mfd-card-value mfd-text-positive">$1,158</p>
+                  <p class="mfd-card-sub mfd-text-tertiary">23% savings rate</p>
+                </div>
+              </div>
+              <div class="mfd-list">
+                <p class="mfd-list-head">Spending by Category</p>
+                <div class="mfd-list-row" style="flex-direction:column; align-items:stretch; gap:6px;">
+                  <div style="display:flex; justify-content:space-between;"><span class="mfd-row-name">Housing</span><span class="mfd-row-value">$1,850 <span class="mfd-text-tertiary">48%</span></span></div>
+                  <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-indigo" style="width:100%"></div></div>
+                </div>
+                <div class="mfd-list-row" style="flex-direction:column; align-items:stretch; gap:6px;">
+                  <div style="display:flex; justify-content:space-between;"><span class="mfd-row-name">Food &amp; Dining</span><span class="mfd-row-value">$640 <span class="mfd-text-tertiary">17%</span></span></div>
+                  <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-violet" style="width:35%"></div></div>
+                </div>
+                <div class="mfd-list-row" style="flex-direction:column; align-items:stretch; gap:6px;">
+                  <div style="display:flex; justify-content:space-between;"><span class="mfd-row-name">Shopping</span><span class="mfd-row-value">$485 <span class="mfd-text-tertiary">13%</span></span></div>
+                  <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-amber" style="width:26%"></div></div>
+                </div>
+                <div class="mfd-list-row" style="flex-direction:column; align-items:stretch; gap:6px;">
+                  <div style="display:flex; justify-content:space-between;"><span class="mfd-row-name">Transport</span><span class="mfd-row-value">$320 <span class="mfd-text-tertiary">8%</span></span></div>
+                  <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-cyan" style="width:17%"></div></div>
+                </div>
+                <div class="mfd-list-row" style="flex-direction:column; align-items:stretch; gap:6px;">
+                  <div style="display:flex; justify-content:space-between;"><span class="mfd-row-name">Health</span><span class="mfd-row-value">$195 <span class="mfd-text-tertiary">5%</span></span></div>
+                  <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-emerald" style="width:11%"></div></div>
+                </div>
+                <div class="mfd-list-row" style="flex-direction:column; align-items:stretch; gap:6px;">
+                  <div style="display:flex; justify-content:space-between;"><span class="mfd-row-name">Entertainment</span><span class="mfd-row-value">$142 <span class="mfd-text-tertiary">4%</span></span></div>
+                  <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-rose" style="width:8%"></div></div>
+                </div>
+                <div class="mfd-list-row" style="flex-direction:column; align-items:stretch; gap:6px;">
+                  <div style="display:flex; justify-content:space-between;"><span class="mfd-row-name">Other</span><span class="mfd-row-value">$210 <span class="mfd-text-tertiary">5%</span></span></div>
+                  <div class="mfd-bar-track"><div class="mfd-bar-fill mfd-swatch-slate" style="width:11%"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Taxes panel -->
+            <div class="mfd-panel" id="mfd-taxes">
+              <div class="mfd-card" style="margin-bottom:12px;">
+                <p class="mfd-panel-label">Tax Treatment &mdash; <span class="mfd-row-value" style="font-weight:700;">$312,510</span> total assets</p>
+                <div class="mfd-stack-bar">
+                  <div class="mfd-swatch-emerald" style="width:31%"></div>
+                  <div class="mfd-swatch-indigo" style="width:46%"></div>
+                  <div class="mfd-swatch-amber" style="width:24%"></div>
+                </div>
+                <div class="mfd-stack-legend">
+                  <span class="mfd-legend-chip"><span class="mfd-legend-swatch mfd-swatch-emerald"></span>Free 31%</span>
+                  <span class="mfd-legend-chip"><span class="mfd-legend-swatch mfd-swatch-indigo"></span>Deferred 46%</span>
+                  <span class="mfd-legend-chip"><span class="mfd-legend-swatch mfd-swatch-amber"></span>Taxable 24%</span>
+                </div>
+              </div>
+              <div class="mfd-stat-grid3">
+                <div class="mfd-card">
+                  <span class="mfd-pill" style="background:rgba(16,185,129,0.10); color:#10b981;">Tax-Free</span>
+                  <p class="mfd-card-value" style="margin-top:8px; color:#10b981;">$95,400</p>
+                  <p class="mfd-card-sub mfd-text-tertiary">Roth IRA &middot; HSA</p>
+                </div>
+                <div class="mfd-card">
+                  <span class="mfd-pill" style="background:rgba(99,102,241,0.10); color:#818cf8;">Tax-Deferred</span>
+                  <p class="mfd-card-value mfd-text-accent" style="margin-top:8px;">$142,800</p>
+                  <p class="mfd-card-sub mfd-text-tertiary">401(k) &middot; Trad IRA</p>
+                </div>
+                <div class="mfd-card">
+                  <span class="mfd-pill" style="background:rgba(245,158,11,0.10); color:#f59e0b;">Taxable</span>
+                  <p class="mfd-card-value" style="margin-top:8px; color:#f59e0b;">$74,310</p>
+                  <p class="mfd-card-sub mfd-text-tertiary">Brokerage &middot; Cash</p>
+                </div>
+              </div>
+              <div class="mfd-list">
+                <p class="mfd-list-head">By Account</p>
+                <div class="mfd-list-row"><div style="display:flex; align-items:center; gap:8px;"><span class="mfd-row-name">Fidelity 401(k)</span><span class="mfd-pill" style="background:rgba(99,102,241,0.10); color:#818cf8;">Tax-Deferred</span></div><p class="mfd-row-value">$142,800</p></div>
+                <div class="mfd-list-row"><div style="display:flex; align-items:center; gap:8px;"><span class="mfd-row-name">Roth IRA</span><span class="mfd-pill" style="background:rgba(16,185,129,0.10); color:#10b981;">Tax-Free</span></div><p class="mfd-row-value">$58,400</p></div>
+                <div class="mfd-list-row"><div style="display:flex; align-items:center; gap:8px;"><span class="mfd-row-name">HSA</span><span class="mfd-pill" style="background:rgba(16,185,129,0.10); color:#10b981;">Tax-Free</span></div><p class="mfd-row-value">$12,200</p></div>
+                <div class="mfd-list-row"><div style="display:flex; align-items:center; gap:8px;"><span class="mfd-row-name">Brokerage</span><span class="mfd-pill" style="background:rgba(245,158,11,0.10); color:#f59e0b;">Taxable</span></div><p class="mfd-row-value">$47,200</p></div>
+                <div class="mfd-list-row"><div style="display:flex; align-items:center; gap:8px;"><span class="mfd-row-name">High-Yield Savings</span><span class="mfd-pill" style="background:rgba(245,158,11,0.10); color:#f59e0b;">Taxable</span></div><p class="mfd-row-value">$22,800</p></div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Holdings panel -->
-        <div class="demo-panel" id="panel-holdings" role="tabpanel">
-          <div class="about-card-title" style="margin-bottom:14px;">Holdings — Investment Accounts</div>
-          <table class="holdings-table">
-            <thead>
-              <tr>
-                <th>Ticker</th>
-                <th>Shares</th>
-                <th>Price</th>
-                <th>Value</th>
-                <th>Cost Basis</th>
-                <th>Gain</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>VTSAX</td><td>210.5</td><td>$128.40</td><td>$27,028</td><td>$23,100</td><td class="gain">+17.0%</td></tr>
-              <tr><td>FXAIX</td><td>145.2</td><td>$185.20</td><td>$26,899</td><td>$23,450</td><td class="gain">+14.7%</td></tr>
-              <tr><td>VTI</td><td>98.6</td><td>$265.10</td><td>$26,139</td><td>$23,800</td><td class="gain">+9.8%</td></tr>
-              <tr><td>VXUS</td><td>320.0</td><td>$58.90</td><td>$18,848</td><td>$17,900</td><td class="gain">+5.3%</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Forecast panel -->
-        <div class="demo-panel" id="panel-forecast" role="tabpanel">
-          <div class="about-card-title" style="margin-bottom:14px;">Retirement Forecast — Monte Carlo Projection</div>
-          <div class="forecast-chart-wrap">
-            <svg viewBox="0 0 610 220" width="100%" height="220" aria-label="Projected net worth from age 34 to 100 under base, optimistic, and pessimistic scenarios">
-              <polygon points="30,179 140,156 250,113 360,30 470,46 580,87 580,190 470,154 360,118 250,151 140,172 30,185" fill="var(--c-blue)" opacity="0.12"/>
-              <polyline points="30,182 140,164 250,133 360,77 470,97 580,143" fill="none" stroke="var(--c-purple)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <line x1="360" y1="10" x2="360" y2="200" stroke="var(--c-border)" stroke-width="1" stroke-dasharray="4 4"/>
-              <text x="30" y="214" font-size="11" fill="var(--c-text-3)">Age 34</text>
-              <text x="245" y="214" font-size="11" fill="var(--c-text-3)">Age 55</text>
-              <text x="340" y="214" font-size="11" fill="var(--c-text-3)">Retire 65</text>
-              <text x="555" y="214" font-size="11" fill="var(--c-text-3)">Age 100</text>
-            </svg>
-          </div>
-          <div class="forecast-legend">
-            <span><span class="legend-dot" style="background:var(--c-purple); display:inline-block;"></span> Base scenario</span>
-            <span><span class="legend-dot" style="background:var(--c-blue); display:inline-block; opacity:0.5;"></span> Optimistic / pessimistic band</span>
-          </div>
-        </div>
-
-        <!-- Goals panel -->
-        <div class="demo-panel" id="panel-goals" role="tabpanel">
-          <div class="about-card-title" style="margin-bottom:18px;">Goals</div>
-
-          <div class="goal-item">
-            <div class="goal-item-head">
-              <span class="goal-item-name">$500K Net Worth</span>
-              <span class="goal-item-target">Target: 2028 &middot; 69%</span>
-            </div>
-            <div class="goal-bar-track"><div class="goal-bar-fill" style="width:69%"></div></div>
-          </div>
-
-          <div class="goal-item">
-            <div class="goal-item-head">
-              <span class="goal-item-name">$1M Net Worth</span>
-              <span class="goal-item-target">Target: 2035 &middot; 34%</span>
-            </div>
-            <div class="goal-bar-track"><div class="goal-bar-fill" style="width:34%"></div></div>
-          </div>
-
-          <div class="goal-item">
-            <div class="goal-item-head">
-              <span class="goal-item-name">$2M Retirement</span>
-              <span class="goal-item-target">Target: 2045 &middot; 17%</span>
-            </div>
-            <div class="goal-bar-track"><div class="goal-bar-fill" style="width:17%"></div></div>
-          </div>
-        </div>
-
-        <div class="demo-disclaimer">All figures on this page are simulated for demonstration purposes only.</div>
+        <div class="mfd-disclaimer">All figures in this demo are simulated for demonstration purposes only.</div>
       </div>
     </div>
   </section>
