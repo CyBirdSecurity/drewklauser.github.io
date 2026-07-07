@@ -92,52 +92,6 @@ const LANG_COLORS = {
   C:          '#555555',
 };
 
-/* ── Typing animation ─────────────────────────────────────────────── */
-(function initTyping() {
-  const el = document.getElementById('typedWord');
-  if (!el) return;
-
-  const words = [
-    'secure systems',
-    'resilient teams',
-    'supply chains',
-    'compliance programs',
-    'security tooling',
-  ];
-
-  let wordIdx  = 0;
-  let charIdx  = 0;
-  let deleting = false;
-  let pauseMs  = 0;
-
-  function tick() {
-    const current = words[wordIdx];
-
-    if (deleting) {
-      charIdx--;
-      el.textContent = current.slice(0, charIdx);
-      if (charIdx === 0) {
-        deleting = false;
-        wordIdx  = (wordIdx + 1) % words.length;
-        pauseMs  = 400;
-      }
-    } else {
-      charIdx++;
-      el.textContent = current.slice(0, charIdx);
-      if (charIdx === current.length) {
-        deleting = true;
-        pauseMs  = 1800;
-      }
-    }
-
-    const speed = deleting ? 45 : 85;
-    setTimeout(tick, pauseMs || speed);
-    pauseMs = 0;
-  }
-
-  setTimeout(tick, 900);
-})();
-
 /* ── Navbar scroll behaviour ──────────────────────────────────────────── */
 (function initNavbar() {
   const navbar = document.getElementById('navbar');
