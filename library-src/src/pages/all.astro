@@ -49,8 +49,8 @@ const allYears = [...new Set(books.map(b => b.year_read))].sort((a, b) => b - a)
 >
   <!-- Compact hero -->
   <header style="position:relative;z-index:1;padding:5rem 2rem 2rem;text-align:center;">
-    <h1 style="font-family:'Inter',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-0.035em;color:var(--c-text);">All Books</h1>
-    <p style="font-family:'JetBrains Mono',monospace;font-size:0.875rem;color:var(--c-purple);margin-top:0.5rem;letter-spacing:0.08em;" id="books-count">{sortedBooks.length} books · A–Z by author</p>
+    <h1 style="font-family:var(--font-serif);font-size:clamp(2rem,5vw,3.5rem);font-weight:600;letter-spacing:-0.015em;color:var(--c-text);">All Books</h1>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:0.875rem;color:var(--c-accent);margin-top:0.5rem;letter-spacing:0.08em;" id="books-count">{sortedBooks.length} books · A–Z by author</p>
   </header>
 
   <!-- Nav (back to Library + no section anchors) -->
