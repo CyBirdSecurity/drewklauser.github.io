@@ -1,4 +1,6 @@
 ---
+import { CATEGORY_COLORS, MEDIUM_ICONS } from '../utils/books';
+
 export interface Props {
   title?: string;
   description?: string;
@@ -55,13 +57,57 @@ const {
       </div>
     </dialog>
 
-    <script>
+    <script define:vars={{ CATEGORY_COLORS, MEDIUM_ICONS }}>
+      // ── Global modal handler (shared by every page) ──────────
       document.getElementById('book-modal')?.addEventListener('click', function(e) {
         if (e.target === this) this.close();
       });
       document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') (document.getElementById('book-modal') as HTMLDialogElement)?.close();
+        if (e.key === 'Escape') document.getElementById('book-modal')?.close();
       });
+
+      window.openBookModal = function(book) {
+        const modal = document.getElementById('book-modal');
+        if (!modal) return;
+
+        // Cover
+        const coverWrap = document.getElementById('modal-cover-wrap');
+        if (coverWrap) {
+          if (book.hasCover && book.coverUrl) {
+            coverWrap.innerHTML = `<img src="${book.coverUrl}" alt="Cover of ${book.title}" style="width:100%;display:block;border-radius:2px 4px 4px 2px;box-shadow:4px 4px 20px rgba(0,0,0,0.4);" />`;
+          } else {
+            const bg = CATEGORY_COLORS[book.categories?.[0]] ?? '#5C4033';
+            coverWrap.innerHTML = `
+              <div class="modal-cover-placeholder" style="background-color:${bg};">
+                ${book.title}
+              </div>`;
+          }
+        }
+
+        // Categories
+        const catsEl = document.getElementById('modal-categories');
+        if (catsEl) {
+          catsEl.innerHTML = (book.categories ?? []).map(cat => {
+            const color = CATEGORY_COLORS[cat] ?? '#5C4033';
+            return `<span class="category-badge" style="background-color:${color};">${cat}</span>`;
+          }).join('');
+        }
+
+        const titleEl = document.getElementById('modal-title');
+        titleEl.textContent = book.title;
+        titleEl.href = `https://www.amazon.com/s?k=${encodeURIComponent(book.title + ' ' + book.author)}`;
+        document.getElementById('modal-author').textContent = book.author;
+        document.getElementById('modal-medium').textContent = `${MEDIUM_ICONS[book.medium] ?? ''} ${book.medium}`;
+        document.getElementById('modal-year').textContent = `Read in ${book.year_read}`;
+
+        const notesEl = document.getElementById('modal-notes');
+        if (notesEl) {
+          notesEl.textContent = book.notes ?? '';
+          notesEl.style.display = book.notes ? 'block' : 'none';
+        }
+
+        modal.showModal();
+      };
     </script>
   </body>
 </html>
