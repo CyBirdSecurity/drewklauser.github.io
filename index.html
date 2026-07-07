@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
   <meta name="description" content="Drew Klauser — Engineering Manager, Security Engineering & Compliance at ezCater. Builder of security tools, teams, and trustworthy systems." />
   <meta property="og:title" content="Drew Klauser | Security Engineering & Leadership" />
   <meta property="og:description" content="Engineering Manager owning Security Engineering & Compliance at ezCater. Building tools and teams that make security a business enabler." />
@@ -11,12 +12,12 @@
   <title>Drew Klauser | Security Engineering & Leadership</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23059669'/><text y='22' x='4' font-size='16' font-family='monospace' fill='white'>DK</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23163C25'/><text y='22' x='6' font-size='16' font-family='Georgia, serif' fill='white'>DK</text></svg>" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -26,7 +27,7 @@
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Drew Klauser home">
-        <span class="nav-logo-text">Drew<span class="nav-logo-dot"> Klauser</span></span>
+        <span class="nav-logo-text">Drew<span class="nav-logo-dot">.</span>Klauser</span>
       </a>
 
       <ul class="nav-links" id="navLinks" role="list">
@@ -46,34 +47,19 @@
 
   <!-- ── Hero ───────────────────────────────────────────────── -->
   <section class="hero" id="hero" aria-label="Introduction">
-    <div class="hero-mesh" aria-hidden="true">
-      <div class="mesh-orb mesh-orb--purple"></div>
-      <div class="mesh-orb mesh-orb--blue"></div>
-      <div class="mesh-orb mesh-orb--cyan"></div>
-      <div class="hero-grid-overlay"></div>
-    </div>
-
     <div class="container hero-container">
       <div class="hero-content reveal">
-        <div class="hero-eyebrow">
-          <span class="eyebrow-dot" aria-hidden="true"></span>
-          Engineering Manager · Security &amp; Compliance
-        </div>
+        <p class="hero-eyebrow">Engineering Manager &middot; Security &amp; Compliance</p>
 
         <h1 class="hero-title">
-          <span class="title-line">Drew</span>
-          <span class="title-line gradient-text">Klauser</span>
+          <span class="title-line">Security leadership,</span>
+          <span class="title-line accent-text">built to ship.</span>
         </h1>
 
-        <p class="hero-tagline">
-          Building
-          <span class="typed-word" id="typedWord" aria-live="polite">secure systems</span>
-          <span class="typed-cursor" aria-hidden="true">|</span>
-        </p>
-
         <p class="hero-description">
-          Engineering Manager owning <strong>Security Engineering &amp; Compliance</strong> at ezCater.
-          I build tools, grow teams, and turn compliance into a business enabler — not a blocker.
+          I run security engineering at <strong>ezCater</strong> and build the automation that keeps
+          compliance from slowing anything down &mdash; SOC 2, AI-assisted vulnerability triage, and
+          the tooling in between.
         </p>
 
         <div class="hero-ctas">
@@ -81,67 +67,50 @@
             View Projects
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          <a href="#contact" class="link-arrow">Get in Touch</a>
         </div>
 
         <div class="hero-stats" aria-label="Quick stats">
           <div class="stat">
-            <span class="stat-value">8+</span>
-            <span class="stat-label">Years in Security</span>
+            <span class="stat-value">8+ yrs</span>
+            <span class="stat-label">In security</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat">
-            <span class="stat-value">SOC 2</span>
-            <span class="stat-label">Compliance Programs</span>
+            <span class="stat-value">2</span>
+            <span class="stat-label">Compliance frameworks led</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat">
-            <span class="stat-value">AI</span>
-            <span class="stat-label">Powered Security Tools</span>
+            <span class="stat-value">3</span>
+            <span class="stat-label">Tools open-sourced</span>
           </div>
         </div>
       </div>
 
       <div class="hero-visual reveal" aria-hidden="true">
-        <div class="shield-card">
-          <div class="shield-glow"></div>
-          <svg class="shield-svg" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M60 8L14 26V68C14 95.6 34 120.8 60 132C86 120.8 106 95.6 106 68V26L60 8Z" fill="url(#shieldGrad)" opacity="0.15"/>
-            <path d="M60 8L14 26V68C14 95.6 34 120.8 60 132C86 120.8 106 95.6 106 68V26L60 8Z" stroke="url(#shieldStroke)" stroke-width="1.5"/>
-            <path d="M43 70l11 11 23-24" stroke="url(#checkGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-              <linearGradient id="shieldGrad" x1="14" y1="8" x2="106" y2="132">
-                <stop stop-color="#059669"/>
-                <stop offset="1" stop-color="#2563eb"/>
-              </linearGradient>
-              <linearGradient id="shieldStroke" x1="14" y1="8" x2="106" y2="132">
-                <stop stop-color="#34D399"/>
-                <stop offset="1" stop-color="#60a5fa"/>
-              </linearGradient>
-              <linearGradient id="checkGrad" x1="43" y1="70" x2="77" y2="81">
-                <stop stop-color="#6EE7B7"/>
-                <stop offset="1" stop-color="#93c5fd"/>
-              </linearGradient>
-            </defs>
-          </svg>
-          <div class="shield-badge shield-badge--tl">
-            <span class="badge-dot badge-dot--green"></span>Supply Chain
+        <div class="health-card">
+          <div class="health-head">
+            <span class="health-label">Program health</span>
+            <span class="health-badge"><span class="status-dot"></span>Active</span>
           </div>
-          <div class="shield-badge shield-badge--tr">
-            <span class="badge-dot badge-dot--blue"></span>AI-Powered
+          <div class="gauge-wrap">
+            <svg width="104" height="104" viewBox="0 0 104 104">
+              <circle cx="52" cy="52" r="44" fill="none" stroke="var(--c-border)" stroke-width="10" />
+              <circle class="gauge-arc" cx="52" cy="52" r="44" fill="none" stroke="var(--c-accent)" stroke-width="10"
+                      stroke-linecap="round" stroke-dasharray="276.5" stroke-dashoffset="24"
+                      transform="rotate(-90 52 52)" />
+              <text x="52" y="58" text-anchor="middle" class="gauge-value">92<tspan class="gauge-value-unit">%</tspan></text>
+            </svg>
+            <p class="gauge-caption"><strong>Controls coverage</strong> across production systems, reviewed quarterly.</p>
           </div>
-          <div class="shield-badge shield-badge--bl">
-            <span class="badge-dot badge-dot--purple"></span>SOC 2 Ready
-          </div>
-          <div class="shield-badge shield-badge--br">
-            <span class="badge-dot badge-dot--cyan"></span>AppSec
+          <div class="health-rows">
+            <div class="health-row"><span class="k">SOC 2 Type II</span><span class="v">Active</span></div>
+            <div class="health-row"><span class="k">Critical findings open</span><span class="v">0</span></div>
+            <div class="health-row"><span class="k">Mean time to remediate</span><span class="v">3.2 days</span></div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="hero-scroll-hint" aria-hidden="true">
-      <span></span>
     </div>
   </section>
 
@@ -150,78 +119,56 @@
     <div class="container">
       <div class="section-header reveal">
         <p class="section-eyebrow">About</p>
-        <h2 class="section-title">Security leadership<br/><span class="gradient-text">that ships.</span></h2>
-        <p class="section-sub">
-          I sit at the intersection of security engineering, compliance, and product — turning abstract risk into concrete engineering solutions.
-        </p>
+        <h2 class="section-title">Where risk<br/><span class="accent-text">meets execution.</span></h2>
       </div>
 
       <div class="about-grid">
-        <div class="about-card reveal" style="--delay: 0ms">
-          <div class="about-card-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3 class="about-card-title">Engineering Leadership</h3>
-          <p class="about-card-text">Managing high-performing security engineering teams at ezCater. Owning roadmap, hiring, mentorship, and delivering security outcomes that matter to the business.</p>
-          <div class="about-card-tags skill-tags" role="list">
-            <span class="skill-tag" role="listitem">Engineering Management</span>
-            <span class="skill-tag" role="listitem">Security Roadmapping</span>
-            <span class="skill-tag" role="listitem">Team Building</span>
-            <span class="skill-tag" role="listitem">Cross-functional Leadership</span>
-            <span class="skill-tag" role="listitem">Security Culture</span>
-            <span class="skill-tag" role="listitem">Hiring &amp; Mentorship</span>
-            <span class="skill-tag" role="listitem">OKR Alignment</span>
-          </div>
+        <div class="about-copy reveal">
+          <p>I sit between security engineering, compliance, and product &mdash; turning abstract risk into engineering work that actually gets prioritized.</p>
+          <p>Most of what I build starts as something that removed a chore from my own team, then gets released once it's proven useful elsewhere.</p>
         </div>
 
-        <div class="about-card reveal" style="--delay: 80ms">
-          <div class="about-card-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <div class="about-rows">
+          <div class="about-row reveal" style="--delay: 0ms">
+            <span class="about-row-tag">Leadership</span>
+            <div>
+              <h3 class="about-row-title">Engineering management</h3>
+              <p class="about-row-text">Own roadmap, hiring, and mentorship for a security engineering team, translating business risk into a roadmap the rest of engineering will actually plan around.</p>
+              <div class="chips" role="list">
+                <span class="chip" role="listitem">Team building</span>
+                <span class="chip" role="listitem">Hiring &amp; mentorship</span>
+                <span class="chip" role="listitem">Roadmapping</span>
+                <span class="chip" role="listitem">Security culture</span>
+              </div>
+            </div>
           </div>
-          <h3 class="about-card-title">Compliance &amp; GRC</h3>
-          <p class="about-card-text">Driving SOC 2, PCI DSS, and Compliance programs that don't slow engineering down. Translating audit requirements into scalable, automated controls.</p>
-          <div class="about-card-tags skill-tags" role="list">
-            <span class="skill-tag" role="listitem">SOC 2 Type II</span>
-            <span class="skill-tag" role="listitem">PCI DSS</span>
-            <span class="skill-tag" role="listitem">Risk Management</span>
-            <span class="skill-tag" role="listitem">Vendor Assessment</span>
-            <span class="skill-tag" role="listitem">Audit Readiness</span>
-            <span class="skill-tag" role="listitem">Policy Development</span>
-          </div>
-        </div>
 
-        <div class="about-card reveal" style="--delay: 160ms">
-          <div class="about-card-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <div class="about-row reveal" style="--delay: 80ms">
+            <span class="about-row-tag">Compliance</span>
+            <div>
+              <h3 class="about-row-title">Compliance &amp; GRC</h3>
+              <p class="about-row-text">SOC 2 Type II and PCI DSS programs built as automated controls, not spreadsheets &mdash; audit evidence that generates itself.</p>
+              <div class="chips" role="list">
+                <span class="chip" role="listitem">SOC 2 Type II</span>
+                <span class="chip" role="listitem">PCI DSS</span>
+                <span class="chip" role="listitem">Vendor risk</span>
+                <span class="chip" role="listitem">Policy</span>
+              </div>
+            </div>
           </div>
-          <h3 class="about-card-title">Security Tooling</h3>
-          <p class="about-card-text">Building open-source tools that automate security work — from AI-powered code scanning to supply chain protection. If it's repetitive, it should be automated.</p>
-          <div class="about-card-tags skill-tags" role="list">
-            <span class="skill-tag" role="listitem">Application Security</span>
-            <span class="skill-tag" role="listitem">Cloud Security (AWS)</span>
-            <span class="skill-tag" role="listitem">Detection &amp; Response</span>
-            <span class="skill-tag" role="listitem">Vulnerability Management</span>
-            <span class="skill-tag" role="listitem">Security Architecture</span>
-            <span class="skill-tag" role="listitem">Threat Modeling</span>
-            <span class="skill-tag" role="listitem">SIEM</span>
-            <span class="skill-tag" role="listitem">Penetration Testing</span>
-          </div>
-        </div>
 
-        <div class="about-card reveal" style="--delay: 240ms">
-          <div class="about-card-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          </div>
-          <h3 class="about-card-title">AI &amp; Automation</h3>
-          <p class="about-card-text">Leveraging Claude AI and modern LLMs to augment security workflows — smarter vulnerability triage, automated policy generation, and intelligent code review.</p>
-          <div class="about-card-tags skill-tags" role="list">
-            <span class="skill-tag" role="listitem">Python</span>
-            <span class="skill-tag" role="listitem">Shell / Bash</span>
-            <span class="skill-tag" role="listitem">GitHub Actions</span>
-            <span class="skill-tag" role="listitem">Claude AI</span>
-            <span class="skill-tag" role="listitem">Supply Chain Security</span>
-            <span class="skill-tag" role="listitem">CI/CD Security</span>
-            <span class="skill-tag" role="listitem">OWASP</span>
+          <div class="about-row reveal" style="--delay: 160ms">
+            <span class="about-row-tag">Tooling</span>
+            <div>
+              <h3 class="about-row-title">AI &amp; automation</h3>
+              <p class="about-row-text">Claude-driven scanners, supply-chain integrity checks, and CI/CD guardrails &mdash; open-sourced when they're worth someone else's time.</p>
+              <div class="chips" role="list">
+                <span class="chip" role="listitem">Python</span>
+                <span class="chip" role="listitem">GitHub Actions</span>
+                <span class="chip" role="listitem">Claude AI</span>
+                <span class="chip" role="listitem">Supply chain security</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -231,12 +178,12 @@
         <div class="role-content">
           <div class="role-info">
             <span class="role-title">Engineering Manager, Security &amp; Compliance</span>
-            <span class="role-sep" aria-hidden="true">·</span>
+            <span class="role-sep" aria-hidden="true">&middot;</span>
             <span class="role-company">ezCater</span>
           </div>
           <div class="role-badge">
             <span class="status-dot" aria-hidden="true"></span>
-            Remote · Full-time
+            Remote &middot; Full-time
           </div>
         </div>
       </div>
@@ -248,13 +195,11 @@
     <div class="container">
       <div class="projects-header reveal">
         <div class="section-header">
-          <p class="section-eyebrow">Open Source</p>
-          <h2 class="section-title">Tools I've built<br/><span class="gradient-text">for security teams.</span></h2>
-          <p class="section-sub">Public repositories — security automation that's actually useful.</p>
+          <h2 class="section-title">Tools I've built<br/><span class="accent-text">for security teams.</span></h2>
+          <p class="section-sub">Public repositories &mdash; security automation that's actually useful.</p>
         </div>
-        <a href="https://github.com/CyBirdSecurity" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" aria-label="View all repositories on GitHub">
+        <a href="https://github.com/CyBirdSecurity" target="_blank" rel="noopener noreferrer" class="link-arrow" aria-label="View all repositories on GitHub">
           View all on GitHub
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
 
@@ -265,7 +210,7 @@
 
       <div class="projects-header reveal" style="margin-top: 4rem;">
         <div class="section-header">
-          <h2 class="section-title">Tools I've built<br/><span class="gradient-text">for personal development.</span></h2>
+          <h2 class="section-title">Tools I've built<br/><span class="accent-text">for personal development.</span></h2>
           <p class="section-sub">Certification study tools and learning resources.</p>
         </div>
       </div>
@@ -278,16 +223,11 @@
       <!-- ── Library Feature ───────────────────────────────────── -->
       <div class="library-card reveal" style="margin-top: 5rem;">
         <div class="library-card-left">
-          <div class="about-card-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-            </svg>
-          </div>
           <p class="section-eyebrow">Reading &amp; Learning</p>
-          <h2 class="library-card-title">A curated reading<br/><span class="gradient-text">Library.</span></h2>
+          <h2 class="library-card-title">A curated reading<br/><span class="accent-text">Library.</span></h2>
           <p class="library-card-desc">
-            I track every book I read — organized by year, category, and ranked against each other. From cybersecurity deep dives to finance essentials and leadership classics.
+            Every book I've read, organized by year and category, ranked against each other &mdash;
+            cybersecurity deep dives next to finance and leadership classics.
           </p>
           <a href="/library" class="btn btn-primary">
             Explore the Library
@@ -296,62 +236,49 @@
         </div>
         <div class="library-card-right">
           <div class="library-stats">
-            <div class="library-stat">
-              <span class="library-stat-value">130+</span>
-              <span class="library-stat-label">Books tracked</span>
-            </div>
-            <div class="library-stat">
-              <span class="library-stat-value">8</span>
-              <span class="library-stat-label">Years of reading</span>
-            </div>
-            <div class="library-stat">
-              <span class="library-stat-value">12</span>
-              <span class="library-stat-label">Categories</span>
-            </div>
-            <div class="library-stat">
-              <span class="library-stat-value">Top 10</span>
-              <span class="library-stat-label">Ranked favorites</span>
-            </div>
+            <div class="library-stat"><span class="k">Books tracked</span><span class="v">130+</span></div>
+            <div class="library-stat"><span class="k">Years of reading</span><span class="v">8</span></div>
+            <div class="library-stat"><span class="k">Categories</span><span class="v">12</span></div>
+            <div class="library-stat"><span class="k">Ranked favorites</span><span class="v">Top 10</span></div>
           </div>
         </div>
       </div>
 
       <!-- ── MyFi Feature ───────────────────────────────────────── -->
-      <div class="library-card reveal" style="margin-top: 2rem;">
-        <div class="library-card-left">
-          <div class="about-card-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.1-2.8-2.8L7 14"/></svg>
+      <div class="library-card library-card--reverse reveal" style="margin-top: 1.75rem;">
+        <div class="library-card-right library-card-chart">
+          <div class="chart-card" aria-hidden="true">
+            <div class="chart-head">
+              <span class="chart-label">Projected net worth</span>
+              <span class="chart-value">$1.84M <span class="chart-value-sub">by 65</span></span>
+            </div>
+            <svg width="100%" height="132" viewBox="0 0 320 132" preserveAspectRatio="none">
+              <polyline points="0,108 40,101 80,96 120,84 150,78" fill="none" stroke="var(--c-accent)" stroke-width="2.5" stroke-linecap="round" />
+              <polyline points="150,62 190,50 230,36 270,24 320,16" fill="none" stroke="var(--c-accent)" stroke-width="1.6" stroke-dasharray="1 6" stroke-linecap="round" />
+              <polyline points="150,78 190,72 230,64 270,54 320,44" fill="none" stroke="var(--c-accent)" stroke-width="1" opacity="0.28" />
+              <polyline points="150,46 190,30 230,14 270,2 320,-8" fill="none" stroke="var(--c-accent)" stroke-width="1" opacity="0.28" />
+              <circle cx="150" cy="78" r="3" fill="var(--c-accent)" />
+              <circle cx="320" cy="16" r="3.5" fill="var(--c-accent)" />
+            </svg>
+            <div class="chart-axis"><span>2026</span><span>today</span><span>2046</span><span>2066</span></div>
           </div>
-          <p class="section-eyebrow">Building &amp; Invite Only</p>
-          <h2 class="library-card-title">MyFi — a personal<br/><span class="gradient-text">finance dashboard.</span></h2>
+        </div>
+        <div class="library-card-left">
+          <p class="section-eyebrow">Building &middot; Invite-only</p>
+          <h2 class="library-card-title">MyFi &mdash; a personal<br/><span class="accent-text">finance dashboard.</span></h2>
           <p class="library-card-desc">
-            A self-hosted app I'm building that unifies every account, tracks investments in real time,
-            and projects wealth through retirement with Monte Carlo forecasting. It's invite-only for
-            now — explore a simulated demo to see what it does.
+            A self-hosted app I designed, built, and shipped solo &mdash; it unifies every account,
+            tracks investments in real time, and runs Monte Carlo forecasts through retirement.
+            Product, design, and engineering, end to end.
           </p>
           <a href="/myfi" class="btn btn-primary">
             Preview MyFi
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-        </div>
-        <div class="library-card-right">
-          <div class="library-stats">
-            <div class="library-stat">
-              <span class="library-stat-value">Invite</span>
-              <span class="library-stat-label">Access only</span>
-            </div>
-            <div class="library-stat">
-              <span class="library-stat-value">Monte Carlo</span>
-              <span class="library-stat-label">Retirement forecast</span>
-            </div>
-            <div class="library-stat">
-              <span class="library-stat-value">Live</span>
-              <span class="library-stat-label">Holdings &amp; prices</span>
-            </div>
-            <div class="library-stat">
-              <span class="library-stat-value">Local AI</span>
-              <span class="library-stat-label">Chat with your data</span>
-            </div>
+          <div class="chips" style="margin-top: 22px;">
+            <span class="chip">Monte Carlo forecasting</span>
+            <span class="chip">Live holdings</span>
+            <span class="chip">Local AI chat</span>
           </div>
         </div>
       </div>
@@ -360,17 +287,14 @@
 
   <!-- ── Contact ────────────────────────────────────────────── -->
   <section class="contact section" id="contact" aria-label="Contact information">
-    <div class="contact-bg" aria-hidden="true">
-      <div class="contact-orb"></div>
-    </div>
     <div class="container">
       <div class="contact-inner reveal">
         <p class="section-eyebrow" style="text-align:center">Contact</p>
         <h2 class="section-title" style="text-align:center">
-          Let's build something<br/><span class="gradient-text">secure together.</span>
+          Let's build something<br/><span class="accent-text">secure together.</span>
         </h2>
         <p class="contact-sub">
-          Whether you're thinking about security strategy, tooling, compliance, or just want to connect — I'm always open to a good conversation.
+          Whether you're thinking about security strategy, tooling, compliance, or just want to connect &mdash; I'm always open to a good conversation.
         </p>
 
         <div class="contact-links">
@@ -415,7 +339,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <a href="#hero" class="footer-logo" aria-label="Back to top">
-        <span class="footer-logo-text">Drew<span class="nav-logo-dot"> Klauser</span></span>
+        <span class="footer-logo-text">Drew<span class="nav-logo-dot">.</span>Klauser</span>
       </a>
       <p class="footer-copy">
         &copy; <span id="footerYear"></span> Drew Klauser. Built with
