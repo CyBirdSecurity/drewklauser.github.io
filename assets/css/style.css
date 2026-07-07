@@ -5,6 +5,8 @@
 
 /* ── Custom Properties ────────────────────────────────────── */
 :root {
+  color-scheme: light;
+
   /* Surfaces */
   --c-bg:          #F7F3EC;
   --c-bg-elevated: #FCFAF5;
