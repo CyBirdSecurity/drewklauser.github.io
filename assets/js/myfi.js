@@ -12,12 +12,16 @@
   if (!navBtns.length) return;
 
   const titles = {
-    'mfd-dashboard': ['Dashboard', 'Your financial snapshot'],
-    'mfd-holdings':  ['Holdings', 'All positions across accounts'],
-    'mfd-forecast':  ['Retirement Forecast', 'Projected to age 100'],
-    'mfd-goals':     ['Goals', 'Track your milestones'],
-    'mfd-budget':    ['Budget', 'Monthly spending breakdown'],
-    'mfd-taxes':     ['Tax Analysis', 'Optimize your account structure'],
+    'mfd-dashboard':  ['Dashboard', 'Your financial snapshot'],
+    'mfd-accounts':   ['Accounts', 'Every account in one place'],
+    'mfd-holdings':   ['Holdings', 'All positions across accounts'],
+    'mfd-forecast':   ['Forecast', 'Monte Carlo projection to age 100'],
+    'mfd-retirement': ['Retirement', 'Withdrawal rate & income planning'],
+    'mfd-scenarios':  ['Scenarios', 'Compare what-if plans'],
+    'mfd-goals':      ['Goals', 'Track your milestones'],
+    'mfd-budget':     ['Budget', 'Monthly spending breakdown'],
+    'mfd-taxes':      ['Taxes', 'Optimize your account structure'],
+    'mfd-import':     ['Import', 'Bring in existing balance history'],
   };
 
   const titleEl = document.getElementById('mfd-title');
@@ -39,6 +43,8 @@
         titleEl.textContent = meta[0];
         subtitleEl.textContent = meta[1];
       }
+
+      btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     });
   });
 })();
