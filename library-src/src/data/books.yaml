@@ -1212,3 +1212,12 @@ books:
     in_progress: true
     ranking: null
     notes: ""
+
+  - title: "The Next Millionaire Next Door"
+    author: "Thomas J. Stanley, Sarah Stanley Fallaw"
+    year_read: 2026
+    categories: [Finance]
+    medium: hardcover
+    in_progress: true
+    ranking: null
+    notes: ""
