@@ -1218,6 +1218,6 @@ books:
     year_read: 2026
     categories: [Finance]
     medium: hardcover
-    in_progress: true
+    in_progress: false
     ranking: null
     notes: ""
