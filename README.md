@@ -10,27 +10,19 @@ committed under any of the directories below is what goes live.
   Engineering & Leadership").
 - `me/` — a links page.
 - `myfi/` — a personal finance / retirement dashboard page.
-- `library/` — the **built** Library site (deployed artifact, committed to git).
-- `library-src/` — the **source** for the Library, an [Astro](https://astro.build) app.
-  Edit here, then rebuild into `library/`.
+- `library/` — the Library: plain HTML/CSS/JS, no build step. Edit and push directly.
+- `scripts/` — optional local helpers (cover-art auto-fetch); never required to deploy.
 - `404.md` — custom 404 page.
 
 ## The Library
 
-The Library is a small Astro app for tracking books read, backed by a single YAML data
-file. See [CLAUDE.md](CLAUDE.md) for the full guide to adding books, cover art, and the
+The Library is a hand-written static site for tracking books read — the browser fetches
+`library/books.yaml` and renders everything client-side, so there's nothing to build.
+See [CLAUDE.md](CLAUDE.md) for the full guide to adding books, cover art, and the
 "in progress" vs. finished counting logic.
 
-Quick reference, from `library-src/`:
-
-```bash
-npm install        # first time only
-npm run dev        # local dev server
-npm run build      # runs fetch-covers, then writes the static site to ../library/
-```
-
-Any change to the Library must be rebuilt and the regenerated `library/` output
-committed alongside the `library-src/` source change.
+Editing `library/books.yaml` (and adding any new cover art to `library/covers/`) and
+pushing is the entire workflow — no install, no build, no separate output to commit.
 
 ## Conventions
 
