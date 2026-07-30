@@ -1,0 +1,9 @@
+{
+  "name": "library-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Optional local helpers for fetching book cover art. Not required to run or deploy the Library — it's plain static HTML/JS.",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
