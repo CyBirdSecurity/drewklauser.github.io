@@ -1059,6 +1059,15 @@ books:
     ranking: 3
     notes: ""
 
+  - title: "Working Backwards"
+    author: "Colin Bryar, Bill Carr"
+    year_read: 2026
+    categories: [Business]
+    medium: hardcover
+    in_progress: true
+    ranking: null
+    notes: "Rereading as part of a book club."
+
   - title: "Stacked"
     author: "Joe Saul-Sehy, Emily Guy Birken"
     year_read: 2025
