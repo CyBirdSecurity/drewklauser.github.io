@@ -1,0 +1,177 @@
+# Recipe data for the virtual cookbook. Loaded client-side by
+# recipes/assets/lib.js — no build step, same pattern as library/books.yaml.
+#
+# Schema for each recipe:
+#
+#   title: "Recipe Name"            # required
+#   author: "Drew"                  # who contributed it
+#   cuisine: "Italian"               # single cuisine tag, shown as a badge
+#   categories: [Snacks]              # one or more; see allowed values below
+#   difficulty: easy                 # easy | medium | hard
+#   prep_minutes: 15
+#   cook_minutes: 20                 # active cook/bake time, not chill/rest time
+#   servings: 4                      # the base yield these ingredient amounts are for
+#   yield_label: "servings"          # optional, e.g. "balls", "cookies" — defaults to "servings"
+#   tags: [vegetarian, quick]         # free-form, used for filtering
+#   image: null                      # optional override; defaults to images/{slug}/hero.jpg
+#   ingredients:
+#     # Structured form scales with the servings stepper:
+#     - qty: 1
+#       unit: cup
+#       item: rolled oats
+#     # Plain-string form does NOT scale — shown as-is at any serving count
+#     # (use this for "to taste" items, or anything that's easier to type free-form):
+#     - "salt and pepper, to taste"
+#   steps:
+#     - text: "Bring a large pot of salted water to a boil."
+#       timer_minutes: null           # optional countdown timer for this step
+#       image: null                  # optional; resolves to images/{slug}/{image}
+#       ingredients: [0, 3]           # optional — zero-based indices into the
+#                                     # ingredients list above. Renders those
+#                                     # lines (scaled to the current serving
+#                                     # count) right on the step, since by the
+#                                     # time you're mid-recipe you're looking
+#                                     # at the step, not scrolling back to the
+#                                     # ingredient list to check an amount.
+#   notes: ""                        # optional, shown below the recipe
+#
+# Allowed categories: Breakfast, Lunch, Dinner, Pasta, Snacks, Dessert, Baking,
+# Drinks, No-Bake, Sides, Sauces. (To add a new one, also add it to
+# CATEGORY_COLORS in recipes/assets/lib.js.)
+#
+# Cover art: drop a JPG at recipes/images/{slug}/hero.jpg, where slug is the
+# title lowercased, non-alphanumerics stripped, spaces turned to hyphens
+# (same slugify rule as the Library). No cover file just falls back to a
+# colored placeholder client-side — nothing to configure.
+
+recipes:
+  - title: "Peanut Butter Protein Balls"
+    author: "Drew"
+    cuisine: American
+    categories: [Snacks, No-Bake]
+    difficulty: easy
+    prep_minutes: 15
+    cook_minutes: 0
+    servings: 12
+    yield_label: "balls"
+    tags: [vegetarian, no-bake, high-protein, make-ahead]
+    image: null
+    ingredients:
+      - qty: 1
+        unit: cup
+        item: rolled oats
+      - qty: 0.5
+        unit: cup
+        item: peanut butter
+      - qty: 0.3
+        unit: cup
+        item: vanilla protein powder
+      - qty: 0.3
+        unit: cup
+        item: honey
+      - qty: 0.3
+        unit: cup
+        item: mini chocolate chips
+      - qty: 0.5
+        unit: tsp
+        item: vanilla extract
+      - qty: 0.1
+        unit: tsp
+        item: fine salt
+      - qty: 1
+        unit: tbsp
+        item: water (if needed)
+    steps:
+      - text: "Mix base ingredients: in a medium bowl, stir together the oats, peanut butter, protein powder, honey, vanilla extract, and salt until fully combined and no dry pockets of protein powder remain."
+        ingredients: [0, 1, 2, 3, 5, 6]
+      - text: "Adjust texture: if the mixture is too dry to hold together, add the water a little at a time and stir until it's moist enough to roll but not sticky."
+        ingredients: [7]
+      - text: "Fold in chocolate chips: fold in the mini chocolate chips evenly throughout the mixture."
+        ingredients: [4]
+      - text: "Chill the mixture: cover the bowl and refrigerate for 15-20 minutes so it firms up and is easier to roll."
+        timer_minutes: 20
+      - text: "Roll into balls: scoop about 1 tablespoon of mixture and roll between your palms into a ball, about 1 inch wide. Repeat with remaining mixture (makes about 12 balls)."
+      - text: "Chill to set: place balls on a parchment-lined plate or container and refrigerate for at least 30 minutes to firm up before eating."
+        timer_minutes: 30
+    notes: "Store in an airtight container in the fridge for up to a week, or freeze for up to 3 months. For a chewier texture, use old-fashioned rolled oats rather than quick oats. If your protein powder is unflavored, consider adding a touch more honey or vanilla to taste."
+
+  - title: "Spicy Rigatoni alla Vodka with Sausage & Burrata"
+    author: "Drew"
+    cuisine: Italian
+    categories: [Dinner, Pasta]
+    difficulty: medium
+    prep_minutes: 15
+    cook_minutes: 35
+    servings: 6
+    tags: [spicy, creamy, date-night]
+    image: null
+    ingredients:
+      - qty: 1
+        unit: lb
+        item: rigatoni
+      - qty: 1
+        unit: lb
+        item: "spicy Italian sausage, casings removed"
+      - qty: 2
+        unit: tbsp
+        item: olive oil
+      - qty: 1
+        unit: shallot
+        item: ", finely minced (or 1/2 small onion)"
+      - qty: 4
+        unit: "garlic clove"
+        item: ", minced"
+      - qty: 6
+        unit: tbsp
+        item: tomato paste
+      - qty: 2
+        unit: tbsp
+        item: "Calabrian chili paste (or chopped peppers in oil)"
+      - qty: 4
+        unit: "fl oz"
+        item: vodka
+      - qty: 1
+        unit: cup
+        item: heavy cream
+      - qty: 1
+        unit: cup
+        item: "Parmesan, finely grated"
+      - qty: 2
+        unit: tbsp
+        item: butter
+      - qty: 2
+        unit: burrata
+        item: ""
+      - qty: 0.3
+        unit: cup
+        item: fresh basil leaves
+      - qty: 1
+        unit: tsp
+        item: salt
+      - qty: 0.5
+        unit: tsp
+        item: black pepper
+    steps:
+      - text: "Boil the pasta water: bring a large pot of well-salted water to a boil for the rigatoni. Don't cook the pasta yet — you want it going in around the time the sauce comes together."
+      - text: "Brown the sausage: heat the olive oil in a large, deep skillet over medium-high. Add the sausage, breaking it into bite-size crumbles. Cook until deeply browned, 6-8 minutes. Remove sausage to a plate, leaving the fat behind."
+        timer_minutes: 7
+        ingredients: [2, 1]
+      - text: "Soften the aromatics: lower heat to medium. Add the shallot and garlic to the sausage fat and cook until soft and fragrant, about 2-3 minutes."
+        timer_minutes: 3
+        ingredients: [3, 4]
+      - text: "Caramelize the paste: stir in the tomato paste and Calabrian chili paste. Cook, stirring constantly, until the paste darkens to a deep brick red, 3-4 minutes. This step is what gives the sauce its depth — don't rush it."
+        timer_minutes: 4
+        ingredients: [5, 6]
+      - text: "Add vodka: pour in the vodka and stir, scraping up the browned bits. Let it bubble and cook down for 2 minutes to burn off the raw alcohol."
+        timer_minutes: 2
+        ingredients: [7]
+      - text: "Cook the rigatoni: drop the pasta into the boiling water now and cook to just under al dente (about 1 minute less than the box). Reserve a cup of pasta water before draining."
+        ingredients: [0]
+      - text: "Build the cream sauce: reduce heat to low. Stir in the heavy cream until smooth, then the browned sausage. Season with the salt and pepper. Simmer gently 2-3 minutes."
+        timer_minutes: 3
+        ingredients: [8, 13, 14]
+      - text: "Toss it all together: add the drained rigatoni to the sauce along with the butter and Parmesan. Toss over low heat, adding splashes of reserved pasta water until the sauce is glossy and clings to every tube."
+        ingredients: [10, 9]
+      - text: "Finish with burrata & basil: plate the pasta, tear the burrata over the top so it melts into the heat, and scatter with the basil. Serve right away."
+        ingredients: [11, 12]
+    notes: "Heat control: Calabrian chili varies a lot by brand. Start with 2 tbsp, taste the sauce before adding pasta, and stir in more if you want it hotter. A pinch of red pepper flakes with the aromatics adds another layer. If the sauce gets too thick after tossing, loosen it with pasta water rather than more cream. Pre-shredded Parmesan won't melt as smoothly — grate your own off the block if you can."

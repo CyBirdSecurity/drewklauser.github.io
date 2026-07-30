@@ -74,15 +74,8 @@
       width: 88px;
       height: 88px;
       border-radius: 50%;
-      background: var(--c-accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-serif);
-      font-size: 2rem;
-      font-weight: 600;
-      color: #fff;
-      letter-spacing: -1px;
+      object-fit: cover;
+      display: block;
       flex-shrink: 0;
       box-shadow: var(--shadow-1), var(--shadow-2);
     }
@@ -289,12 +282,12 @@
   <main class="linktree">
 
     <!-- Avatar -->
-    <div class="avatar" aria-hidden="true">DK</div>
+    <img class="avatar" src="/me/assets/img/profile.jpg" alt="Drew Klauser" />
 
     <!-- Profile -->
     <div class="profile">
       <h1 class="profile-name">Drew <span class="accent-text">Klauser</span></h1>
-      <p class="profile-title">Engineering Manager, Security &amp; Compliance<br/>at ezCater &middot; CyBird Security</p>
+      <p class="profile-title">Engineering Manager, Security &amp; Compliance<br/>at ezCater</p>
       <a href="https://www.linkedin.com/in/drewklauser/" target="_blank" rel="noopener noreferrer" class="profile-badge" aria-label="Connect with Drew on LinkedIn">
         <span class="status-dot" aria-hidden="true"></span>
         Open to connecting
@@ -367,7 +360,18 @@
         </div>
         <div class="link-content">
           <span class="link-label">Reading List</span>
-          <span class="link-value">Drew's Library Tracker</span>
+          <span class="link-value">Drew's Library</span>
+        </div>
+        <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="https://drewklauser.com/recipes" class="link-card" aria-label="Drew's virtual cookbook">
+        <div class="link-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div class="link-content">
+          <span class="link-label">Cookbook</span>
+          <span class="link-value">Drew's Recipes</span>
         </div>
         <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
