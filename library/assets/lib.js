@@ -62,8 +62,12 @@ function coverEl(book, { width, height, imgClass, placeholderClass, extraPlaceho
   img.src = book.coverUrl;
   img.alt = `Cover of ${book.title}`;
   img.loading = 'lazy';
-  if (width) img.width = width;
-  if (height) img.height = height;
+  // img is inline by default, which leaves a few px of baseline gap below
+  // it — enough for the spine-edge color to bleed past the cover art.
+  img.style.display = 'block';
+  if (width) { img.width = width; img.style.width = `${width}px`; }
+  if (height) { img.height = height; img.style.height = `${height}px`; }
+  if (width && height) img.style.objectFit = 'cover';
   if (imgClass) img.className = imgClass;
 
   img.onerror = () => {
