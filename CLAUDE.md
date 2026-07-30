@@ -8,10 +8,11 @@ This is a static GitHub Pages site served from the repo root (`drewklauser.com`)
 
 - `index.html`, `me/`, `assets/` — the main personal site.
 - `library/` — the Library: plain HTML/CSS/JS, no build step. Edit files here directly.
+- `recipes/` — the Recipes cookbook: plain HTML/CSS/JS, no build step. Edit files here directly.
 - `scripts/` — optional local helpers (cover-art auto-fetch); never required to deploy.
 
 There is **no build step and no CI**. Whatever is committed is what goes live —
-editing a file under `library/` and pushing is the entire deploy process.
+editing a file under `library/` or `recipes/` and pushing is the entire deploy process.
 
 ## The Library
 
@@ -75,6 +76,67 @@ flip it to `false` (and confirm `year_read`) once you finish it.
 > Note: the "Browse all books" page (`library/all/index.html`) intentionally lists
 > **every** book in the library, including in-progress ones, so its count can be one
 > higher than the home page.
+
+## The Recipes cookbook
+
+Same pattern as the Library: a hand-written static site that fetches `recipes.yaml`
+client-side (own vendored copy of `js-yaml`, `recipes/vendor/js-yaml.min.js`) — no
+shared code with `library/`, so the two stay independent.
+
+- **Data:** `recipes/recipes.yaml`
+- **Images:** `recipes/images/{slug}/hero.jpg` (card/cover), plus optional
+  `recipes/images/{slug}/{step-image}.jpg` referenced per step
+- **Pages:** `recipes/index.html` (browse/search/filter + recipe modal),
+  `recipes/cook/index.html` (cook mode — one template for every recipe, driven by
+  `?r={slug}&servings={n}` in the URL, not a page per recipe)
+- **Shared render logic:** `recipes/assets/lib.js` (YAML loading, slugify, fraction
+  formatting for servings scaling, image fallback, modal), `recipes/assets/home.js`,
+  `recipes/assets/cook.js` (step navigation, timers, wake lock, ingredient checklist)
+- **Styles:** `recipes/assets/style.css` (mobile-first — cook mode is meant to be used
+  one-handed at the stove)
+
+### Adding a recipe
+
+1. Add an entry to the `recipes:` list in `recipes/recipes.yaml`. The full schema
+   (with comments) lives at the top of that file — the short version:
+
+   ```yaml
+   - title: "Recipe Name"
+     cuisine: "Italian"
+     categories: [Dinner, Pasta]       # see allowed values in recipes.yaml
+     difficulty: easy                 # easy | medium | hard
+     prep_minutes: 15
+     cook_minutes: 20
+     servings: 4                      # base yield the ingredient amounts are for
+     ingredients:
+       - qty: 1                       # structured form scales with the servings stepper
+         unit: cup
+         item: rolled oats
+       - "salt and pepper, to taste"  # plain-string form never scales
+     steps:
+       - text: "Bring a large pot of salted water to a boil."
+         timer_minutes: null           # optional countdown timer
+         ingredients: [0]              # optional — indices into ingredients above,
+                                       # rendered as scaled chips right on the step
+     notes: ""
+   ```
+
+2. **Photos.** Drop a JPG at `recipes/images/{slug}/hero.jpg`, where `slug` is the
+   title lowercased, non-alphanumerics stripped, spaces to hyphens (same rule as the
+   Library). No cover just falls back to a colored placeholder client-side. Per-step
+   photos are optional — set `image: "step-2.jpg"` on a step and drop the file next
+   to the hero image.
+
+3. **Push.** Just `recipes.yaml` and any new `recipes/images/**` files.
+
+### Why per-step `ingredients:` indices matter
+
+Cook mode scales every ingredient to whatever serving count was picked on the
+`Start Cooking` button, but the step *text* itself is never rescaled (that would need
+NLP). Tagging a step with the ingredient indices it actually uses renders those scaled
+amounts as chips on the step, so mid-recipe you're never stuck guessing an amount or
+scrolling back to the ingredient list. Skip it for steps that don't introduce a new
+ingredient (rolling, resting, plating).
 
 ## Conventions
 
