@@ -1222,7 +1222,7 @@ books:
     ranking: null
     notes: ""
 
-  - title: "Locked Up: Cybersecurity Threat Mitigation Lessons from A Real-World LockBit Ransomware Response"
+  - title: "Locked Up"
     author: "Zachary Lewis"
     year_read: 2026
     categories: [Cybersecurity]
