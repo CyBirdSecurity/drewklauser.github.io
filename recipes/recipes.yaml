@@ -330,6 +330,42 @@ recipes:
         ingredients: [5, 6]
     notes: ""
 
+  - title: "Blood Orange Amaretto Margarita"
+    author: "Drew"
+    cuisine: Mexican
+    categories: [Drinks]
+    difficulty: easy
+    prep_minutes: 5
+    cook_minutes: 0
+    servings: 1
+    yield_label: "cocktail"
+    tags: [cocktail, amaretto, tequila]
+    image: null
+    ingredients:
+      - qty: 2
+        unit: oz
+        item: amaretto
+      - qty: 1.5
+        unit: oz
+        item: "silver tequila"
+      - qty: 1
+        unit: oz
+        item: "blood orange juice, freshly squeezed"
+      - qty: 0.5
+        unit: oz
+        item: "lime juice, freshly squeezed"
+      - qty: 0.25
+        unit: oz
+        item: "light simple syrup"
+      - "salt, for the rim"
+    steps:
+      - text: "Salt the rim of a rocks glass."
+        ingredients: [5]
+      - text: "Add the amaretto, tequila, blood orange juice, lime juice, and simple syrup to a shaker with ice."
+        ingredients: [0, 1, 2, 3, 4]
+      - text: "Shake well and strain into the prepared rocks glass over fresh ice."
+    notes: ""
+
   - title: "Flavor-Packed Mojito"
     author: "Drew"
     cuisine: Cuban
