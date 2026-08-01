@@ -237,6 +237,7 @@ function initRecipeModal() {
 
     const startBtn = document.getElementById('modal-start-cooking');
     if (startBtn) {
+      startBtn.textContent = (recipe.categories ?? []).includes('Drinks') ? 'Start Mixing' : 'Start Cooking';
       const cookBase = recipesBase() === '.' ? 'cook' : `${recipesBase()}/cook`;
       startBtn.onclick = () => {
         window.location.href = `${cookBase}/?r=${recipe.slug}&servings=${current}`;
