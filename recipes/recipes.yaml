@@ -175,3 +175,608 @@ recipes:
       - text: "Finish with burrata & basil: plate the pasta, tear the burrata over the top so it melts into the heat, and scatter with the basil. Serve right away."
         ingredients: [11, 12]
     notes: "Heat control: Calabrian chili varies a lot by brand. Start with 2 tbsp, taste the sauce before adding pasta, and stir in more if you want it hotter. A pinch of red pepper flakes with the aromatics adds another layer. If the sauce gets too thick after tossing, loosen it with pasta water rather than more cream. Pre-shredded Parmesan won't melt as smoothly — grate your own off the block if you can."
+
+  - title: "Winter Simple Syrup"
+    author: "Drew"
+    cuisine: American
+    categories: [Drinks, Sauces]
+    difficulty: easy
+    prep_minutes: 5
+    cook_minutes: 10
+    servings: 2
+    yield_label: "cups"
+    tags: [cocktail-syrup, make-ahead, winter]
+    image: null
+    ingredients:
+      - qty: 1
+        unit: cup
+        item: sugar
+      - qty: 0.75
+        unit: cup
+        item: cranberries
+      - qty: 1
+        unit: cup
+        item: water
+      - qty: 2
+        unit: sprig
+        item: rosemary
+    steps:
+      - text: "Combine the sugar, water, and cranberries in a small saucepan over medium heat."
+        ingredients: [0, 1, 2]
+      - text: "Stir until the sugar dissolves, then add the rosemary sprigs."
+        ingredients: [3]
+      - text: "Bring to a gentle simmer and cook until the cranberries soften and start to burst, about 5-8 minutes."
+        timer_minutes: 8
+      - text: "Remove from heat and let steep for 10-15 minutes for more rosemary flavor."
+        timer_minutes: 15
+      - text: "Strain out the solids, pressing lightly to extract the liquid. Cool and store in an airtight jar in the fridge."
+    notes: "Instructions inferred from the ingredient list — the original recipe card only had quantities, no written method. A 2.5x batch (2 1/2 cups sugar, 3 cups cranberries, 2 cups water, 5 sprigs rosemary) was also noted on the card; scale servings up to match."
+
+  - title: "Spiced Simple Syrup"
+    author: "Drew"
+    cuisine: American
+    categories: [Drinks, Sauces]
+    difficulty: easy
+    prep_minutes: 5
+    cook_minutes: 10
+    servings: 1.5
+    yield_label: "cups"
+    tags: [cocktail-syrup, make-ahead, holiday]
+    image: null
+    ingredients:
+      - qty: 0.5
+        unit: cup
+        item: sugar
+      - qty: 0.5
+        unit: cup
+        item: brown sugar
+      - qty: 1
+        unit: cup
+        item: water
+      - qty: 2
+        unit: stick
+        item: cinnamon
+      - qty: 1
+        unit: tbsp
+        item: cloves
+      - qty: 2
+        unit: dash
+        item: orange bitters
+    steps:
+      - text: "Combine the sugar, brown sugar, and water in a small saucepan over medium heat. Stir until the sugars dissolve."
+        ingredients: [0, 1, 2]
+      - text: "Add the cinnamon sticks and cloves."
+        ingredients: [3, 4]
+      - text: "Bring to a gentle simmer for about 10 minutes."
+        timer_minutes: 10
+      - text: "Remove from heat and let steep for 15-20 minutes."
+        timer_minutes: 20
+      - text: "Strain out the solids, stir in the orange bitters, and cool. Store in an airtight jar in the fridge."
+        ingredients: [5]
+    notes: "Instructions inferred from the ingredient list — the original recipe card only had quantities, no written method."
+
+  - title: "Amaretto Stone Sour"
+    author: "Drew"
+    cuisine: American
+    categories: [Drinks]
+    difficulty: easy
+    prep_minutes: 5
+    cook_minutes: 0
+    servings: 1
+    yield_label: "cocktail"
+    tags: [cocktail, amaretto]
+    image: null
+    ingredients:
+      - qty: 2
+        unit: oz
+        item: amaretto liqueur
+      - qty: 1
+        unit: oz
+        item: "lemon juice, freshly squeezed"
+      - qty: 1
+        unit: oz
+        item: "orange juice, freshly squeezed"
+      - qty: 0.5
+        unit: oz
+        item: egg white
+      - qty: 1
+        unit: tsp
+        item: simple syrup
+      - "orange peel, for garnish"
+    steps:
+      - text: "Add the amaretto, lemon juice, orange juice, egg white, and simple syrup to a shaker without ice. Dry shake to emulsify the egg white."
+        ingredients: [0, 1, 2, 3, 4]
+      - text: "Add ice and shake again until well chilled."
+      - text: "Strain up into a coupe or cocktail glass."
+      - text: "Express the orange peel over the drink and float it on top to garnish."
+        ingredients: [5]
+    notes: ""
+
+  - title: "Modern Amaretto Sour"
+    author: "Drew"
+    cuisine: American
+    categories: [Drinks]
+    difficulty: easy
+    prep_minutes: 5
+    cook_minutes: 0
+    servings: 1
+    yield_label: "cocktail"
+    tags: [cocktail, amaretto, bourbon]
+    image: null
+    ingredients:
+      - qty: 2
+        unit: oz
+        item: amaretto liqueur
+      - qty: 1.5
+        unit: oz
+        item: "cask-proof bourbon"
+      - qty: 1
+        unit: oz
+        item: "lemon juice, freshly squeezed"
+      - qty: 0.5
+        unit: oz
+        item: egg white
+      - qty: 1
+        unit: tsp
+        item: simple syrup
+      - "lemon twist, for garnish"
+      - "2 brandied cherries, for garnish"
+    steps:
+      - text: "Add the amaretto, bourbon, lemon juice, egg white, and simple syrup to a shaker without ice. Dry shake to emulsify the egg white."
+        ingredients: [0, 1, 2, 3, 4]
+      - text: "Add ice and shake hard until well chilled."
+      - text: "Strain into a cocktail glass over fresh ice."
+      - text: "Garnish with a lemon twist and the brandied cherries."
+        ingredients: [5, 6]
+    notes: ""
+
+  - title: "Flavor-Packed Mojito"
+    author: "Drew"
+    cuisine: Cuban
+    categories: [Drinks]
+    difficulty: easy
+    prep_minutes: 8
+    cook_minutes: 0
+    servings: 1
+    yield_label: "16 oz cocktail"
+    tags: [cocktail, rum, mint]
+    image: null
+    ingredients:
+      - qty: 16
+        unit: leaf
+        item: fresh mint
+      - qty: 1
+        unit: whole
+        item: "lime, juiced (plus a wedge to garnish)"
+      - qty: 3
+        unit: tbsp
+        item: sugar
+      - qty: 2.5
+        unit: oz
+        item: white rum
+      - qty: 8
+        unit: oz
+        item: lime seltzer water
+      - qty: 1
+        unit: cup
+        item: ice
+      - qty: 2
+        unit: dash
+        item: Angostura bitters
+      - "mint sprig, for garnish"
+    steps:
+      - text: "Gently muddle the mint leaves in the bottom of a glass to release their oils without shredding them."
+        ingredients: [0]
+      - text: "Add the lime juice, sugar, and rum, and stir until the sugar dissolves."
+        ingredients: [1, 2, 3]
+      - text: "Let rest for 1-2 minutes."
+        timer_minutes: 2
+      - text: "Fill the glass with ice, top with the lime seltzer water, and add the bitters."
+        ingredients: [5, 4, 6]
+      - text: "Garnish with a slapped mint sprig and the lime wedge."
+        ingredients: [7]
+    notes: ""
+
+  - title: "Aperol Margarita"
+    author: "Drew"
+    cuisine: Mexican
+    categories: [Drinks]
+    difficulty: easy
+    prep_minutes: 5
+    cook_minutes: 0
+    servings: 1
+    yield_label: "cocktail"
+    tags: [cocktail, tequila, aperol]
+    image: null
+    ingredients:
+      - qty: 2
+        unit: oz
+        item: silver tequila
+      - qty: 1
+        unit: oz
+        item: Aperol
+      - qty: 1
+        unit: oz
+        item: "fresh lime juice"
+      - qty: 0.5
+        unit: oz
+        item: agave syrup
+      - qty: 3
+        unit: dash
+        item: orange bitters
+      - "salt, for rimming the glass"
+      - "lime wheel, for garnish"
+    steps:
+      - text: "Rim a rocks glass with salt."
+        ingredients: [5]
+      - text: "Add the tequila, Aperol, lime juice, agave syrup, and orange bitters to a shaker with ice."
+        ingredients: [0, 1, 2, 3, 4]
+      - text: "Shake until well chilled."
+      - text: "Strain into the salt-rimmed glass over fresh ice."
+      - text: "Garnish with a lime wheel."
+        ingredients: [6]
+    notes: ""
+
+  - title: "Almond Whisky Sour"
+    author: "Drew"
+    cuisine: American
+    categories: [Drinks]
+    difficulty: easy
+    prep_minutes: 5
+    cook_minutes: 0
+    servings: 1
+    yield_label: "cocktail"
+    tags: [cocktail, bourbon, orgeat]
+    image: null
+    ingredients:
+      - qty: 2
+        unit: oz
+        item: bourbon
+      - qty: 1
+        unit: oz
+        item: orgeat
+      - qty: 1
+        unit: oz
+        item: "lemon juice, freshly squeezed"
+      - qty: 1
+        unit: whole
+        item: egg white
+    steps:
+      - text: "Add the bourbon, orgeat, lemon juice, and egg white to a shaker without ice. Dry shake to emulsify the egg white."
+        ingredients: [0, 1, 2, 3]
+      - text: "Add ice and shake hard until well chilled."
+      - text: "Strain into a rocks glass over fresh ice, or up into a coupe."
+    notes: "No garnish was specified on the original card — a lemon twist or a couple of dashes of Angostura bitters on top both work well."
+
+  - title: "Mashed Sweet Potatoes"
+    author: "Drew"
+    cuisine: American
+    categories: [Sides]
+    difficulty: medium
+    prep_minutes: 20
+    cook_minutes: 40
+    servings: 8
+    tags: [holiday, cheesy]
+    image: null
+    ingredients:
+      - qty: 3
+        unit: lb
+        item: "sweet potatoes, peeled and chopped"
+      - qty: 4.25
+        unit: tsp
+        item: kosher salt
+      - qty: 0.5
+        unit: cup
+        item: whole buttermilk
+      - qty: 0.25
+        unit: cup
+        item: unsalted butter
+      - qty: 3
+        unit: tsp
+        item: fresh rosemary
+      - qty: 1.25
+        unit: tsp
+        item: ground black pepper
+      - qty: 0.25
+        unit: tsp
+        item: garlic powder
+      - qty: 0.67
+        unit: cup
+        item: shredded Gruyere cheese
+      - qty: 0.33
+        unit: cup
+        item: panko breadcrumbs
+      - qty: 0.25
+        unit: cup
+        item: shredded Asiago cheese
+    steps:
+      - text: "Bring a large pot of water to a boil, add the sweet potatoes and half the kosher salt, and cook until fork-tender, 15-20 minutes."
+        timer_minutes: 20
+        ingredients: [0, 1]
+      - text: "Drain well and mash with the buttermilk and butter until mostly smooth."
+        ingredients: [2, 3]
+      - text: "Stir in the rosemary, black pepper, garlic powder, and remaining salt."
+        ingredients: [4, 5, 6]
+      - text: "Spread into a baking dish and top with the Gruyere, panko, and Asiago."
+        ingredients: [7, 8, 9]
+      - text: "Bake or broil until the topping is melted and golden, about 10-15 minutes."
+        timer_minutes: 15
+    notes: "Instructions inferred from the ingredient list — the original recipe card only had quantities, no written method."
+
+  - title: "Blueberry Muffins"
+    author: "Drew"
+    cuisine: American
+    categories: [Breakfast, Baking]
+    difficulty: easy
+    prep_minutes: 15
+    cook_minutes: 27
+    servings: 12
+    yield_label: "muffins"
+    tags: [blueberry, make-ahead]
+    image: null
+    ingredients:
+      - qty: 1.75
+        unit: cup
+        item: flour
+      - qty: 1
+        unit: tsp
+        item: baking soda
+      - qty: 1
+        unit: tsp
+        item: baking powder
+      - qty: 0.5
+        unit: tsp
+        item: salt
+      - qty: 0.5
+        unit: cup
+        item: "butter, softened"
+      - qty: 0.5
+        unit: cup
+        item: sugar
+      - qty: 0.25
+        unit: cup
+        item: brown sugar
+      - qty: 2
+        unit: whole
+        item: "eggs, room temp"
+      - qty: 0.5
+        unit: cup
+        item: "yogurt or sour cream"
+      - qty: 2
+        unit: tsp
+        item: vanilla extract
+      - qty: 0.25
+        unit: cup
+        item: "milk, room temp"
+      - qty: 1.5
+        unit: cup
+        item: frozen blueberries
+      - "cinnamon and extra brown sugar, for topping"
+    steps:
+      - text: "Whisk the flour, baking soda, baking powder, and salt together in a large bowl."
+        ingredients: [0, 1, 2, 3]
+      - text: "Beat the butter, sugar, and brown sugar on high until creamy."
+        ingredients: [4, 5, 6]
+      - text: "Add the eggs and mix."
+        ingredients: [7]
+      - text: "Add the yogurt/sour cream and vanilla extract, and mix."
+        ingredients: [8, 9]
+      - text: "Add the milk and mix."
+        ingredients: [10]
+      - text: "Add the dry ingredients on low speed until just combined."
+      - text: "Fold in the blueberries."
+        ingredients: [11]
+      - text: "Spoon the batter into muffin tins and sprinkle cinnamon and brown sugar on top."
+        ingredients: [12]
+      - text: "Bake at 425°F for 7 minutes, then reduce the oven to 350°F and bake for 20 more minutes."
+        timer_minutes: 27
+    notes: ""
+
+  - title: "Bourbon Pumpkin Bread"
+    author: "Drew"
+    cuisine: American
+    categories: [Baking, Dessert]
+    difficulty: medium
+    prep_minutes: 20
+    cook_minutes: 50
+    servings: 2
+    yield_label: "loaves"
+    tags: [fall, bourbon, pumpkin]
+    image: null
+    ingredients:
+      - qty: 0.5
+        unit: cup
+        item: unsalted butter
+      - qty: 0.25
+        unit: cup
+        item: bourbon
+      - qty: 1
+        unit: tbsp
+        item: vanilla
+      - qty: 1.75
+        unit: cup
+        item: "pumpkin puree (15 oz)"
+      - qty: 4
+        unit: whole
+        item: eggs
+      - qty: 0.5
+        unit: cup
+        item: olive oil
+      - qty: 2
+        unit: cup
+        item: flour
+      - qty: 1
+        unit: cup
+        item: whole wheat flour
+      - qty: 1.75
+        unit: cup
+        item: light brown sugar
+      - qty: 1.5
+        unit: tsp
+        item: baking soda
+      - qty: 1
+        unit: tsp
+        item: fine sea salt
+      - qty: 1
+        unit: tsp
+        item: ground cinnamon
+      - qty: 0.5
+        unit: tsp
+        item: ground ginger
+      - qty: 0.5
+        unit: tsp
+        item: ground cardamom
+      - "water, to bring the bourbon mixture up to 2/3 cup"
+    steps:
+      - text: "Heat the oven to 350°F. Grease two 8-inch loaf pans with butter or line with parchment paper."
+      - text: "Melt the butter in a large skillet over medium-high heat, then reduce to medium and cook until the milk solids brown and smell nutty, 5-7 minutes. Watch closely — it can burn fast."
+        timer_minutes: 7
+        ingredients: [0]
+      - text: "In a measuring cup, combine the bourbon and vanilla, then add water until you reach the 2/3 cup mark."
+        ingredients: [1, 2, 14]
+      - text: "In a large bowl, whisk together the bourbon mixture, pumpkin puree, eggs, and oil. Scrape in the brown butter and stir to combine."
+        ingredients: [3, 4, 5]
+      - text: "In another bowl, whisk together both flours, brown sugar, baking soda, salt, cinnamon, ginger, and cardamom. Pour the wet ingredients into the dry and stir to combine."
+        ingredients: [6, 7, 8, 9, 10, 11, 12, 13]
+      - text: "Divide the batter between the two loaf pans. Bake 50-60 minutes, until a tester inserted in the center comes out clean. Cool completely before removing from the pans."
+        timer_minutes: 55
+    notes: "Adapted from https://www.onceuponachef.com/recipes/spiced-pumpkin-bread.html. Ran about 50 minutes in metal loaf pans — check closer to 60 minutes if using glass or ceramic."
+
+  - title: "Lemon Poppyseed Bread"
+    author: "Drew"
+    cuisine: American
+    categories: [Baking, Dessert, Breakfast]
+    difficulty: easy
+    prep_minutes: 15
+    cook_minutes: 35
+    servings: 2
+    yield_label: "loaves"
+    tags: [lemon, make-ahead]
+    image: null
+    ingredients:
+      - "vegetable oil spray, for the pans"
+      - qty: 1.5
+        unit: cup
+        item: flour
+      - qty: 1
+        unit: tbsp
+        item: poppy seeds
+      - qty: 1
+        unit: tbsp
+        item: baking powder
+      - qty: 0.5
+        unit: tsp
+        item: baking soda
+      - qty: 0.75
+        unit: tsp
+        item: kosher salt
+      - qty: 1.67
+        unit: cup
+        item: sugar
+      - qty: 0.67
+        unit: cup
+        item: milk
+      - qty: 0.5
+        unit: cup
+        item: vegetable oil
+      - qty: 3
+        unit: whole
+        item: eggs
+      - qty: 2
+        unit: tsp
+        item: "grated lemon zest"
+      - qty: 2
+        unit: tbsp
+        item: "fresh lemon juice"
+      - qty: 1
+        unit: tsp
+        item: vanilla extract
+      - qty: 1.5
+        unit: cup
+        item: powdered sugar
+      - qty: 1
+        unit: tbsp
+        item: "grated lemon zest (for drizzle)"
+      - qty: 2
+        unit: tbsp
+        item: "fresh lemon juice (for drizzle)"
+      - qty: 1
+        unit: tbsp
+        item: water
+    steps:
+      - text: "Heat the oven to 350°F. Grease 2 loaf pans with vegetable oil spray."
+        ingredients: [0]
+      - text: "In a medium bowl, whisk together the flour, poppy seeds, baking powder, baking soda, and salt."
+        ingredients: [1, 2, 3, 4, 5]
+      - text: "In a large bowl, combine the sugar, milk, oil, eggs, lemon zest, lemon juice, and vanilla, and whisk until well blended. Add the dry ingredients and stir just until combined — don't overmix."
+        ingredients: [6, 7, 8, 9, 10, 11, 12]
+      - text: "Scrape the batter into the prepared pans. Bake until a tester comes out clean, about 35 minutes. Cool in the pans 10-15 minutes, then unmold onto a rack to cool completely."
+        timer_minutes: 35
+      - text: "For the drizzle: sift the powdered sugar into a bowl, stir in the lemon zest, then stir in the water and enough lemon juice to make a pourable icing."
+        ingredients: [13, 14, 15, 16]
+      - text: "Pour the drizzle over the warm or room-temperature bread."
+      - text: "Tightly wrap and store at room temperature for up to 3 days."
+    notes: ""
+
+  - title: "Homemade Irish Cream"
+    author: "Drew"
+    cuisine: Irish
+    categories: [Drinks]
+    difficulty: easy
+    prep_minutes: 5
+    cook_minutes: 0
+    servings: 3.5
+    yield_label: "cups"
+    tags: [make-ahead, holiday, coffee]
+    image: null
+    ingredients:
+      - qty: 1
+        unit: cup
+        item: Irish whiskey
+      - qty: 1
+        unit: can
+        item: "sweetened condensed milk (14 oz)"
+      - qty: 1
+        unit: cup
+        item: heavy cream
+      - qty: 4
+        unit: oz
+        item: milk
+      - qty: 1
+        unit: tbsp
+        item: chocolate syrup
+      - qty: 1
+        unit: tbsp
+        item: instant coffee
+    steps:
+      - text: "Combine all ingredients in a blender."
+        ingredients: [0, 1, 2, 3, 4, 5]
+      - text: "Blend until smooth and the instant coffee is fully dissolved."
+      - text: "Pour into a bottle or jar and store in the fridge, shaking before each use."
+    notes: "Instructions inferred from the ingredient list — the original recipe card only had quantities, no written method. Keeps in the fridge for a couple of weeks."
+
+  - title: "Smoked Pulled Pork Butt"
+    author: "Drew"
+    cuisine: American
+    categories: [Dinner]
+    difficulty: medium
+    prep_minutes: 20
+    cook_minutes: 360
+    servings: 12
+    tags: [bbq, smoker, make-ahead]
+    image: null
+    ingredients:
+      - "7-8 lb pork butt"
+      - "yellow mustard, enough to coat"
+      - "your favorite BBQ dry rub/seasoning, enough to coat"
+      - "1/4 cup apple cider vinegar"
+      - "1/2 stick (4 tbsp) butter, sliced"
+    steps:
+      - text: "Slather the pork butt in mustard on all sides — it's a binder, not a flavor you'll taste in the end."
+      - text: "Coat generously in your seasoning/dry rub."
+      - text: "Tie the roast with butcher's twine so smaller pieces don't fall off or cook faster than the rest."
+      - text: "Smoke at 250°F, monitoring the internal temperature."
+      - text: "At 165°F internal, pull it off the smoker. Set it in a foil tray with the apple cider vinegar and sliced butter around it, and wrap tightly in foil."
+      - text: "Return to the smoker and continue cooking until the internal temperature reaches 204°F."
+      - text: "Rest before pulling."
+    notes: "Times are approximate — this took about 6 hours for a 7.18 lb butt at 250°F. Always cook to internal temperature, not the clock."
