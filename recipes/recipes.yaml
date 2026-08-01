@@ -749,9 +749,9 @@ recipes:
         unit: tbsp
         item: instant coffee
     steps:
-      - text: "Combine all ingredients in a blender."
+      - text: "Combine all ingredients in a shakeable container, like a large jar or cocktail shaker."
         ingredients: [0, 1, 2, 3, 4, 5]
-      - text: "Blend until smooth and the instant coffee is fully dissolved."
+      - text: "Seal it up and shake vigorously until smooth and the instant coffee is fully dissolved."
       - text: "Pour into a bottle or jar and store in the fridge, shaking before each use."
     notes: "Instructions inferred from the ingredient list — the original recipe card only had quantities, no written method. Keeps in the fridge for a couple of weeks."
 
