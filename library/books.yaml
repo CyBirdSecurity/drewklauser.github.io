@@ -1240,6 +1240,15 @@ books:
     ranking: null
     notes: ""
 
+  - title: "Cyber for Builders: The Essential Guide to Building a Cybersecurity Startup"
+    author: "Ross Haleliuk"
+    year_read: 2026
+    categories: [Cybersecurity]
+    medium: paperback
+    in_progress: true
+    ranking: null
+    notes: ""
+
   - title: "The Next Millionaire Next Door"
     author: "Thomas J. Stanley, Sarah Stanley Fallaw"
     year_read: 2026

@@ -41,6 +41,7 @@ const ISBN_OVERRIDES = {
   'stop-letting-everything-affect-you': ['1764110803'],
   'the-first-two-hours': ['073035959X'],
   'mastery': ['1541601920'],
+  'cyber-for-builders-the-essential-guide-to-building-a-cyberse': ['173823410X'],
 };
 
 function slugify(title) {
