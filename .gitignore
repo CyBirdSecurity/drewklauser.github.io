@@ -1,3 +1,4 @@
 library-src/node_modules/
 library-src/.astro/
+scripts/node_modules/
 .DS_Store
