@@ -1227,6 +1227,15 @@ books:
     year_read: 2026
     categories: [Cybersecurity]
     medium: paperback
+    in_progress: false
+    ranking: null
+    notes: ""
+
+  - title: "Dungeon Crawler Carl"
+    author: "Matt Dinniman"
+    year_read: 2026
+    categories: [Fiction]
+    medium: paperback
     in_progress: true
     ranking: null
     notes: ""
