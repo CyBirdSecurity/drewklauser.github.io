@@ -1236,7 +1236,7 @@ books:
     year_read: 2026
     categories: [Fiction]
     medium: paperback
-    in_progress: true
+    in_progress: false
     ranking: null
     notes: ""
 
