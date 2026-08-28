@@ -50,6 +50,10 @@
   <section class="hero" id="hero" aria-label="Introduction">
     <div class="container hero-container">
       <div class="hero-content reveal">
+        <div class="hero-speaking-badge">
+          <span class="status-dot" aria-hidden="true"></span>
+          Speaking at SecureWorld STL this week
+        </div>
         <p class="hero-eyebrow">Engineering Manager &middot; Security &amp; Compliance</p>
 
         <h1 class="hero-title">
@@ -58,7 +62,7 @@
         </h1>
 
         <p class="hero-description">
-          I run security engineering at <strong>ezCater</strong> and build the automation that keeps
+          I run security engineering at <strong><a href="https://www.ezcater.com" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">ezCater</a></strong> and build the automation that keeps
           compliance from slowing anything down &mdash; SOC 2, AI-assisted vulnerability triage, and
           the tooling in between.
         </p>
@@ -78,8 +82,8 @@
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat">
-            <span class="stat-value">2</span>
-            <span class="stat-label">Compliance frameworks led</span>
+            <span class="stat-value" id="heroBooksRead">137+</span>
+            <span class="stat-label">Books read</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat">
@@ -89,27 +93,16 @@
         </div>
       </div>
 
-      <div class="hero-visual reveal" aria-hidden="true">
-        <div class="health-card">
-          <div class="health-head">
-            <span class="health-label">Program health</span>
-            <span class="health-badge"><span class="status-dot"></span>Active</span>
-          </div>
-          <div class="gauge-wrap">
-            <svg width="104" height="104" viewBox="0 0 104 104">
-              <circle cx="52" cy="52" r="44" fill="none" stroke="var(--c-border)" stroke-width="10" />
-              <circle class="gauge-arc" cx="52" cy="52" r="44" fill="none" stroke="var(--c-accent)" stroke-width="10"
-                      stroke-linecap="round" stroke-dasharray="276.5" stroke-dashoffset="24"
-                      transform="rotate(-90 52 52)" />
-              <text x="52" y="58" text-anchor="middle" class="gauge-value">92<tspan class="gauge-value-unit">%</tspan></text>
-            </svg>
-            <p class="gauge-caption"><strong>Controls coverage</strong> across production systems, reviewed quarterly.</p>
-          </div>
-          <div class="health-rows">
-            <div class="health-row"><span class="k">SOC 2 Type II</span><span class="v">Active</span></div>
-            <div class="health-row"><span class="k">Critical findings open</span><span class="v">0</span></div>
-            <div class="health-row"><span class="k">Mean time to remediate</span><span class="v">3.2 days</span></div>
-          </div>
+      <div class="hero-visual reveal">
+        <div class="profile-card">
+          <img class="profile-card-photo" src="/me/assets/img/profile.jpg" alt="Drew Klauser" />
+          <p class="profile-card-name">Drew Klauser</p>
+          <p class="profile-card-role">Engineering Manager<br/>Security &amp; Compliance</p>
+          <p class="profile-card-tagline">Leads a team of 6 covering every domain of security.</p>
+          <a href="#contact" class="profile-card-cta">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to connecting
+          </a>
         </div>
       </div>
     </div>
@@ -255,7 +248,25 @@
       </div>
 
       <!-- ── MyFi Feature ───────────────────────────────────────── -->
-      <div class="library-card library-card--reverse reveal" style="margin-top: 1.75rem;">
+      <div class="library-card reveal" style="margin-top: 1.75rem;">
+        <div class="library-card-left">
+          <p class="section-eyebrow">Building &middot; Invite-only</p>
+          <h2 class="library-card-title">MyFi &mdash; a personal<br/><span class="accent-text">finance dashboard.</span></h2>
+          <p class="library-card-desc">
+            A self-hosted app I designed, built, and shipped solo &mdash; it unifies every account,
+            tracks investments in real time, and runs Monte Carlo forecasts through retirement.
+            Product, design, and engineering, end to end.
+          </p>
+          <a href="/myfi" class="btn btn-primary">
+            Preview MyFi
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="chips" style="margin-top: 22px;">
+            <span class="chip">Monte Carlo forecasting</span>
+            <span class="chip">Live holdings</span>
+            <span class="chip">Local AI chat</span>
+          </div>
+        </div>
         <div class="library-card-right library-card-chart">
           <div class="chart-card" aria-hidden="true">
             <div class="chart-head">
@@ -279,24 +290,6 @@
               <div class="chart-account-row"><span class="name">Roth IRA</span><span class="amt">$58,400</span></div>
               <div class="chart-account-row"><span class="name">Brokerage</span><span class="amt">$47,200</span></div>
             </div>
-          </div>
-        </div>
-        <div class="library-card-left">
-          <p class="section-eyebrow">Building &middot; Invite-only</p>
-          <h2 class="library-card-title">MyFi &mdash; a personal<br/><span class="accent-text">finance dashboard.</span></h2>
-          <p class="library-card-desc">
-            A self-hosted app I designed, built, and shipped solo &mdash; it unifies every account,
-            tracks investments in real time, and runs Monte Carlo forecasts through retirement.
-            Product, design, and engineering, end to end.
-          </p>
-          <a href="/myfi" class="btn btn-primary">
-            Preview MyFi
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <div class="chips" style="margin-top: 22px;">
-            <span class="chip">Monte Carlo forecasting</span>
-            <span class="chip">Live holdings</span>
-            <span class="chip">Local AI chat</span>
           </div>
         </div>
       </div>
@@ -371,6 +364,7 @@
     </div>
   </footer>
 
+  <script src="library/vendor/js-yaml.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
