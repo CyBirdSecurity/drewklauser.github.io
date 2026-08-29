@@ -378,7 +378,7 @@ strong { font-weight: 700; color: var(--c-text); }
   border-radius: 50%;
   object-fit: cover;
   box-shadow: var(--shadow-1), var(--shadow-2);
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
 .profile-card-name {
