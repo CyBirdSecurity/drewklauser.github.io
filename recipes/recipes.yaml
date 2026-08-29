@@ -405,11 +405,9 @@ recipes:
         ingredients: [0]
       - text: "Add the lime juice, sugar, and rum, and stir until the sugar dissolves."
         ingredients: [1, 2, 3]
-      - text: "Let rest for 1-2 minutes."
-        timer_minutes: 2
       - text: "Fill the glass with ice, top with the lime seltzer water, and add the bitters."
         ingredients: [5, 4, 6]
-      - text: "Garnish with a slapped mint sprig and the lime wedge."
+      - text: "Pour everything into a cocktail shaker and shake well, then strain back into the glass, garnish with a slapped mint sprig and the lime wedge, and serve immediately."
         ingredients: [7]
     notes: ""
 
