@@ -376,12 +376,12 @@ strong { font-weight: 700; color: var(--c-text); }
 }
 
 .profile-card-photo {
-  width: 100%;
+  width: 66%;
   aspect-ratio: 2 / 3;
   object-fit: cover;
   object-position: top;
   border-radius: var(--radius);
-  margin-bottom: 22px;
+  margin: 0 auto 22px;
 }
 
 .profile-card-name {
@@ -396,6 +396,12 @@ strong { font-weight: 700; color: var(--c-text); }
   font-size: 14px;
   color: var(--c-text-2);
   line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.profile-card-coffee-btn {
+  padding: 11px 22px;
+  font-size: 14px;
 }
 
 .health-badge {
