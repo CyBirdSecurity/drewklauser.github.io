@@ -301,3 +301,19 @@ async function renderProjects() {
 }
 
 renderProjects();
+
+/* ── Hero stat: live book count from the Library ─────────────────────────── */
+async function renderBooksReadStat() {
+  const el = document.getElementById('heroBooksRead');
+  if (!el) return;
+  try {
+    const res = await fetch('/library/books.yaml');
+    const text = await res.text();
+    const raw = jsyaml.load(text);
+    const finished = raw.books.filter(b => !b.in_progress).length;
+    el.textContent = `${finished}+`;
+  } catch {
+    // leave the static fallback already in the HTML
+  }
+}
+renderBooksReadStat();
