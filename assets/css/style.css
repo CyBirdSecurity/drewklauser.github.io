@@ -356,7 +356,10 @@ strong { font-weight: 700; color: var(--c-text); }
   font-size: 12.5px;
   font-weight: 600;
   color: var(--c-ok);
+  text-decoration: none;
+  transition: background var(--t-fast);
 }
+.hero-speaking-badge:hover { background: rgba(63, 125, 91, 0.14); }
 
 /* Hero visual — profile card */
 .hero-visual {
