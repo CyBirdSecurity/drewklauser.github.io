@@ -370,55 +370,32 @@ strong { font-weight: 700; color: var(--c-text); }
   background: var(--c-bg-card);
   border: 1px solid var(--c-border);
   border-radius: var(--radius-lg);
-  padding: 40px 36px;
+  padding: 24px 24px 30px;
   box-shadow: var(--shadow-1), var(--shadow-2);
   text-align: center;
 }
 
 .profile-card-photo {
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
-  box-shadow: var(--shadow-1), var(--shadow-2);
-  margin: 0 auto 20px;
+  object-position: top;
+  border-radius: var(--radius);
+  margin-bottom: 22px;
 }
 
 .profile-card-name {
   font-family: var(--font-serif);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--c-text);
   margin-bottom: 4px;
 }
 
 .profile-card-role {
-  font-size: 13.5px;
-  color: var(--c-text-2);
-  line-height: 1.5;
-  margin-bottom: 18px;
-}
-
-.profile-card-tagline {
   font-size: 14px;
   color: var(--c-text-2);
-  line-height: 1.6;
-  padding-top: 18px;
-  border-top: 1px solid var(--c-border);
-  margin-bottom: 20px;
-}
-
-.profile-card-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: rgba(63, 125, 91, 0.08);
-  border-radius: 999px;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--c-ok);
-  text-decoration: none;
+  line-height: 1.5;
 }
 
 .health-badge {
