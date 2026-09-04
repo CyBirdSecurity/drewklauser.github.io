@@ -475,12 +475,17 @@ recipes:
       - qty: 1
         unit: whole
         item: egg white
+      - "amaretto cherries, for garnish"
     steps:
-      - text: "Add the bourbon, orgeat, lemon juice, and egg white to a shaker without ice. Dry shake to emulsify the egg white."
-        ingredients: [0, 1, 2, 3]
+      - text: "Add the egg white to a shaker without ice. Dry shake vigorously (no ice) until frothy."
+        ingredients: [3]
+      - text: "Add the bourbon, orgeat, and lemon juice to the shaker."
+        ingredients: [0, 1, 2]
       - text: "Add ice and shake hard until well chilled."
       - text: "Strain into a rocks glass over fresh ice, or up into a coupe."
-    notes: "No garnish was specified on the original card — a lemon twist or a couple of dashes of Angostura bitters on top both work well."
+      - text: "Garnish with amaretto cherries."
+        ingredients: [4]
+    notes: ""
 
   - title: "Mashed Sweet Potatoes"
     author: "Drew"
