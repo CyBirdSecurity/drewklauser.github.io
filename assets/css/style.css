@@ -344,23 +344,6 @@ strong { font-weight: 700; color: var(--c-text); }
   background: var(--c-border);
 }
 
-/* Hero — speaking badge */
-.hero-speaking-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
-  padding: 6px 14px;
-  background: rgba(63, 125, 91, 0.08);
-  border-radius: 999px;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--c-ok);
-  text-decoration: none;
-  transition: background var(--t-fast);
-}
-.hero-speaking-badge:hover { background: rgba(63, 125, 91, 0.14); }
-
 /* Hero visual — profile card */
 .hero-visual {
   position: relative;
