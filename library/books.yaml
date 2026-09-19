@@ -1257,3 +1257,12 @@ books:
     in_progress: false
     ranking: null
     notes: ""
+
+  - title: "Carl's Doomsday Scenario"
+    author: "Matt Dinniman"
+    year_read: 2026
+    categories: [Fiction]
+    medium: hardcover
+    in_progress: false
+    ranking: null
+    notes: ""
