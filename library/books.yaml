@@ -1266,3 +1266,12 @@ books:
     in_progress: false
     ranking: null
     notes: ""
+
+  - title: "The Security Metrics Workbook"
+    author: "Mitchell Telatnik"
+    year_read: 2026
+    categories: [Cybersecurity]
+    medium: paperback
+    in_progress: true
+    ranking: null
+    notes: ""
