@@ -1275,3 +1275,12 @@ books:
     in_progress: true
     ranking: null
     notes: ""
+
+  - title: "CISSP For Dummies"
+    author: "Lawrence C. Miller, Peter H. Gregory"
+    year_read: 2026
+    categories: [Cybersecurity]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: "8th edition (2024)."
