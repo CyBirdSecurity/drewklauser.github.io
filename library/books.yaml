@@ -1064,9 +1064,9 @@ books:
     year_read: 2026
     categories: [Business]
     medium: hardcover
-    in_progress: true
+    in_progress: false
     ranking: null
-    notes: "Rereading as part of a book club."
+    notes: "Reread as part of a book club."
 
   - title: "Stacked"
     author: "Joe Saul-Sehy, Emily Guy Birken"
@@ -1275,3 +1275,12 @@ books:
     in_progress: true
     ranking: null
     notes: ""
+
+  - title: "CISSP For Dummies"
+    author: "Lawrence C. Miller, Peter H. Gregory"
+    year_read: 2026
+    categories: [Cybersecurity]
+    medium: paperback
+    in_progress: false
+    ranking: null
+    notes: "8th edition (2024)."
