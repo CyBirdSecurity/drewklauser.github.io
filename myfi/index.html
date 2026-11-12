@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light" />
-  <meta name="description" content="MyFi — a self-hosted personal finance and retirement dashboard by Drew Klauser. Currently invite-only. Explore a simulated demo of the dashboard, accounts, forecasting, scenario planning, and more." />
-  <meta property="og:title" content="MyFi | Personal Finance & Retirement Dashboard" />
-  <meta property="og:description" content="A self-hosted personal finance dashboard that unifies accounts, tracks investments, and projects wealth through retirement. Invite-only — take the simulated demo for a look inside." />
+  <meta name="description" content="MyFi — a personal finance and retirement dashboard by Drew Klauser. Self-host the open-source MyFi-OS with Docker, or join the waitlist for the hosted version, free during early access." />
+  <meta property="og:title" content="MyFi | Open-Source &amp; Hosted Personal Finance Dashboard" />
+  <meta property="og:description" content="Unify every account, track investments, and project your wealth through retirement. Self-host it free from GitHub, or join the waitlist for hosted MyFi." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drewklauser.com/myfi" />
-  <title>MyFi | Personal Finance & Retirement Dashboard</title>
+  <title>MyFi | Open-Source &amp; Hosted Personal Finance Dashboard</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23163C25'/><text y='22' x='6' font-size='16' font-family='Georgia, serif' fill='white'>DK</text></svg>" />
@@ -34,8 +34,9 @@
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="#demo" class="nav-link">Demo</a></li>
         <li><a href="#features" class="nav-link">Features</a></li>
-        <li><a href="#invite" class="nav-link">Invite Access</a></li>
-        <li><a href="mailto:me@drewklauser.com?subject=MyFi%20Invite%20Request" class="btn btn-nav">Request Invite</a></li>
+        <li><a href="#compare" class="nav-link">Hosted vs. Self-hosted</a></li>
+        <li><a href="https://github.com/CyBirdSecurity/MyFi-OS" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://myfi.drewklauser.com" class="btn btn-nav" target="_blank" rel="noopener noreferrer">Join Waitlist</a></li>
       </ul>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false">
@@ -50,7 +51,7 @@
   <section class="hero" id="hero" aria-label="MyFi introduction">
     <div class="container hero-container">
       <div class="hero-content reveal">
-        <p class="hero-eyebrow">Personal Project &middot; Invite Only</p>
+        <p class="hero-eyebrow">Open Source &middot; Hosted Early Access</p>
 
         <h1 class="hero-title">
           <span class="title-line">Every account.</span>
@@ -58,27 +59,31 @@
         </h1>
 
         <p class="hero-description">
-          MyFi is a self-hosted personal finance dashboard that unifies every account,
-          tracks investments in real time, and projects wealth through retirement with
-          Monte Carlo forecasting, withdrawal-rate planning, and scenario comparisons.
-          It's invite-only while I dogfood it with real accounts &mdash; the interactive
-          demo below runs on simulated data so you can see exactly what's inside.
+          MyFi is a personal finance dashboard that unifies every account, tracks your
+          investments, and projects your wealth through retirement with Monte Carlo
+          forecasting, withdrawal planning, and side-by-side scenarios. Run it yourself,
+          free and open source, or let me host it for you &mdash; the hosted version is
+          free during invite-only early access.
         </p>
 
         <div class="hero-ctas">
-          <a href="#demo" class="btn btn-primary">
-            Explore the Demo
+          <a href="https://myfi.drewklauser.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Join the Hosted Waitlist
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="mailto:me@drewklauser.com?subject=MyFi%20Invite%20Request" class="link-arrow">Request an Invite</a>
+          <a href="https://github.com/CyBirdSecurity/MyFi-OS" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            Self-host on GitHub
+          </a>
         </div>
+        <p class="hero-subcta"><a href="#demo" class="link-arrow">Or try the demo on sample data</a></p>
       </div>
 
       <div class="hero-visual reveal" aria-hidden="true">
         <div class="networth-card">
           <div class="nc-head">
             <span class="nc-label">Net Worth</span>
-            <span class="nc-badge"><span class="status-dot"></span>Live demo</span>
+            <span class="nc-badge"><span class="status-dot"></span>Sample data</span>
           </div>
           <p class="nc-value">$284,510<span class="delta">&#9650; 4.2%</span></p>
           <div class="nc-donut-row">
@@ -104,7 +109,7 @@
       <div class="section-header reveal">
         <p class="section-eyebrow">Simulated Demo</p>
         <h2 class="section-title">See it in action,<br/><span class="accent-text">with sample data.</span></h2>
-        <p class="section-sub">The same interactive walkthrough shown on MyFi's own logged-out home page &mdash; click through the sidebar to explore every section.</p>
+        <p class="section-sub">Click through the sidebar to explore every section. Hosted and self-hosted MyFi run the same app, so this is what you get either way.</p>
       </div>
 
       <div class="myfi-app-demo reveal">
@@ -112,7 +117,7 @@
           <span class="mfd-dot"></span>
           <span class="mfd-dot"></span>
           <span class="mfd-dot"></span>
-          <span class="mfd-url">app.myfi.io</span>
+          <span class="mfd-url">myfi.drewklauser.com</span>
         </div>
 
         <div class="mfd-body">
@@ -611,7 +616,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-15.5-6.36L3 8"/><path d="M3 4v4h4"/><path d="M3 12a9 9 0 0 0 15.5 6.36L21 16"/><path d="M21 20v-4h-4"/></svg>
           </div>
           <h3 class="feature-card-title">Account Syncing</h3>
-          <p class="feature-card-text">Connect a real brokerage, retirement, bank, or credit account via Plaid &mdash; holdings and balances sync automatically, with a daily refresh and a manual sync-now action for anything that needs an update sooner.</p>
+          <p class="feature-card-text">Connect brokerage, retirement, bank, and credit accounts through Plaid &mdash; balances, holdings, and transactions refresh daily, with a sync-now button when you need it sooner. Included on hosted; bring your own Plaid keys when self-hosting.</p>
         </div>
 
         <div class="feature-card reveal" style="--delay: 60ms">
@@ -634,8 +639,8 @@
           <div class="feature-card-icon" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3 class="feature-card-title">Household Linking</h3>
-          <p class="feature-card-text">Link an account with a partner's to combine financial data into a unified net-worth view and a shared retirement forecast.</p>
+          <h3 class="feature-card-title">Household Planning</h3>
+          <p class="feature-card-text">Plan as a couple: add a partner with their own income, retirement age, and Social Security, mark accounts as yours, theirs, or joint, and get one combined forecast.</p>
         </div>
 
         <div class="feature-card reveal" style="--delay: 60ms">
@@ -650,47 +655,125 @@
           <div class="feature-card-icon" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
-          <h3 class="feature-card-title">AI Chat</h3>
-          <p class="feature-card-text">Ask natural-language questions about your finances via a locally-run LLM. No data ever leaves the machine.</p>
+          <h3 class="feature-card-title">AI Assistance</h3>
+          <p class="feature-card-text">A language model suggests categories for imported transactions &mdash; a local Ollama model when self-hosting, so nothing leaves your server. Hosted adds AI chat for plain-language questions about your finances.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Invite CTA ─────────────────────────────────────────── -->
-  <section class="contact section" id="invite" aria-label="Request an invite">
+  <!-- ── Hosted vs. Self-hosted ─────────────────────────────── -->
+  <section class="section" id="compare" aria-label="Hosted and self-hosted MyFi">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Two Ways to Run MyFi</p>
+        <h2 class="section-title">Same app.<br/><span class="accent-text">You pick where it lives.</span></h2>
+        <p class="section-sub">Both versions share the dashboard, forecasting, budgeting, and tax planning. The difference is who runs the server.</p>
+      </div>
+
+      <div class="plan-grid">
+        <article class="plan-card plan-card--featured reveal">
+          <div class="plan-head">
+            <p class="plan-kicker">Hosted</p>
+            <span class="plan-badge plan-badge--accent">Free during early access</span>
+          </div>
+          <h3 class="plan-name">MyFi Hosted</h3>
+          <p class="plan-desc">Sign in from any device and start planning. Nothing to install or keep running.</p>
+          <ul class="plan-list" role="list">
+              <li><svg class="plan-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Bank sync included.</strong> Connect banks and brokerages through Plaid &mdash; no developer account or API keys.</span></li>
+              <li><svg class="plan-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Zero maintenance.</strong> No Docker, HTTPS, upgrades, or backups to manage. I run the servers.</span></li>
+              <li><svg class="plan-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Real accounts &amp; email.</strong> Reset a password by email, and link a partner&rsquo;s own login into one shared plan.</span></li>
+              <li><svg class="plan-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>AI chat.</strong> Ask questions about your finances in plain language, with smarter transaction categorization.</span></li>
+          </ul>
+          <div class="plan-foot">
+            <a href="https://myfi.drewklauser.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              Join the Waitlist
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <p class="plan-note">Invite-only while I onboard a small group. Join the waitlist or request an invite at <a href="https://myfi.drewklauser.com" target="_blank" rel="noopener noreferrer">myfi.drewklauser.com</a>.</p>
+          </div>
+        </article>
+
+        <article class="plan-card reveal" style="--delay: 80ms">
+          <div class="plan-head">
+            <p class="plan-kicker">Self-hosted</p>
+            <span class="plan-badge">Open source &middot; MIT</span>
+          </div>
+          <h3 class="plan-name">MyFi-OS</h3>
+          <p class="plan-desc">Run MyFi on your own hardware with Docker. Your finances never leave your machine.</p>
+          <ul class="plan-list" role="list">
+              <li><svg class="plan-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Your data, your server.</strong> Everything lives in your own PostgreSQL database. No telemetry, no trackers.</span></li>
+              <li><svg class="plan-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Local AI by default.</strong> Category suggestions come from a local Ollama model; Anthropic is optional.</span></li>
+              <li><svg class="plan-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Bring your own Plaid.</strong> Bank sync is optional. Manual entry and CSV/OFX import work without it.</span></li>
+              <li><svg class="plan-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Free and MIT-licensed.</strong> Fork it, change it, and send improvements back.</span></li>
+          </ul>
+          <pre class="plan-code" aria-label="Quick start commands"><code><span class="plan-code-prompt">$</span> git clone https://github.com/cybirdsecurity/myfi-os.git
+<span class="plan-code-prompt">$</span> cd myfi-os &amp;&amp; cp .env.example .env
+<span class="plan-code-prompt">$</span> docker compose up -d --build</code></pre>
+          <div class="plan-foot">
+            <a href="https://github.com/CyBirdSecurity/MyFi-OS" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              View on GitHub
+            </a>
+            <p class="plan-note">Needs Docker and roughly 4 CPU cores / 8 GB RAM for the local model. Setup steps are in the README.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="compare-wrap reveal">
+        <table class="compare-table">
+          <caption class="sr-only">Hosted and self-hosted MyFi compared</caption>
+          <thead>
+            <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col">Hosted</th><th scope="col">Self-hosted</th></tr>
+          </thead>
+          <tbody>
+                <tr><th scope="row">Price</th><td data-label="Hosted">Free during early access</td><td data-label="Self-hosted">Free, MIT license</td></tr>
+                <tr><th scope="row">Getting started</th><td data-label="Hosted">Request an invite, then sign up</td><td data-label="Self-hosted">Docker Compose on your own hardware</td></tr>
+                <tr><th scope="row">Where your data lives</th><td data-label="Hosted">Managed for you</td><td data-label="Self-hosted">Your own PostgreSQL database</td></tr>
+                <tr><th scope="row">Bank sync (Plaid)</th><td data-label="Hosted">Included</td><td data-label="Self-hosted">Optional, with your own Plaid keys</td></tr>
+                <tr><th scope="row">AI</th><td data-label="Hosted">AI chat + categorization</td><td data-label="Self-hosted">Local Ollama categorization (or Anthropic)</td></tr>
+                <tr><th scope="row">Logins</th><td data-label="Hosted">Separate logins for partners, email password reset</td><td data-label="Self-hosted">One account per instance; reset from the server CLI</td></tr>
+                <tr><th scope="row">Updates &amp; backups</th><td data-label="Hosted">Handled for you</td><td data-label="Self-hosted"><code>git pull</code> and <code>make backup</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Get started CTA ────────────────────────────────────── -->
+  <section class="contact section" id="get-started" aria-label="Get started with MyFi">
     <div class="container">
       <div class="contact-inner reveal">
-        <p class="section-eyebrow" style="text-align:center">Invite Only</p>
+        <p class="section-eyebrow" style="text-align:center">Get Started</p>
         <h2 class="section-title" style="text-align:center">
-          Want early access<br/><span class="accent-text">to MyFi?</span>
+          Ready to see your<br/><span class="accent-text">whole picture?</span>
         </h2>
         <p class="contact-sub">
-          MyFi isn't publicly available yet &mdash; it's still growing with a small group of invited users.
-          If what you saw above is interesting, reach out and I'll follow up when a spot opens.
+          Join the waitlist for a hosted invite, or clone the repo and have MyFi running
+          on your own machine in a few minutes.
         </p>
 
         <div class="contact-links">
-          <a href="mailto:me@drewklauser.com?subject=MyFi%20Invite%20Request" class="contact-card" aria-label="Email Drew to request a MyFi invite">
+          <a href="https://myfi.drewklauser.com" class="contact-card" target="_blank" rel="noopener noreferrer" aria-label="Join the MyFi hosted waitlist">
             <div class="contact-card-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
             </div>
             <div class="contact-card-content">
-              <span class="contact-card-label">Request an Invite</span>
-              <span class="contact-card-value">me@drewklauser.com</span>
+              <span class="contact-card-label">Hosted &middot; Join the waitlist</span>
+              <span class="contact-card-value">myfi.drewklauser.com</span>
             </div>
-            <svg class="contact-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="contact-card-arrow" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
 
-          <a href="/" class="contact-card" aria-label="Back to Drew's homepage">
+          <a href="https://github.com/CyBirdSecurity/MyFi-OS" class="contact-card" target="_blank" rel="noopener noreferrer" aria-label="MyFi-OS on GitHub">
             <div class="contact-card-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M9 21V12h6v9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
             </div>
             <div class="contact-card-content">
-              <span class="contact-card-label">Back to</span>
-              <span class="contact-card-value">drewklauser.com</span>
+              <span class="contact-card-label">Self-hosted &middot; Open source</span>
+              <span class="contact-card-value">CyBirdSecurity/MyFi-OS</span>
             </div>
-            <svg class="contact-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="contact-card-arrow" aria-hidden="true"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
       </div>
@@ -708,6 +791,8 @@
         <span aria-label="love">&#9825;</span> and Claude Code.
       </p>
       <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://myfi.drewklauser.com" class="footer-link" target="_blank" rel="noopener noreferrer">Hosted MyFi</a>
+        <a href="https://github.com/CyBirdSecurity/MyFi-OS" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="/#projects" class="footer-link">Projects</a>
         <a href="/library" class="footer-link">Library</a>
         <a href="/#contact" class="footer-link">Contact</a>
