@@ -451,10 +451,6 @@
 }
 
 /* ── Shared helpers ── */
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
-}
 .btn-outline {
   background: var(--c-bg-card);
   color: var(--c-accent);
@@ -552,66 +548,8 @@
 .plan-note { font-size: 13px; color: var(--c-text-3); line-height: 1.6; }
 .plan-note a { color: var(--c-accent); font-weight: 600; border-bottom: 1px solid var(--c-accent-border); }
 
-.compare-wrap {
-  margin-top: 40px;
-  background: var(--c-bg-card);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-1);
-  overflow-x: auto;
-}
-.compare-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
-.compare-table th, .compare-table td {
-  text-align: left;
-  padding: 14px 20px;
-  border-bottom: 1px solid var(--c-border);
-  vertical-align: top;
-}
-.compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: none; }
-.compare-table thead th {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--c-text-3);
-  background: var(--c-bg-elevated);
-}
-.compare-table tbody th { font-weight: 700; color: var(--c-text); width: 28%; }
-.compare-table td { color: var(--c-text-2); width: 36%; }
-.compare-table code {
-  font-family: var(--font-mono);
-  font-size: 12.5px;
-  background: var(--c-accent-tint);
-  padding: 1px 6px;
-  border-radius: 4px;
-}
 
 /* Responsive */
-@media (max-width: 640px) {
-  .compare-table { min-width: 0; }
-  .compare-table thead { display: none; }
-  .compare-table tbody tr {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 14px;
-    padding: 14px 16px;
-    border-bottom: 1px solid var(--c-border);
-  }
-  .compare-table tbody tr:last-child { border-bottom: none; }
-  .compare-table tbody th, .compare-table tbody td { width: auto; padding: 0; border: none; }
-  .compare-table tbody th { grid-column: 1 / -1; margin-bottom: 6px; }
-  .compare-table td { font-size: 13.5px; }
-  .compare-table td::before {
-    content: attr(data-label);
-    display: block;
-    font-size: 10.5px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--c-text-3);
-    margin-bottom: 2px;
-  }
-}
 @media (max-width: 900px) {
   .mfd-grid-3-2 { grid-template-columns: 1fr; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
@@ -620,7 +558,6 @@
   .networth-card { width: 100%; }
   .plan-grid { grid-template-columns: 1fr; }
   .plan-card { padding: 24px 20px; }
-  .compare-table th, .compare-table td { padding: 12px 14px; }
   .feature-grid { grid-template-columns: 1fr; }
   .mfd-body { flex-direction: column; }
   .mfd-sidebar {
