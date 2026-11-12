@@ -539,6 +539,80 @@ strong { font-weight: 700; color: var(--c-text); }
   padding: 4px 12px;
 }
 
+/* ── Talks ────────────────────────────────────────────────────────────── */
+.talks { background: var(--c-bg); padding-top: 72px; padding-bottom: 32px; }
+.talks .section-header { margin-bottom: 40px; }
+
+.talks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+}
+
+.talk-card {
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-1);
+  transition: box-shadow var(--t-slow) var(--ease), border-color var(--t-slow) var(--ease);
+}
+.talk-card:hover { box-shadow: var(--shadow-2); border-color: var(--c-border-hov); }
+
+.talk-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.talk-event {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  background: var(--c-accent-tint);
+  border-radius: var(--radius-xs);
+  padding: 4px 10px;
+}
+.talk-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--c-text-3);
+}
+.talk-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+.talk-abstract {
+  font-size: 14px;
+  color: var(--c-text-2);
+  line-height: 1.7;
+  flex: 1;
+}
+.talk-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--c-text);
+  border-bottom: 1.5px solid var(--c-border);
+  padding-bottom: 2px;
+  transition: border-color var(--t-base) var(--ease), color var(--t-base) var(--ease);
+}
+.talk-link:hover { border-color: var(--c-accent); color: var(--c-accent); }
+
 /* ── Projects ─────────────────────────────────────────────────────────── */
 .projects { background: var(--c-bg); padding-top: 56px; padding-bottom: 56px; }
 
@@ -963,6 +1037,7 @@ strong { font-weight: 700; color: var(--c-text); }
 
   .projects-header { flex-direction: column; align-items: flex-start; }
   .projects-grid { grid-template-columns: 1fr; }
+  .talks-grid { grid-template-columns: 1fr; }
 
   .current-role { flex-direction: column; align-items: flex-start; gap: 10px; }
   .role-content { flex-direction: column; align-items: flex-start; }
