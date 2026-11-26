@@ -1284,3 +1284,21 @@ books:
     in_progress: false
     ranking: null
     notes: "8th edition (2024)."
+
+  - title: "Code"
+    author: "Charles Petzold"
+    year_read: 2026
+    categories: [Technology]
+    medium: paperback
+    in_progress: true
+    ranking: null
+    notes: "The Hidden Language of Computer Hardware and Software."
+
+  - title: "The Expectant Father"
+    author: "Armin A. Brott, Jennifer Ash"
+    year_read: 2026
+    categories: [Self-Help]
+    medium: paperback
+    in_progress: true
+    ranking: null
+    notes: "The Ultimate Guide for Dads-to-Be. 4th edition (2015)."
